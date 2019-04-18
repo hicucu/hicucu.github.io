@@ -4,14 +4,28 @@
 
     <url>
         <loc>https://hicucu.github.io/tags/coding/</loc>
-        <lastmod>2019-04-17T13:37:11.733Z</lastmod>
+        <lastmod>2019-04-18T12:25:04.565Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/codility/</loc>
-        <lastmod>2019-04-17T13:37:11.733Z</lastmod>
+        <lastmod>2019-04-18T12:25:04.565Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/tags/study/</loc>
+        <lastmod>2019-04-18T12:25:04.565Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/tags/HTML-CSS/</loc>
+        <lastmod>2019-04-18T12:25:02.402Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -60,13 +74,6 @@
 
     <url>
         <loc>https://hicucu.github.io/tags/TIL/</loc>
-        <lastmod>2019-04-17T10:56:31.979Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/tags/HTML-CSS/</loc>
         <lastmod>2019-04-17T10:56:31.979Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
