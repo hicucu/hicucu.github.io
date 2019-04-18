@@ -8,6 +8,94 @@
     </url>
 
     <url>
+        <loc>https://hicucu.github.io/2019/03/19/TypeError-is-not-a-function/</loc>
+        <lastmod>2019-04-18T15:17:31.431Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/04/16/fc-190416/</loc>
+        <lastmod>2019-04-18T15:17:17.694Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/04/15/fc-190415/</loc>
+        <lastmod>2019-04-18T15:17:08.962Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/04/12/fc-190412/</loc>
+        <lastmod>2019-04-18T15:16:58.216Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/04/11/fc-190411/</loc>
+        <lastmod>2019-04-18T15:16:25.822Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/04/09/fc-190409/</loc>
+        <lastmod>2019-04-18T15:15:43.547Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/04/08/fc-190408/</loc>
+        <lastmod>2019-04-18T15:15:33.238Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/04/04/fc-190404/</loc>
+        <lastmod>2019-04-18T15:15:20.750Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/04/03/fc-190402/</loc>
+        <lastmod>2019-04-18T15:14:59.443Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/04/17/codility-1-1-BinaryGap/</loc>
+        <lastmod>2019-04-18T15:14:34.100Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/04/18/box-sizing/</loc>
+        <lastmod>2019-04-18T15:14:02.161Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://hicucu.github.io/2019/04/19/codility-2-1-OddOccurrencesInArray/</loc>
         <lastmod>2019-04-18T15:12:12.876Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -24,64 +112,8 @@
     </url>
 
     <url>
-        <loc>https://hicucu.github.io/2019/04/04/fc-190404/</loc>
-        <lastmod>2019-04-18T15:07:43.412Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://hicucu.github.io/2019/04/05/fc-190405/</loc>
         <lastmod>2019-04-18T15:07:42.881Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/2019/04/08/fc-190408/</loc>
-        <lastmod>2019-04-18T15:07:42.356Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/2019/04/09/fc-190409/</loc>
-        <lastmod>2019-04-18T15:07:41.825Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/2019/04/11/fc-190411/</loc>
-        <lastmod>2019-04-18T15:07:41.342Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/2019/04/12/fc-190412/</loc>
-        <lastmod>2019-04-18T15:07:40.810Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/2019/04/15/fc-190415/</loc>
-        <lastmod>2019-04-18T15:07:40.288Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/2019/04/16/fc-190416/</loc>
-        <lastmod>2019-04-18T15:07:39.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -98,38 +130,6 @@
     <url>
         <loc>https://hicucu.github.io/2019/03/19/to-do-list/</loc>
         <lastmod>2019-04-18T15:07:38.763Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/2019/03/19/TypeError-is-not-a-function/</loc>
-        <lastmod>2019-04-18T15:07:37.740Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/2019/04/17/codility-1-1-BinaryGap/</loc>
-        <lastmod>2019-04-18T12:25:04.565Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/2019/04/18/box-sizing/</loc>
-        <lastmod>2019-04-18T12:25:02.402Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/2019/04/03/fc-190402/</loc>
-        <lastmod>2019-04-17T10:55:11.075Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

@@ -17,7 +17,7 @@
 <meta property="og:description" content="증상 JQuery의 stop, animate 를 사용 할 때 TypeError발생TypeError: $(…).stop is not a function">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://hicucu.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-04-18T15:07:37.740Z">
+<meta property="og:updated_time" content="2019-04-18T15:17:31.431Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TypeError-is-not-a-function">
 <meta name="twitter:description" content="증상 JQuery의 stop, animate 를 사용 할 때 TypeError발생TypeError: $(…).stop is not a function">
@@ -189,7 +189,9 @@
 <h1 id="추가"><a href="#추가" class="headerlink" title="추가"></a>추가</h1><blockquote>
 <p>jQuery.noConflict() 사용으로도 가능<br><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> jq = jQuery.noConflict();</span><br><span class="line">        </span><br><span class="line">jq(<span class="hljs-string">'.menu-icon.left-icon'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    jq(<span class="hljs-string">'body #wrapped'</span>).stop().animate(&#123;</span><br><span class="line">        <span class="hljs-string">"left"</span>: <span class="hljs-string">"-0"</span></span><br><span class="line">    &#125;, <span class="hljs-number">1500</span>);</span><br><span class="line">&#125;);</span><br><span class="line">jq(<span class="hljs-string">'.menu-icon.right-icon'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    jq(<span class="hljs-string">'body #wrapped'</span>).stop().animate(&#123;</span><br><span class="line">        <span class="hljs-string">"left"</span>: <span class="hljs-string">"-400px"</span></span><br><span class="line">    &#125;, <span class="hljs-number">1500</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">jq(<span class="hljs-string">'.close-icon'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    jq(<span class="hljs-string">'body #wrapped'</span>).stop().animate(&#123;</span><br><span class="line">        <span class="hljs-string">"left"</span>: <span class="hljs-string">"-200px"</span></span><br><span class="line">    &#125;, <span class="hljs-number">1500</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h1 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h1><p><a href="&quot;https://api.jquery.com/jquery.noconflict/&quot;">jQuery.noConflict()</a></p>
+<h1 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h1><blockquote>
+<p><a href="&quot;https://api.jquery.com/jquery.noconflict/&quot;">jQuery.noConflict()</a></p>
+</blockquote>
 
         </div>
         
