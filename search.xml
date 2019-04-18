@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>codility-2-1-OddOccurrencesInArray</title>
+      <link href="/2019/04/19/codility-2-1-OddOccurrencesInArray/"/>
+      <url>/2019/04/19/codility-2-1-OddOccurrencesInArray/</url>
+      
+        <content type="html"><![CDATA[<h1 id="OddOccurrencesInArray"><a href="#OddOccurrencesInArray" class="headerlink" title="OddOccurrencesInArray"></a>OddOccurrencesInArray</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the array can be paired with another element that has the same value, except for one element that is left unpaired.</span><br><span class="line"></span><br><span class="line">For example, in array A such that:</span><br><span class="line">  A[0] = 9  A[1] = 3  A[2] = 9</span><br><span class="line">  A[3] = 3  A[4] = 9  A[5] = 7</span><br><span class="line">  A[6] = 9</span><br><span class="line"></span><br><span class="line">        the elements at indexes 0 and 2 have value 9,</span><br><span class="line">        the elements at indexes 1 and 3 have value 3,</span><br><span class="line">        the elements at indexes 4 and 6 have value 9,</span><br><span class="line">        the element at index 5 has value 7 and is unpaired.</span><br><span class="line"></span><br><span class="line">Write a function:</span><br><span class="line"></span><br><span class="line">    function solution(A);</span><br><span class="line"></span><br><span class="line">that, given an array A consisting of N integers fulfilling the above conditions, returns the value of the unpaired element.</span><br><span class="line"></span><br><span class="line">For example, given array A such that:</span><br><span class="line">  A[0] = 9  A[1] = 3  A[2] = 9</span><br><span class="line">  A[3] = 3  A[4] = 9  A[5] = 7</span><br><span class="line">  A[6] = 9</span><br><span class="line"></span><br><span class="line">the function should return 7, as explained in the example above.</span><br><span class="line"></span><br><span class="line">Write an efficient algorithm for the following assumptions:</span><br><span class="line"></span><br><span class="line">        N is an odd integer within the range [1..1,000,000];</span><br><span class="line">        each element of array A is an integer within the range [1..1,000,000,000];</span><br><span class="line">        all but one of the values in A occur an even number of times.</span><br><span class="line"></span><br><span class="line">Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.</span><br></pre></td></tr></table></figure><a id="more"></a><h1 id="방법"><a href="#방법" class="headerlink" title="방법"></a>방법</h1><blockquote><p>xor을 이용<br>0과 어떤 수 n을 xor 연산하면 n이된다.<br><code>000 xor 101</code>의 결과는 <code>101</code>이다.<br>어떤 수 n에 x를 짝수번 xor연산 할 경우 그 값은 n과 동일하다.<br>10진수 5은 2진수로 101이고 10진수 3은 2진수로 011이다.<br><code>101 xor 011</code>의 결과는 <code>110</code> 이고 <code>110 xor 011</code>의 결과는 <code>101</code>이 된다.<br>즉 0에 짝수개 만큼 존재하는 수들을 xor연산하면 그 결과는 0이 되고 짝수개가 존재하는 수들 가운데 홀수개가 존재하는 수를 xor하면 결국 홀수개가 존재하는 수의 값이 남는다.<br>0에 7, 5, 7, 4, 5를 xor연산하면 7과 5는 두 개씩 존재하기 때문에 0이되고 하나만 존재하는 4의 값만 남는다.</p></blockquote><h1 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h1><blockquote><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">A</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// write your code in JavaScript (Node.js 8.9.4)</span></span><br><span class="line">    <span class="hljs-keyword">var</span> result = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>; i&lt;A.length; i++)&#123;</span><br><span class="line">        result = result^A[i];</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="hljs-keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></blockquote><h1 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h1><blockquote><p><img src="https://user-images.githubusercontent.com/48123604/56371200-a146b600-6237-11e9-97f1-a2ccce91fd62.png" alt="image"></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+          <category> codility </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> study </tag>
+            
+            <tag> codility </tag>
+            
+            <tag> coding </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>box-sizing</title>
       <link href="/2019/04/18/box-sizing/"/>
       <url>/2019/04/18/box-sizing/</url>

@@ -2,20 +2,25 @@
 <html lang="ko">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>카테고리: Study - DEUL</title>
+<title>codility-2-1-OddOccurrencesInArray - DEUL</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="canonical" href="https://hicucu.github.io/categories/study/">
+<link rel="canonical" href="https://hicucu.github.io/2019/04/19/codility-2-1-oddoccurrencesinarray/">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="DEUL">
-<meta property="og:url" content="https://hicucu.github.io/categories/Study/index.html">
+    <meta name="description" content="OddOccurrencesInArray1234567891011121314151617181920212223242526272829303132A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the">
+<meta name="keywords" content="study,codility,coding">
+<meta property="og:type" content="article">
+<meta property="og:title" content="codility-2-1-OddOccurrencesInArray">
+<meta property="og:url" content="https://hicucu.github.io/2019/04/19/codility-2-1-OddOccurrencesInArray/index.html">
 <meta property="og:site_name" content="DEUL">
+<meta property="og:description" content="OddOccurrencesInArray1234567891011121314151617181920212223242526272829303132A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://hicucu.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-04-18T15:12:12.876Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DEUL">
+<meta name="twitter:title" content="codility-2-1-OddOccurrencesInArray">
+<meta name="twitter:description" content="OddOccurrencesInArray1234567891011121314151617181920212223242526272829303132A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the">
 <meta name="twitter:image" content="https://hicucu.github.io/images/og_image.png">
 
 
@@ -143,18 +148,6 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">카테고리</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">Study</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
@@ -179,21 +172,33 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/04/19/codility-2-1-OddOccurrencesInArray/">codility-2-1-OddOccurrencesInArray</a>
+                codility-2-1-OddOccurrencesInArray
             
         </h1>
         <div class="content">
             <h1 id="OddOccurrencesInArray"><a href="#OddOccurrencesInArray" class="headerlink" title="OddOccurrencesInArray"></a>OddOccurrencesInArray</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the array can be paired with another element that has the same value, except for one element that is left unpaired.</span><br><span class="line"></span><br><span class="line">For example, in array A such that:</span><br><span class="line">  A[0] = 9  A[1] = 3  A[2] = 9</span><br><span class="line">  A[3] = 3  A[4] = 9  A[5] = 7</span><br><span class="line">  A[6] = 9</span><br><span class="line"></span><br><span class="line">        the elements at indexes 0 and 2 have value 9,</span><br><span class="line">        the elements at indexes 1 and 3 have value 3,</span><br><span class="line">        the elements at indexes 4 and 6 have value 9,</span><br><span class="line">        the element at index 5 has value 7 and is unpaired.</span><br><span class="line"></span><br><span class="line">Write a function:</span><br><span class="line"></span><br><span class="line">    function solution(A);</span><br><span class="line"></span><br><span class="line">that, given an array A consisting of N integers fulfilling the above conditions, returns the value of the unpaired element.</span><br><span class="line"></span><br><span class="line">For example, given array A such that:</span><br><span class="line">  A[0] = 9  A[1] = 3  A[2] = 9</span><br><span class="line">  A[3] = 3  A[4] = 9  A[5] = 7</span><br><span class="line">  A[6] = 9</span><br><span class="line"></span><br><span class="line">the function should return 7, as explained in the example above.</span><br><span class="line"></span><br><span class="line">Write an efficient algorithm for the following assumptions:</span><br><span class="line"></span><br><span class="line">        N is an odd integer within the range [1..1,000,000];</span><br><span class="line">        each element of array A is an integer within the range [1..1,000,000,000];</span><br><span class="line">        all but one of the values in A occur an even number of times.</span><br><span class="line"></span><br><span class="line">Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="방법"><a href="#방법" class="headerlink" title="방법"></a>방법</h1><blockquote>
+<p>xor을 이용<br>0과 어떤 수 n을 xor 연산하면 n이된다.<br><code>000 xor 101</code>의 결과는 <code>101</code>이다.<br>어떤 수 n에 x를 짝수번 xor연산 할 경우 그 값은 n과 동일하다.<br>10진수 5은 2진수로 101이고 10진수 3은 2진수로 011이다.<br><code>101 xor 011</code>의 결과는 <code>110</code> 이고 <code>110 xor 011</code>의 결과는 <code>101</code>이 된다.<br>즉 0에 짝수개 만큼 존재하는 수들을 xor연산하면 그 결과는 0이 되고 짝수개가 존재하는 수들 가운데 홀수개가 존재하는 수를 xor하면 결국 홀수개가 존재하는 수의 값이 남는다.<br>0에 7, 5, 7, 4, 5를 xor연산하면 7과 5는 두 개씩 존재하기 때문에 0이되고 하나만 존재하는 4의 값만 남는다.</p>
+</blockquote>
+<h1 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h1><blockquote>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">A</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// write your code in JavaScript (Node.js 8.9.4)</span></span><br><span class="line">    <span class="hljs-keyword">var</span> result = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>; i&lt;A.length; i++)&#123;</span><br><span class="line">        result = result^A[i];</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="hljs-keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h1 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h1><blockquote>
+<p><img src="https://user-images.githubusercontent.com/48123604/56371200-a146b600-6237-11e9-97f1-a2ccce91fd62.png" alt="image"></p>
+</blockquote>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/19/codility-2-1-OddOccurrencesInArray/#more">자세히 보기</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/codility/">codility</a>, <a class="has-link-grey -link" href="/tags/coding/">coding</a>, <a class="has-link-grey -link" href="/tags/study/">study</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -203,173 +208,19 @@
 
 
 
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-18T12:00:49.000Z">2019-04-18</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Study/">Study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Study/HTML-CSS/">HTML-CSS</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3분 read (About 410 words)
-                </span>
-                
-                
-            </div>
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/18/box-sizing/">
+                <span class="level-item">box-sizing</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/18/box-sizing/">box-sizing</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="box-sizing과-box-model"><a href="#box-sizing과-box-model" class="headerlink" title="box-sizing과 box model"></a>box-sizing과 box model</h1><h2 id="box의-크기를-어떤-기준으로-계산-할-것인가"><a href="#box의-크기를-어떤-기준으로-계산-할-것인가" class="headerlink" title="box의 크기를 어떤 기준으로 계산 할 것인가?"></a>box의 크기를 어떤 기준으로 계산 할 것인가?</h2><blockquote>
-<p>HTML은 Box로 이루어져 있으며 문서의 레이아웃을 계산 할 때 박스 모델에 따라 박스의 사이즈가 달라지게 됨</p>
-</blockquote>
-<h2 id="box의-크기는-어떤-요소들로-이루어-지는가"><a href="#box의-크기는-어떤-요소들로-이루어-지는가" class="headerlink" title="box의 크기는 어떤 요소들로 이루어 지는가?"></a>box의 크기는 어떤 요소들로 이루어 지는가?</h2><blockquote>
-<p>box의 크기에 영향을 주는 요소는 box의 width, height, border, padding, margin이 됨</p>
-</blockquote>
-<h2 id="각-요소의-값이-동일-할-때-box의-크기는-달라지는가"><a href="#각-요소의-값이-동일-할-때-box의-크기는-달라지는가" class="headerlink" title="각 요소의 값이 동일 할 때 box의 크기는 달라지는가?"></a>각 요소의 값이 동일 할 때 box의 크기는 달라지는가?</h2><blockquote>
-</blockquote>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"div content"</span>&gt;</span>content-box<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"div border"</span>&gt;</span>border-box<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/18/box-sizing/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
         
     </div>
 </div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-17T11:01:01.000Z">2019-04-17</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Study/">Study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/codility/">codility</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4분 read (About 615 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/17/codility-1-1-BinaryGap/">codility-1.1.BinaryGap</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="1-BinaryGap"><a href="#1-BinaryGap" class="headerlink" title="1.BinaryGap"></a>1.BinaryGap</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.</span><br><span class="line"></span><br><span class="line">For example, number 9 has binary representation 1001 and contains a binary gap of length 2. The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3. The number 20 has binary representation 10100 and contains one binary gap of length 1. The number 15 has binary representation 1111 and has no binary gaps. The number 32 has binary representation 100000 and has no binary gaps.</span><br><span class="line"></span><br><span class="line">Write a function:</span><br><span class="line"></span><br><span class="line">    function solution(N);</span><br><span class="line"></span><br><span class="line">that, given a positive integer N, returns the length of its longest binary gap. The function should return 0 if N doesn&apos;t contain a binary gap.</span><br><span class="line"></span><br><span class="line">For example, given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5. Given N = 32 the function should return 0, because N has binary representation &apos;100000&apos; and thus no binary gaps.</span><br><span class="line"></span><br><span class="line">Write an efficient algorithm for the following assumptions:</span><br><span class="line"></span><br><span class="line">        N is an integer within the range [1..2,147,483,647].</span><br><span class="line"></span><br><span class="line">Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/17/codility-1-1-BinaryGap/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-19T06:28:28.000Z">2019-03-19</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Study/">Study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Study/Front-end/">Front-end</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1분 read (About 183 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/03/19/TypeError-is-not-a-function/">TypeError-is-not-a-function</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="증상"><a href="#증상" class="headerlink" title="증상"></a>증상</h1><blockquote>
-<p>JQuery의 stop, animate 를 사용 할 때 TypeError발생<br>TypeError: $(…).stop is not a function<br><img src="https://user-images.githubusercontent.com/48123604/56209717-25116e80-608f-11e9-8e8b-345f04159c91.jpg" alt="TypeError"></p>
-</blockquote>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/03/19/TypeError-is-not-a-function/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
 
 
 </div>
