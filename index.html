@@ -163,7 +163,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9분 read (About 1358 words)
+                    9분 read (About 1353 words)
                 </span>
                 
                 
@@ -180,7 +180,11 @@
 <figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">change_value</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">	x = val;</span><br><span class="line">	<span class="hljs-built_in">printf</span>(<span class="hljs-string">"x : %d in change_value \n"</span>, x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="hljs-keyword">int</span> x = <span class="hljs-number">10</span>;</span><br><span class="line">	change_value(x, <span class="hljs-number">20</span>);</span><br><span class="line">	<span class="hljs-built_in">printf</span>(<span class="hljs-string">"x : %d in main \n"</span>, x);</span><br><span class="line">&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p>위 소스는 main에서 선언된 변수 x에 값 10을 주고 변수 x와 정수 val 매개변수로 하여 change_value를 호출한 후 change_value에서 x의 값을 val로 변경하는 소스이다.<br><img src="https://user-images.githubusercontent.com/48123604/56506442-7622d600-6559-11e9-9741-97a8cd044c0c.png" alt="image"><br>실행을 하면 change_value에서 x의 값은 20으로 변경되었지만 main에서는 여전히 10이다.<br>이는 main에서 넘긴 x는 x의 값 10을 의미하기 때문에 이것을 바꾸어도 main의 x는 영향을 받지 않는다.<br>그래서 Call by Value이다.<br></p></blockquote>
+<p>위 소스는 main에서 선언된 변수 x에 값 10을 주고 변수 x와 정수 val 매개변수로 하여 change_value를 호출한 후 change_value에서 x의 값을 val로 변경하는 소스이다.</p>
+<p><img src="https://user-images.githubusercontent.com/48123604/56506442-7622d600-6559-11e9-9741-97a8cd044c0c.png" alt="image"></p>
+<p>실행을 하면 change_value에서 x의 값은 20으로 변경되었지만 main에서는 여전히 10이다.</p>
+<p>이는 main에서 넘긴 x는 x의 값 10을 의미하기 때문에 이것을 바꾸어도 main의 x는 영향을 받지 않는다.</p>
+<p>그래서 Call by Value이다.<br></p></blockquote>
         </div>
         
         
