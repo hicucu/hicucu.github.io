@@ -8,14 +8,21 @@
     </url>
 
     <url>
-        <loc>https://hicucu.github.io/categories/codility/</loc>
-        <lastmod>2019-04-19T10:03:26.368Z</lastmod>
+        <loc>https://hicucu.github.io/categories/Study/programming/</loc>
+        <lastmod>2019-04-22T16:42:53.503Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/categories/Study/</loc>
+        <lastmod>2019-04-22T16:42:53.503Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/categories/codility/</loc>
         <lastmod>2019-04-19T10:03:26.368Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
