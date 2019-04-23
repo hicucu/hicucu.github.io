@@ -163,7 +163,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9분 read (About 1353 words)
+                    9분 read (About 1357 words)
                 </span>
                 
                 
@@ -176,15 +176,13 @@
             
         </h1>
         <div class="content">
-            <h1 id="Call-by-Value-와-Call-by-Reference"><a href="#Call-by-Value-와-Call-by-Reference" class="headerlink" title="Call by Value 와 Call by Reference"></a>Call by Value 와 Call by Reference</h1><h2 id="Call-by-Value"><a href="#Call-by-Value" class="headerlink" title="Call by Value"></a>Call by Value</h2><blockquote>
-<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">change_value</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">	x = val;</span><br><span class="line">	<span class="hljs-built_in">printf</span>(<span class="hljs-string">"x : %d in change_value \n"</span>, x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="hljs-keyword">int</span> x = <span class="hljs-number">10</span>;</span><br><span class="line">	change_value(x, <span class="hljs-number">20</span>);</span><br><span class="line">	<span class="hljs-built_in">printf</span>(<span class="hljs-string">"x : %d in main \n"</span>, x);</span><br><span class="line">&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
+            <h1 id="Call-by-Value-와-Call-by-Reference"><a href="#Call-by-Value-와-Call-by-Reference" class="headerlink" title="Call by Value 와 Call by Reference"></a>Call by Value 와 Call by Reference</h1><h2 id="Call-by-Value"><a href="#Call-by-Value" class="headerlink" title="Call by Value"></a>Call by Value</h2><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">change_value</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">	x = val;</span><br><span class="line">	<span class="hljs-built_in">printf</span>(<span class="hljs-string">"x : %d in change_value \n"</span>, x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="hljs-keyword">int</span> x = <span class="hljs-number">10</span>;</span><br><span class="line">	change_value(x, <span class="hljs-number">20</span>);</span><br><span class="line">	<span class="hljs-built_in">printf</span>(<span class="hljs-string">"x : %d in main \n"</span>, x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>위 소스는 main에서 선언된 변수 x에 값 10을 주고 변수 x와 정수 val 매개변수로 하여 change_value를 호출한 후 change_value에서 x의 값을 val로 변경하는 소스이다.</p>
 <p><img src="https://user-images.githubusercontent.com/48123604/56506442-7622d600-6559-11e9-9741-97a8cd044c0c.png" alt="image"></p>
 <p>실행을 하면 change_value에서 x의 값은 20으로 변경되었지만 main에서는 여전히 10이다.</p>
 <p>이는 main에서 넘긴 x는 x의 값 10을 의미하기 때문에 이것을 바꾸어도 main의 x는 영향을 받지 않는다.</p>
-<p>그래서 Call by Value이다.<br></p></blockquote>
+<p>그래서 Call by Value이다.</p>
+<hr>
         </div>
         
         
@@ -236,7 +234,7 @@
             
         </h1>
         <div class="content">
-            <h1 id="CyclicRotation"><a href="#CyclicRotation" class="headerlink" title="CyclicRotation"></a>CyclicRotation</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">An array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one index, and the last element of the array is moved to the first place. For example, the rotation of array A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7] (elements are shifted right by one index and 6 is moved to the first place).</span><br><span class="line"></span><br><span class="line">The goal is to rotate array A K times; that is, each element of A will be shifted to the right K times.</span><br><span class="line"></span><br><span class="line">Write a function:</span><br><span class="line"></span><br><span class="line">    def solution(A, K)</span><br><span class="line"></span><br><span class="line">that, given an array A consisting of N integers and an integer K, returns the array A rotated K times.</span><br><span class="line"></span><br><span class="line">For example, given</span><br><span class="line">    A = [3, 8, 9, 7, 6]</span><br><span class="line">    K = 3</span><br><span class="line"></span><br><span class="line">the function should return [9, 7, 6, 3, 8]. Three rotations were made:</span><br><span class="line">    [3, 8, 9, 7, 6] -&gt; [6, 3, 8, 9, 7]</span><br><span class="line">    [6, 3, 8, 9, 7] -&gt; [7, 6, 3, 8, 9]</span><br><span class="line">    [7, 6, 3, 8, 9] -&gt; [9, 7, 6, 3, 8]</span><br><span class="line"></span><br><span class="line">For another example, given</span><br><span class="line">    A = [0, 0, 0]</span><br><span class="line">    K = 1</span><br><span class="line"></span><br><span class="line">the function should return [0, 0, 0]</span><br><span class="line"></span><br><span class="line">Given</span><br><span class="line">    A = [1, 2, 3, 4]</span><br><span class="line">    K = 4</span><br><span class="line"></span><br><span class="line">the function should return [1, 2, 3, 4]</span><br><span class="line"></span><br><span class="line">Assume that:</span><br><span class="line"></span><br><span class="line">        N and K are integers within the range [0..100];</span><br><span class="line">        each element of array A is an integer within the range [−1,000..1,000].</span><br><span class="line"></span><br><span class="line">In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.</span><br><span class="line">Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.</span><br></pre></td></tr></table></figure>
+            <h1 id="CyclicRotation"><a href="#CyclicRotation" class="headerlink" title="CyclicRotation"></a>CyclicRotation</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">An array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one index, and the last element of the array is moved to the first place. For example, the rotation of array A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7] (elements are shifted right by one index and 6 is moved to the first place).</span><br><span class="line"></span><br><span class="line">The goal is to rotate array A K times; that is, each element of A will be shifted to the right K times.</span><br><span class="line"></span><br><span class="line">Write a function:</span><br><span class="line"></span><br><span class="line">    def solution(A, K)</span><br><span class="line"></span><br><span class="line">that, given an array A consisting of N integers and an integer K, returns the array A rotated K times.</span><br><span class="line"></span><br><span class="line">For example, given</span><br><span class="line">    A = [3, 8, 9, 7, 6]</span><br><span class="line">    K = 3</span><br><span class="line"></span><br><span class="line">the function should return [9, 7, 6, 3, 8]. Three rotations were made:</span><br><span class="line">    [3, 8, 9, 7, 6] -[6, 3, 8, 9, 7]</span><br><span class="line">    [6, 3, 8, 9, 7] -[7, 6, 3, 8, 9]</span><br><span class="line">    [7, 6, 3, 8, 9] -[9, 7, 6, 3, 8]</span><br><span class="line"></span><br><span class="line">For another example, given</span><br><span class="line">    A = [0, 0, 0]</span><br><span class="line">    K = 1</span><br><span class="line"></span><br><span class="line">the function should return [0, 0, 0]</span><br><span class="line"></span><br><span class="line">Given</span><br><span class="line">    A = [1, 2, 3, 4]</span><br><span class="line">    K = 4</span><br><span class="line"></span><br><span class="line">the function should return [1, 2, 3, 4]</span><br><span class="line"></span><br><span class="line">Assume that:</span><br><span class="line"></span><br><span class="line">        N and K are integers within the range [0..100];</span><br><span class="line">        each element of array A is an integer within the range [−1,000..1,000].</span><br><span class="line"></span><br><span class="line">In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.</span><br><span class="line">Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.</span><br></pre></td></tr></table></figure>
         </div>
         
         
@@ -275,7 +273,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3분 read (About 418 words)
+                    3분 read (About 427 words)
                 </span>
                 
                 
@@ -340,15 +338,11 @@
             
         </h1>
         <div class="content">
-            <h1 id="box-sizing과-box-model"><a href="#box-sizing과-box-model" class="headerlink" title="box-sizing과 box model"></a>box-sizing과 box model</h1><h2 id="box의-크기를-어떤-기준으로-계산-할-것인가"><a href="#box의-크기를-어떤-기준으로-계산-할-것인가" class="headerlink" title="box의 크기를 어떤 기준으로 계산 할 것인가?"></a>box의 크기를 어떤 기준으로 계산 할 것인가?</h2><blockquote>
-<p>HTML은 Box로 이루어져 있으며 문서의 레이아웃을 계산 할 때 박스 모델에 따라 박스의 사이즈가 달라지게 됨</p>
-</blockquote>
-<h2 id="box의-크기는-어떤-요소들로-이루어-지는가"><a href="#box의-크기는-어떤-요소들로-이루어-지는가" class="headerlink" title="box의 크기는 어떤 요소들로 이루어 지는가?"></a>box의 크기는 어떤 요소들로 이루어 지는가?</h2><blockquote>
-<p>box의 크기에 영향을 주는 요소는 box의 width, height, border, padding, margin이 됨</p>
-</blockquote>
-<h2 id="각-요소의-값이-동일-할-때-box의-크기는-달라지는가"><a href="#각-요소의-값이-동일-할-때-box의-크기는-달라지는가" class="headerlink" title="각 요소의 값이 동일 할 때 box의 크기는 달라지는가?"></a>각 요소의 값이 동일 할 때 box의 크기는 달라지는가?</h2><blockquote>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"div content"</span>&gt;</span>content-box<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"div border"</span>&gt;</span>border-box<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
+            <h1 id="box-sizing과-box-model"><a href="#box-sizing과-box-model" class="headerlink" title="box-sizing과 box model"></a>box-sizing과 box model</h1><h2 id="box의-크기를-어떤-기준으로-계산-할-것인가"><a href="#box의-크기를-어떤-기준으로-계산-할-것인가" class="headerlink" title="box의 크기를 어떤 기준으로 계산 할 것인가?"></a>box의 크기를 어떤 기준으로 계산 할 것인가?</h2><p> HTML은 Box로 이루어져 있으며 문서의 레이아웃을 계산 할 때 박스 모델에 따라 박스의 사이즈가 달라지게 됨</p>
+<hr>
+<h2 id="box의-크기는-어떤-요소들로-이루어-지는가"><a href="#box의-크기는-어떤-요소들로-이루어-지는가" class="headerlink" title="box의 크기는 어떤 요소들로 이루어 지는가?"></a>box의 크기는 어떤 요소들로 이루어 지는가?</h2><p> box의 크기에 영향을 주는 요소는 box의 width, height, border, padding, margin이 됨</p>
+<hr>
+<h2 id="각-요소의-값이-동일-할-때-box의-크기는-달라지는가"><a href="#각-요소의-값이-동일-할-때-box의-크기는-달라지는가" class="headerlink" title="각 요소의 값이 동일 할 때 box의 크기는 달라지는가?"></a>각 요소의 값이 동일 할 때 box의 크기는 달라지는가?</h2><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"div content"</span>&gt;</span>content-box<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"div border"</span>&gt;</span>border-box<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
         </div>
         
         
@@ -387,7 +381,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4분 read (About 615 words)
+                    4분 read (About 613 words)
                 </span>
                 
                 
@@ -452,12 +446,8 @@
             
         </h1>
         <div class="content">
-            <h1 id="picture"><a href="#picture" class="headerlink" title="picture"></a>picture</h1><blockquote>
-<p><code>&lt;picture&gt;</code> 내에 <code>&lt;img&gt;</code>를 사용하는 것은 필수</p>
-</blockquote>
-<blockquote>
-<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class="rwd-wrapper"&gt;</span><br><span class="line">    &lt;<span class="hljs-selector-tag">picture</span>&gt;</span><br><span class="line">        &lt;source srcset="images/image-1x.png 1x, images/image-2x.png 2x"&gt;        </span><br><span class="line">    &lt;/picture&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
+            <h1 id="picture"><a href="#picture" class="headerlink" title="picture"></a>picture</h1><p><code>&lt;picture&gt;</code> 내에 <code>&lt;img&gt;</code>를 사용하는 것은 필수</p>
+<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class="rwd-wrapper"&gt;</span><br><span class="line">    &lt;<span class="hljs-selector-tag">picture</span>&gt;</span><br><span class="line">        &lt;source srcset="images/image-1x.png 1x, images/image-2x.png 2x"       </span><br><span class="line">    &lt;/picture&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
         </div>
         
         
@@ -509,12 +499,9 @@
             
         </h1>
         <div class="content">
-            <h1 id="footer"><a href="#footer" class="headerlink" title="footer"></a>footer</h1><h2 id="img"><a href="#img" class="headerlink" title="img"></a>img</h2><blockquote>
-<p><img src="https://user-images.githubusercontent.com/48123604/56102827-7e33b200-5f6a-11e9-8b80-1e12403bf194.png" alt="image"></p>
-</blockquote>
-<h2 id="마크업"><a href="#마크업" class="headerlink" title="마크업"></a>마크업</h2><blockquote>
-<p>내 마크업<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">div.footer-bg</span><br><span class="line">    footer.footer</span><br><span class="line">        a</span><br><span class="line">            img</span><br><span class="line">        </span><br><span class="line">        ul.footer-menu</span><br><span class="line">            li</span><br><span class="line">        div.copyright</span><br><span class="line">            p</span><br><span class="line">                a</span><br><span class="line">            p</span><br><span class="line">        div.badge</span><br><span class="line">            img.badge-html</span><br><span class="line">            img.badge-css    </span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
+            <h1 id="footer"><a href="#footer" class="headerlink" title="footer"></a>footer</h1><h2 id="img"><a href="#img" class="headerlink" title="img"></a>img</h2><p><img src="https://user-images.githubusercontent.com/48123604/56102827-7e33b200-5f6a-11e9-8b80-1e12403bf194.png" alt="image"></p>
+<hr>
+<h2 id="마크업"><a href="#마크업" class="headerlink" title="마크업"></a>마크업</h2><p>내 마크업<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">div.footer-bg</span><br><span class="line">    footer.footer</span><br><span class="line">        a</span><br><span class="line">            img</span><br><span class="line">        </span><br><span class="line">        ul.footer-menu</span><br><span class="line">            li</span><br><span class="line">        div.copyright</span><br><span class="line">            p</span><br><span class="line">                a</span><br><span class="line">            p</span><br><span class="line">        div.badge</span><br><span class="line">            img.badge-html</span><br><span class="line">            img.badge-css</span><br></pre></td></tr></table></figure></p>
         </div>
         
         
@@ -566,15 +553,9 @@
             
         </h1>
         <div class="content">
-            <h1 id="인기-사이트"><a href="#인기-사이트" class="headerlink" title="인기 사이트"></a>인기 사이트</h1><blockquote>
-<p><img src="https://user-images.githubusercontent.com/48123604/56009298-4fbf9800-5d1a-11e9-9030-248e5e3ff541.png" alt="image"></p>
-</blockquote>
-<h2 id="마크업"><a href="#마크업" class="headerlink" title="마크업"></a>마크업</h2><blockquote>
-<p>내 마크업<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">section.favorite</span><br><span class="line">    h2.favorite-heading</span><br><span class="line">    ol.favorite-list</span><br><span class="line">        li</span><br><span class="line">            a</span><br><span class="line">            strong            </span><br><span class="line">    a.favorite-more</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>강사님 마크업<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">section.favorite</span><br><span class="line">    h2.favorite=heading</span><br><span class="line">    ol</span><br><span class="line">        li.no1</span><br><span class="line">            a</span><br><span class="line">            em.up, em.down, em.stop</span><br><span class="line">    favorite-more</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
+            <h1 id="인기-사이트"><a href="#인기-사이트" class="headerlink" title="인기 사이트"></a>인기 사이트</h1><p><img src="https://user-images.githubusercontent.com/48123604/56009298-4fbf9800-5d1a-11e9-9030-248e5e3ff541.png" alt="image"></p>
+<h2 id="마크업"><a href="#마크업" class="headerlink" title="마크업"></a>마크업</h2><p>내 마크업<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">section.favorite</span><br><span class="line">    h2.favorite-heading</span><br><span class="line">    ol.favorite-list</span><br><span class="line">        li</span><br><span class="line">            a</span><br><span class="line">            strong            </span><br><span class="line">    a.favorite-more</span><br></pre></td></tr></table></figure></p>
+<p>강사님 마크업<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">section.favorite</span><br><span class="line">    h2.favorite=heading</span><br><span class="line">    ol</span><br><span class="line">        li.no1</span><br><span class="line">            a</span><br><span class="line">            em.up, em.down, em.stop</span><br><span class="line">    favorite-more</span><br></pre></td></tr></table></figure></p>
         </div>
         
         
@@ -613,7 +594,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5분 read (About 705 words)
+                    5분 read (About 704 words)
                 </span>
                 
                 
@@ -627,15 +608,10 @@
         </h1>
         <div class="content">
             <h1 id="새소식"><a href="#새소식" class="headerlink" title="새소식"></a>새소식</h1><p><img src="https://user-images.githubusercontent.com/48123604/55924758-1ddd0180-5c46-11e9-8fdf-0d59d410b8b0.png" alt="image"></p>
-<h2 id="마크업"><a href="#마크업" class="headerlink" title="마크업"></a>마크업</h2><blockquote>
-<p>내 마크업<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">section.news</span><br><span class="line">    h2.news-header</span><br><span class="line">    a.news-link</span><br><span class="line">        article.news-item        </span><br><span class="line">            h3.news-item-subject</span><br><span class="line">            time</span><br><span class="line">            p.news-item-brief                </span><br><span class="line">                span</span><br><span class="line">                img                </span><br><span class="line">    a.news-more</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
+<h2 id="마크업"><a href="#마크업" class="headerlink" title="마크업"></a>마크업</h2><p>내 마크업<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">section.news</span><br><span class="line">    h2.news-header</span><br><span class="line">    a.news-link</span><br><span class="line">        article.news-item        </span><br><span class="line">            h3.news-item-subject</span><br><span class="line">            time</span><br><span class="line">            p.news-item-brief                </span><br><span class="line">                span</span><br><span class="line">                img                </span><br><span class="line">    a.news-more</span><br></pre></td></tr></table></figure></p>
 <p>강사님 마크업</p>
-</blockquote>
-<blockquote>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">section.news</span><br><span class="line">    h2.news-heading</span><br><span class="line">    article.news-item</span><br><span class="line">        h3.news-item-subject</span><br><span class="line">        time.news-item-date</span><br><span class="line">        p.news-item-brief</span><br><span class="line">        figure.news-item-thumbnail</span><br><span class="line">            img</span><br><span class="line">            figcaption</span><br><span class="line">    a.news-more</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">section.news</span><br><span class="line">    h2.news-heading</span><br><span class="line">    article.news-item</span><br><span class="line">        h3.news-item-subject</span><br><span class="line">        time.news-item-date</span><br><span class="line">        p.news-item-brief</span><br><span class="line">        figure.news-item-thumbnail</span><br><span class="line">            img</span><br><span class="line">            figcaption</span><br><span class="line">    a.news-more</span><br></pre></td></tr></table></figure>
+<hr>
         </div>
         
         
@@ -687,9 +663,7 @@
             
         </h1>
         <div class="content">
-            <h1 id="time"><a href="#time" class="headerlink" title="time"></a>time</h1><blockquote>
-<p>datetime 필요<br>time[datetime=”2019-04-09T11:18:27”]</p>
-</blockquote>
+            <h1 id="time"><a href="#time" class="headerlink" title="time"></a>time</h1><p>datetime 필요<br>time[datetime=”2019-04-09T11:18:27”]</p>
         </div>
         
         
