@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://hicucu.github.io/2019/04/29/Javascript-ES/</loc>
+        <lastmod>2019-04-29T12:13:37.228Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://hicucu.github.io/2019/03/19/TypeError-is-not-a-function/</loc>
         <lastmod>2019-04-23T15:59:43.173Z</lastmod>
         <changefreq>weekly</changefreq>
