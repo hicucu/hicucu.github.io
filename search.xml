@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>codility-3-2-FrogJmp</title>
+      <link href="/2019/05/06/codility-3-2-FrogJmp/"/>
+      <url>/2019/05/06/codility-3-2-FrogJmp/</url>
+      
+        <content type="html"><![CDATA[<h1 id="FrogJmp"><a href="#FrogJmp" class="headerlink" title="FrogJmp"></a>FrogJmp</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">A small frog wants to get to the other side of the road. The frog is currently located at position X and wants to get to a position greater than or equal to Y. The small frog always jumps a fixed distance, D.</span><br><span class="line"></span><br><span class="line">Count the minimal number of jumps that the small frog must perform to reach its target.</span><br><span class="line"></span><br><span class="line">Write a function:</span><br><span class="line"></span><br><span class="line">    function solution(X, Y, D);</span><br><span class="line"></span><br><span class="line">that, given three integers X, Y and D, returns the minimal number of jumps from position X to a position equal to or greater than Y.</span><br><span class="line"></span><br><span class="line">For example, given:</span><br><span class="line">  X = 10</span><br><span class="line">  Y = 85</span><br><span class="line">  D = 30</span><br><span class="line"></span><br><span class="line">the function should return 3, because the frog will be positioned as follows:</span><br><span class="line"></span><br><span class="line">        after the first jump, at position 10 + 30 = 40</span><br><span class="line">        after the second jump, at position 10 + 30 + 30 = 70</span><br><span class="line">        after the third jump, at position 10 + 30 + 30 + 30 = 100</span><br><span class="line"></span><br><span class="line">Write an efficient algorithm for the following assumptions:</span><br><span class="line"></span><br><span class="line">        X, Y and D are integers within the range [1..1,000,000,000];</span><br><span class="line">        X ≤ Y.</span><br><span class="line"></span><br><span class="line">Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.</span><br></pre></td></tr></table></figure><h2 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h2><p>X : 시작 위치<br>Y : 도착 위치<br>D : 증가량</p><p>X+nD &gt; Y의 n을 구하기<br>도착위치에서 시작위치를 뺀 후 증가량 D로 나누기<br>다른 언어의 경우 기본적으로 정수형 연산이기 때문에 나머지가 있으면 몫+1 이지만<br>javascript는 기본적으로 모든 숫자의 연산이 정수가 아닌 실수형이기 때문에 올림으로 계산하면 됨</p><h2 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">X, Y, D</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// write your code in JavaScript (Node.js 8.9.4)</span></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.ceil((Y - X) / D);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h2><p><img src="https://user-images.githubusercontent.com/48123604/57214792-05ce8700-7026-11e9-911d-e4a9b4df4473.png" alt="image"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+          <category> codility </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> study </tag>
+            
+            <tag> coding </tag>
+            
+            <tag> codility </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>codility Lesson3 TapeEquilibrium</title>
       <link href="/2019/05/05/codility-3-1-TapeEquilibrium/"/>
       <url>/2019/05/05/codility-3-1-TapeEquilibrium/</url>
@@ -22,9 +53,9 @@
       
         <tags>
             
-            <tag> coding </tag>
-            
             <tag> study </tag>
+            
+            <tag> coding </tag>
             
             <tag> codility </tag>
             
@@ -136,9 +167,9 @@
       
         <tags>
             
-            <tag> coding </tag>
-            
             <tag> study </tag>
+            
+            <tag> coding </tag>
             
         </tags>
       
@@ -165,9 +196,9 @@
       
         <tags>
             
-            <tag> coding </tag>
-            
             <tag> study </tag>
+            
+            <tag> coding </tag>
             
             <tag> codility </tag>
             
@@ -196,9 +227,9 @@
       
         <tags>
             
-            <tag> coding </tag>
-            
             <tag> study </tag>
+            
+            <tag> coding </tag>
             
             <tag> codility </tag>
             
@@ -227,9 +258,9 @@
       
         <tags>
             
-            <tag> study </tag>
-            
             <tag> HTML-CSS </tag>
+            
+            <tag> study </tag>
             
         </tags>
       
@@ -256,9 +287,9 @@
       
         <tags>
             
-            <tag> coding </tag>
-            
             <tag> study </tag>
+            
+            <tag> coding </tag>
             
             <tag> codility </tag>
             
