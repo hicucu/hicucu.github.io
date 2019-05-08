@@ -8,6 +8,20 @@
     </url>
 
     <url>
+        <loc>https://hicucu.github.io/categories/fast-campus/Javascript/</loc>
+        <lastmod>2019-05-08T16:29:35.844Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/categories/fast-campus/</loc>
+        <lastmod>2019-05-08T16:29:35.844Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://hicucu.github.io/categories/codility/</loc>
         <lastmod>2019-05-06T08:43:25.967Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,20 +31,6 @@
     <url>
         <loc>https://hicucu.github.io/categories/Study/</loc>
         <lastmod>2019-05-06T08:43:25.967Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/categories/fast-campus/Javascript/</loc>
-        <lastmod>2019-05-03T03:50:44.195Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/categories/fast-campus/</loc>
-        <lastmod>2019-05-03T03:50:44.195Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
