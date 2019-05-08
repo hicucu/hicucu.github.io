@@ -703,6 +703,8 @@
             
             <tag> Error </tag>
             
+            <tag> TypeError </tag>
+            
         </tags>
       
     </entry>
