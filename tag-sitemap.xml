@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://hicucu.github.io/tags/sort/</loc>
+        <lastmod>2019-05-30T06:39:36.832Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/tags/Javascript/</loc>
+        <lastmod>2019-05-30T06:39:36.832Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/tags/ESMAScript/</loc>
+        <lastmod>2019-05-09T01:18:09.631Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://hicucu.github.io/tags/TypeError/</loc>
         <lastmod>2019-05-08T17:25:32.631Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -26,13 +47,6 @@
     <url>
         <loc>https://hicucu.github.io/tags/JQuery/</loc>
         <lastmod>2019-05-08T17:25:32.631Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/tags/Javascript/</loc>
-        <lastmod>2019-05-08T17:23:10.148Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -68,13 +82,6 @@
     <url>
         <loc>https://hicucu.github.io/tags/codility/</loc>
         <lastmod>2019-05-06T08:43:25.967Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/tags/ESMAScript/</loc>
-        <lastmod>2019-04-30T15:02:33.781Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

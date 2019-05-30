@@ -8,6 +8,22 @@
     </url>
 
     <url>
+        <loc>https://hicucu.github.io/2019/05/20/javascript-sort/</loc>
+        <lastmod>2019-05-30T06:39:36.832Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/04/29/Javascript-ES/</loc>
+        <lastmod>2019-05-09T01:18:09.631Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://hicucu.github.io/2019/03/19/TypeError-is-not-a-function/</loc>
         <lastmod>2019-05-08T17:25:32.631Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,7 +33,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/05/09/javascript-3/</loc>
-        <lastmod>2019-05-08T17:23:10.148Z</lastmod>
+        <lastmod>2019-05-08T17:24:28.976Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -58,14 +74,6 @@
     <url>
         <loc>https://hicucu.github.io/2019/04/30/Javascript-1/</loc>
         <lastmod>2019-05-01T01:28:36.323Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/2019/04/29/Javascript-ES/</loc>
-        <lastmod>2019-04-30T15:02:33.781Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

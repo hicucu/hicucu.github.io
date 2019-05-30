@@ -166,6 +166,65 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-20T04:39:22.000Z">2019-05-20</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/fast-campus/Javascript/">Javascript</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2분 read (About 342 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/05/20/javascript-sort/">javascript-sort</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="Javascript-Array-sort"><a href="#Javascript-Array-sort" class="headerlink" title="Javascript Array sort"></a>Javascript Array sort</h1><h2 id="기본"><a href="#기본" class="headerlink" title="기본"></a>기본</h2><h3 id="오름차순"><a href="#오름차순" class="headerlink" title="오름차순"></a>오름차순</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> array = [<span class="hljs-string">'z'</span>, <span class="hljs-string">'c'</span>, <span class="hljs-string">'a'</span>];</span><br><span class="line">array.sort();</span><br><span class="line"><span class="hljs-built_in">console</span>.log(array);</span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/48123604/58612430-8a42bb80-82ed-11e9-9083-5ab8cce78aeb.png" alt="image"></p>
+<h3 id="내림차순"><a href="#내림차순" class="headerlink" title="내림차순"></a>내림차순</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> array = [<span class="hljs-string">'z'</span>, <span class="hljs-string">'c'</span>, <span class="hljs-string">'a'</span>];</span><br><span class="line">array.sort().reverse();</span><br><span class="line"><span class="hljs-built_in">console</span>.log(array);</span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/48123604/58612491-b9f1c380-82ed-11e9-8271-4a9e81361451.png" alt="image"></p>
+<h2 id="Number-type"><a href="#Number-type" class="headerlink" title="Number type"></a>Number type</h2><h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> points = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>];</span><br><span class="line"></span><br><span class="line">points.sort();</span><br><span class="line"><span class="hljs-built_in">console</span>.log(points);</span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/48123604/58612567-f8877e00-82ed-11e9-96c6-6a2c341f4856.png" alt="image"></p>
+<p><code>.sort()</code> 메소드는 배열요소를 문자로 인식<br>문자로 ‘10’이 ‘2’보다 작기 때문에 오름차순으로 10이 2보다 앞에 위치하게 됨</p>
+<h3 id="숫자배열의-sort"><a href="#숫자배열의-sort" class="headerlink" title="숫자배열의 sort"></a>숫자배열의 sort</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">points.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> &#123; <span class="hljs-keyword">return</span> a - b; &#125;);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(points);</span><br></pre></td></tr></table></figure>
+<p><code>(a, b) =&gt; { return a-b }</code> 함수를 <code>.sort()</code> 메소드 매개변수로 전달하여 숫자 타입의 배열을 오름차순으로 정렬 할 수 있음</p>
+<p><img src="https://user-images.githubusercontent.com/48123604/58612684-63d15000-82ee-11e9-866e-71ae34a11b96.png" alt="image"></p>
+<p><code>(a, b) =&gt; { return a-b }</code>를 <code>(a, b) =&gt; { return b-a }</code>로 변경하여 내림차순 구현 가능</p>
+<h3 id="Object-배열-sort"><a href="#Object-배열-sort" class="headerlink" title="Object 배열 sort"></a>Object 배열 sort</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> javascript = [</span><br><span class="line">  &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'Vue.js'</span> &#125;,</span><br><span class="line">  &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'vanilla'</span> &#125;,</span><br><span class="line">  &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'Nodejs'</span> &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 비교 함수</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compare</span>(<span class="hljs-params">key</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>&#123;    </span><br><span class="line">    <span class="hljs-keyword">return</span> a[key] &gt; b[key] ? <span class="hljs-number">1</span> : (a[key] &lt; b[key] ? <span class="hljs-number">-1</span> : <span class="hljs-number">0</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// id를 기준으로 정렬</span></span><br><span class="line">javascript.sort(compare(<span class="hljs-string">'id'</span>));</span><br><span class="line"><span class="hljs-built_in">console</span>.log(javascript);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// value 기준으로 정렬</span></span><br><span class="line">javascript.sort(compare(<span class="hljs-string">'value'</span>));</span><br><span class="line"><span class="hljs-built_in">console</span>.log(javascript);</span><br></pre></td></tr></table></figure>
+<p>프로퍼티 값이 문자열인 경우, - 산술 연산으로 비교하면 <code>NaN</code>이 발생</p>
+<p>비교 연산을 이용</p>
+<p><img src="https://user-images.githubusercontent.com/48123604/58613499-de02d400-82f0-11e9-80f9-854810a6aed2.png" alt="image"></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-05-08T16:29:23.000Z">2019-05-09</time>
                 
                 <div class="level-item">
@@ -404,6 +463,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-20T04:39:22.000Z">2019-05-20</time></div>
+                    <a href="/2019/05/20/javascript-sort/" class="has-link-black-ter is-size-6">javascript-sort</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a> / <a class="has-link-grey -link" href="/categories/fast-campus/Javascript/">Javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-08T16:29:23.000Z">2019-05-09</time></div>
                     <a href="/2019/05/09/javascript-3/" class="has-link-black-ter is-size-6">javascript-3</a>
                     <p class="is-size-7 is-uppercase">
@@ -445,19 +517,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-02T11:13:08.000Z">2019-05-02</time></div>
                     <a href="/2019/05/02/javascript-2/" class="has-link-black-ter is-size-6">javascript-2</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a> / <a class="has-link-grey -link" href="/categories/fast-campus/Javascript/">Javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-30T09:59:01.000Z">2019-04-30</time></div>
-                    <a href="/2019/04/30/Javascript-1/" class="has-link-black-ter is-size-6">Javascript-1</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a> / <a class="has-link-grey -link" href="/categories/fast-campus/Javascript/">Javascript</a>
                     </p>
@@ -509,7 +568,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        24
+                        25
                     </p>
                 </div>
             </div>
@@ -529,7 +588,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        16
+                        17
                     </p>
                 </div>
             </div>
@@ -641,7 +700,7 @@
                 <span class="level-item">fast campus</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">16</span>
+                <span class="level-item tag">17</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/fast-campus/HTML-CSS/">
@@ -657,7 +716,7 @@
                 <span class="level-item">Javascript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">4</span>
+                <span class="level-item tag">5</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/fast-campus/web-basic/">
@@ -679,7 +738,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 12.86px;">Javascript</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a>
+        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 13.33px;">Javascript</a> <a href="/tags/TIL/" style="font-size: 18.33px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 13.33px;">codility</a> <a href="/tags/coding/" style="font-size: 15px;">coding</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 16.67px;">study</a> <a href="/tags/web-basic/" style="font-size: 11.67px;">web-basic</a>
     </div>
 </div>
 
@@ -698,7 +757,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -776,7 +835,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Javascript/">
                         <span class="tag">Javascript</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 
@@ -832,6 +891,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/project/">
                         <span class="tag">project</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/sort/">
+                        <span class="tag">sort</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -903,7 +969,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        24
+                        25
                     </p>
                 </div>
             </div>
@@ -923,7 +989,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        16
+                        17
                     </p>
                 </div>
             </div>
@@ -1035,7 +1101,7 @@
                 <span class="level-item">fast campus</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">16</span>
+                <span class="level-item tag">17</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/fast-campus/HTML-CSS/">
@@ -1051,7 +1117,7 @@
                 <span class="level-item">Javascript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">4</span>
+                <span class="level-item tag">5</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/fast-campus/web-basic/">
@@ -1073,7 +1139,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 12.86px;">Javascript</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a>
+        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 13.33px;">Javascript</a> <a href="/tags/TIL/" style="font-size: 18.33px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 13.33px;">codility</a> <a href="/tags/coding/" style="font-size: 15px;">coding</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 16.67px;">study</a> <a href="/tags/web-basic/" style="font-size: 11.67px;">web-basic</a>
     </div>
 </div>
 
@@ -1092,7 +1158,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1170,7 +1236,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Javascript/">
                         <span class="tag">Javascript</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 
@@ -1226,6 +1292,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/project/">
                         <span class="tag">project</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/sort/">
+                        <span class="tag">sort</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
