@@ -8,6 +8,69 @@
     </url>
     
     <url>
+        <loc>https://hicucu.github.io/Javascript/Constructor-Function.html</loc>
+        <lastmod>2019-06-02T18:00:21.737Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://hicucu.github.io/Javascript/Scope-Lexical-Scope.html</loc>
+        <lastmod>2019-06-02T18:00:12.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://hicucu.github.io/Javascript/Primitive-type-vs-Object-type.html</loc>
+        <lastmod>2019-06-02T18:00:10.368Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://hicucu.github.io/Javascript/javascript-Literal.html</loc>
+        <lastmod>2019-06-02T18:00:08.137Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://hicucu.github.io/Javascript/Javascript-Datatype.html</loc>
+        <lastmod>2019-06-02T18:00:05.080Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://hicucu.github.io/Javascript/Function-Definition.html</loc>
+        <lastmod>2019-06-02T18:00:02.742Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://hicucu.github.io/Javascript/DOM.html</loc>
+        <lastmod>2019-06-02T18:00:00.665Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://hicucu.github.io/Javascript/%EC%A0%84%EC%97%AD-%EB%B3%80%EC%88%98%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90%EA%B3%BC-var-%EB%B3%80%EC%88%98%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90.html</loc>
+        <lastmod>2019-06-02T17:59:53.753Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://hicucu.github.io/Javascript/this.html</loc>
+        <lastmod>2019-06-02T17:38:42.886Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://hicucu.github.io/about/</loc>
         <lastmod>2019-04-16T16:15:27.270Z</lastmod>
         <changefreq>weekly</changefreq>

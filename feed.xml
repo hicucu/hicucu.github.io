@@ -8,8 +8,32 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 30 May 2019 07:39:50 GMT</pubDate>
+    <pubDate>Sun, 02 Jun 2019 17:58:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://hicucu.github.io/2019/06/03/javascript-keyword/</link>
+      <guid>https://hicucu.github.io/2019/06/03/javascript-keyword/</guid>
+      <pubDate>Sun, 02 Jun 2019 17:38:13 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;a href=&quot;../../../javascript/Javascript-Datatype.html&quot;&gt;Data type&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../../javascript/javascript-Literal.html&quot;&gt;Literal과 Expression&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../../javascript/Primitive-type-vs-Object-type.html&quot;&gt;Primitive type vs. Object type&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../../javascript/Function-Definition.html&quot;&gt;Function Definition&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../../javascript/Scope-Lexical-Scope.html&quot;&gt;Scope, Lexical Scope&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../../javascript/전역-변수의-문제점과-var-변수의-문제점.html&quot;&gt;전역 변수의 문제점과 var 키워드로 선언한 변수의 문제점&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../../javascript/Constructor-Function.html&quot;&gt;Constructor Function&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../../javascript/this.html&quot;&gt;this&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../../javascript/DOM.html&quot;&gt;DOM&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p><a href="../../../javascript/Javascript-Datatype.html">Data type</a></p><p><a href="../../../javascript/javascript-Literal.html">Literal과 Expression</a></p><p><a href="../../../javascript/Primitive-type-vs-Object-type.html">Primitive type vs. Object type</a></p><p><a href="../../../javascript/Function-Definition.html">Function Definition</a></p><p><a href="../../../javascript/Scope-Lexical-Scope.html">Scope, Lexical Scope</a></p><p><a href="../../../javascript/전역-변수의-문제점과-var-변수의-문제점.html">전역 변수의 문제점과 var 키워드로 선언한 변수의 문제점</a></p><p><a href="../../../javascript/Constructor-Function.html">Constructor Function</a></p><p><a href="../../../javascript/this.html">this</a></p><p><a href="../../../javascript/DOM.html">DOM</a><br><a id="more"></a><br>[브라우저 동작]<br>[Event Delegation]<br>[Event Capturing vs. Event Bubbling]<br>[Class]<br>[super]<br>[Prototype]<br>[Promise]<br>[동기식 처리 모델 vs. 비동기식 처리 모델]</p>]]></content:encoded>
+      
+      <comments>https://hicucu.github.io/2019/06/03/javascript-keyword/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>javascript-sort</title>

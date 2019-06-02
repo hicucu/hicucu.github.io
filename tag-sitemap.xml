@@ -3,6 +3,20 @@
 
 
     <url>
+        <loc>https://hicucu.github.io/tags/project/</loc>
+        <lastmod>2019-06-02T17:50:41.842Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/tags/web-basic/</loc>
+        <lastmod>2019-06-02T17:50:41.842Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://hicucu.github.io/tags/sort/</loc>
         <lastmod>2019-05-30T07:39:50.619Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -66,14 +80,14 @@
     </url>
 
     <url>
-        <loc>https://hicucu.github.io/tags/study/</loc>
+        <loc>https://hicucu.github.io/tags/coding/</loc>
         <lastmod>2019-05-08T17:22:39.560Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://hicucu.github.io/tags/coding/</loc>
+        <loc>https://hicucu.github.io/tags/study/</loc>
         <lastmod>2019-05-08T17:22:39.560Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -89,20 +103,6 @@
     <url>
         <loc>https://hicucu.github.io/tags/homework/</loc>
         <lastmod>2019-04-23T15:58:53.816Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/tags/web-basic/</loc>
-        <lastmod>2019-04-23T15:58:53.816Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/tags/project/</loc>
-        <lastmod>2019-04-23T15:58:34.867Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

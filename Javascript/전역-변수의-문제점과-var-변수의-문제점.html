@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>전역 변수의 문제점과 var 변수의 문제점 - DEUL</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="canonical" href="https://hicucu.github.io/javascript/전역-변수의-문제점과-var-변수의-문제점.html">
+<meta name="naver-site-verification" content="0f9748f2860e30674d25e55346b2d59eec0fc6a2">
+
+
+<meta name="robots" content="nofollow">
+
+    <meta name="description" content="전역 변수의 문제점전역 변수의 생명주기변수는 선언에 의해 생성되고 할당을 통해 값을 갖는다. 그리고 소멸한다. 즉, 변수는 생성과 소멸의 생명주기가 있다.이 생명 주기가 없다면 한 번 선언된 변수는 프로그램을 종료하지 않는 한 영원히 메모리 공간을 점유하게 된다. 변수는 자신이 선언된 위치에서 생성되고 소멸하는데 전역 변수의 생명 주기는 애플리케이션의 생명">
+<meta property="og:type" content="website">
+<meta property="og:title" content="전역 변수의 문제점과 var 변수의 문제점">
+<meta property="og:url" content="https://hicucu.github.io/Javascript/전역-변수의-문제점과-var-변수의-문제점.html">
+<meta property="og:site_name" content="DEUL">
+<meta property="og:description" content="전역 변수의 문제점전역 변수의 생명주기변수는 선언에 의해 생성되고 할당을 통해 값을 갖는다. 그리고 소멸한다. 즉, 변수는 생성과 소멸의 생명주기가 있다.이 생명 주기가 없다면 한 번 선언된 변수는 프로그램을 종료하지 않는 한 영원히 메모리 공간을 점유하게 된다. 변수는 자신이 선언된 위치에서 생성되고 소멸하는데 전역 변수의 생명 주기는 애플리케이션의 생명">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="https://hicucu.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-06-02T17:59:53.753Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="전역 변수의 문제점과 var 변수의 문제점">
+<meta name="twitter:description" content="전역 변수의 문제점전역 변수의 생명주기변수는 선언에 의해 생성되고 할당을 통해 값을 갖는다. 그리고 소멸한다. 즉, 변수는 생성과 소멸의 생명주기가 있다.이 생명 주기가 없다면 한 번 선언된 변수는 프로그램을 종료하지 않는 한 영원히 메모리 공간을 점유하게 된다. 변수는 자신이 선언된 위치에서 생성되고 소멸하는데 전역 변수의 생명 주기는 애플리케이션의 생명">
+<meta name="twitter:image" content="https://hicucu.github.io/images/og_image.png">
+
+
+
+
+
+<link rel="alternative" href="feed.xml" title="전역 변수의 문제점과 var 변수의 문제점" type="application/atom+xml">
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Nanum+Gothic|Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138575853-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-138575853-1');
+</script>
+
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main" style="position:sticky; top:0;">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                DEUL
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="http://github.com/hicucu" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                전역 변수의 문제점과 var 변수의 문제점
+            
+        </h1>
+        <div class="content">
+            <h1 id="전역-변수의-문제점"><a href="#전역-변수의-문제점" class="headerlink" title="전역 변수의 문제점"></a>전역 변수의 문제점</h1><h2 id="전역-변수의-생명주기"><a href="#전역-변수의-생명주기" class="headerlink" title="전역 변수의 생명주기"></a>전역 변수의 생명주기</h2><p>변수는 선언에 의해 생성되고 할당을 통해 값을 갖는다. 그리고 소멸한다.</p>
+<p>즉, 변수는 생성과 소멸의 생명주기가 있다.<br>이 생명 주기가 없다면 한 번 선언된 변수는 프로그램을 종료하지 않는 한 영원히 메모리 공간을 점유하게 된다.</p>
+<p>변수는 자신이 선언된 위치에서 생성되고 소멸하는데 전역 변수의 생명 주기는 애플리케이션의 생명주기와 같다.</p>
+<p>자바스크립트는 진입점이 없고 코드가 로드되자마자 곧바로 해석되고 실행된다.</p>
+<p>함수는 몸체이 마지막 또는 return문이 실행되면 종료한다. 하지만 전역 코드는 마지막 문이 실행되어 더 이상 실행할 문이 없어도 함수처럼 종료되지 않는다.</p>
+<p>전역 코드의 종료는 애플리케이션의 종료와 마찬가지로 더 이상 이벤트에 대응을 할 수 없다. 그러므로 전역 변수는 브라우저를 종료하여 애플리케이션을 종료할 때 까지 유효하다.</p>
+<p>즉 전역 변수의 생명 주기는 애플리케이션의 생명 주기와 일치한다.</p>
+<p>이에 반해 지역 변수의 생명 주기는 함수의 생명주기와 같다.</p>
+<h2 id="전역-변수의-문제"><a href="#전역-변수의-문제" class="headerlink" title="전역 변수의 문제"></a>전역 변수의 문제</h2><ul>
+<li><p>암묵적 결합<br>: 전역 변수를 사용하는 의도는 코드 어디에서나 전역 변수를 사용하겠다는 것이다. 이는 모든 코드가 전역 변수를 참조하고 변경 할 수 있는 암묵적 결합(implicit coupling)을 허용하는 것으로 변수의 유효 범위가 크면 클 수록 코드의 가독성은 나빠지고 의도치 않게 상태가 변경될 수 있는 위험성도 높아진다.</p>
+</li>
+<li><p>긴 생명주기<br>: 전역 변수는 생명주기가 길다.<br>  전역 변수의 상태를 변경할 수 있는 시간도 길고, 모든 함수가 참조할 수 있기 때문에 상태를 변경할 기회도 많다.<br>  또한 메모리 리소스도 오랜 시간 소비된다.<br>  var 키워드는 변수의 중복 선언을 허용하므로 생명 주기가 긴 전역 변수는 변수명이 중복될 가능성이 있다. 변수명이 중복되면 의도치 않은 재할당이 이루어진다.</p>
+</li>
+<li><p>스코프 체인 상에서 종점에 존재<br>: 전역 변수는 스코프 체인에서 가장 종점에 존재한다. 그렇기 때문에 변수를 검색할 때 전역 변수는 가장 마지막에 검색되어 검색 속도가 가장 느리다.<br>  이는 큰 차이는 아니지만 분명히 속도에 차이가 발생한다.</p>
+</li>
+<li><p>네임 스페이스 오염<br>: 자바스크립트는 파일이 분산되어 있어도 하나의 전역 스코프를 공유한다.<br>  따라서 다른 파일 내에 동일한 이름으로 명명된 전역 변수나 함수가 존재하여 예상하지 못한 결과를 만들 수 있다.</p>
+</li>
+</ul>
+<h1 id="var-키워드"><a href="#var-키워드" class="headerlink" title="var 키워드"></a>var 키워드</h1><p>ES5까지는 변수를 선언할 유일한 방법이 var 키워드를 사용하는 것이었다.</p>
+<p>var 키워드로 선언된 변수는 여러 특징이 있고 이 특징은 문제를 발생시킬 가능성이 있다.</p>
+<h2 id="변수-중복-선언"><a href="#변수-중복-선언" class="headerlink" title="변수 중복 선언"></a>변수 중복 선언</h2><p>var 키워드로 선언한 변수는 중복 선언이 가능하다.</p>
+<p>var 키워드로 선언한 변수를 다시 var 키워드로 선언을 하면 javascript는 오류를 발생시키지 않고 나중에 선언한 변수 선언문은 var 키워드가 없는 것 처럼 동작한다.</p>
+<p>이미 선언한 변수명을 모르고 다시 선언하여 할당한다면 의도치 않게 값이 변경되는 문제가 발생하게 된다.</p>
+<h2 id="함수-레벨-스코프"><a href="#함수-레벨-스코프" class="headerlink" title="함수 레벨 스코프"></a>함수 레벨 스코프</h2><p>var 키워드로 선언한 변수는 오로지 함수의 코드 블록 만을 지역 스코프로 인정한다.<br>따라서 함수 외부에서 선언한 변수는 모두 전역 변수이다.</p>
+<p>for문에서 var 키워드로 변수를 선언하여 사용하면 for문이 종료되어도 여전히 변수는 전역 변수로 존재하게 된다.</p>
+<p>함수 레벨 스코프는 전역 변수를 남발할 가능성을 높이고 이로 인하여 전역 변수가 중복 선언되는 경우가 발생하게 된다.</p>
+<h2 id="변수-호이스팅"><a href="#변수-호이스팅" class="headerlink" title="변수 호이스팅"></a>변수 호이스팅</h2><p>var 키워드로 변수를 선언하면 변수 호이스팅에 의해 변수 선언문이 스코프의 선두로 끌어 올려진 것 처럼 동작한다. 즉 변수 호이스팅에 의해 var 키워드로 선언한 변수는 변수 선언문 이전에 참조가 가능하다.</p>
+<p>변수 선언문 이전에 변수를 참조하는 것은 오류를 발생시키지 않지만 프로그램의 흐름상 맞지 않고 가독성을 떨어트린다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+    
+        
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-02T17:38:13.000Z">2019-06-03</time></div>
+                    <a href="/2019/06/03/javascript-keyword/" class="has-link-black-ter is-size-6">Javascript</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-20T04:39:22.000Z">2019-05-20</time></div>
+                    <a href="/2019/05/20/javascript-sort/" class="has-link-black-ter is-size-6">javascript-sort</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a> / <a class="has-link-grey -link" href="/categories/fast-campus/Javascript/">Javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-08T16:29:23.000Z">2019-05-09</time></div>
+                    <a href="/2019/05/09/javascript-3/" class="has-link-black-ter is-size-6">javascript-3</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a> / <a class="has-link-grey -link" href="/categories/fast-campus/Javascript/">Javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-06T08:37:44.000Z">2019-05-06</time></div>
+                    <a href="/2019/05/06/codility-3-2-FrogJmp/" class="has-link-black-ter is-size-6">codility-3-2-FrogJmp</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Study/">Study</a> / <a class="has-link-grey -link" href="/categories/codility/">codility</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-05T06:25:31.000Z">2019-05-05</time></div>
+                    <a href="/2019/05/05/codility-3-1-TapeEquilibrium/" class="has-link-black-ter is-size-6">codility Lesson3 TapeEquilibrium</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Study/">Study</a> / <a class="has-link-grey -link" href="/categories/codility/">codility</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <figure class="image container is-128x128 has-mb-6">
+                            <img class="is-rounded" src="https://www.gravatar.com/avatar/325ac1437725797718e2928411a69178?s=128" alt="DEUL">
+                        </figure>
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        DEUL
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        DEUL | BLOG
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Seoul</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        포스트
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        26
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        카테고리
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        9
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        태그
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        17
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="http://github.com/hicucu" target="_blank" rel="external nofollow noopener noreferrer">
+                팔로우</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/hicucu" rel="external nofollow noopener noreferrer">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/feed.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+        
+            
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            링크
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank" rel="external nofollow noopener noreferrer">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Study/">
+            <span class="level-start">
+                <span class="level-item">Study</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">8</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Study/Front-end/">
+            <span class="level-start">
+                <span class="level-item">Front-end</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Study/HTML-CSS/">
+            <span class="level-start">
+                <span class="level-item">HTML-CSS</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Study/programming/">
+            <span class="level-start">
+                <span class="level-item">programming</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/codility/">
+            <span class="level-start">
+                <span class="level-item">codility</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/fast-campus/">
+            <span class="level-start">
+                <span class="level-item">fast campus</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">17</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/fast-campus/HTML-CSS/">
+            <span class="level-start">
+                <span class="level-item">HTML-CSS</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">10</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/fast-campus/Javascript/">
+            <span class="level-start">
+                <span class="level-item">Javascript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/fast-campus/web-basic/">
+            <span class="level-start">
+                <span class="level-item">web-basic</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            태그 클라우드
+        </h3>
+        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 13.33px;">Javascript</a> <a href="/tags/TIL/" style="font-size: 18.33px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 13.33px;">codility</a> <a href="/tags/coding/" style="font-size: 15px;">coding</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 16.67px;">study</a> <a href="/tags/web-basic/" style="font-size: 11.67px;">web-basic</a>
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">17</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Bootstrap/">
+                        <span class="tag">Bootstrap</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/ESMAScript/">
+                        <span class="tag">ESMAScript</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Error/">
+                        <span class="tag">Error</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/HTML-CSS/">
+                        <span class="tag">HTML-CSS</span>
+                        <span class="tag is-grey">11</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JQuery/">
+                        <span class="tag">JQuery</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Javascript/">
+                        <span class="tag">Javascript</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/TIL/">
+                        <span class="tag">TIL</span>
+                        <span class="tag is-grey">10</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/TypeError/">
+                        <span class="tag">TypeError</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/call-by-reference/">
+                        <span class="tag">call by reference</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/call-by-value/">
+                        <span class="tag">call by value</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/codility/">
+                        <span class="tag">codility</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/coding/">
+                        <span class="tag">coding</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/homework/">
+                        <span class="tag">homework</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/project/">
+                        <span class="tag">project</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/sort/">
+                        <span class="tag">sort</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/study/">
+                        <span class="tag">study</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/web-basic/">
+                        <span class="tag">web-basic</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <figure class="image container is-128x128 has-mb-6">
+                            <img class="is-rounded" src="https://www.gravatar.com/avatar/325ac1437725797718e2928411a69178?s=128" alt="DEUL">
+                        </figure>
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        DEUL
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        DEUL | BLOG
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Seoul</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        포스트
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        26
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        카테고리
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        9
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        태그
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        17
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="http://github.com/hicucu" target="_blank" rel="external nofollow noopener noreferrer">
+                팔로우</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/hicucu" rel="external nofollow noopener noreferrer">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/feed.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            링크
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank" rel="external nofollow noopener noreferrer">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Study/">
+            <span class="level-start">
+                <span class="level-item">Study</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">8</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Study/Front-end/">
+            <span class="level-start">
+                <span class="level-item">Front-end</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Study/HTML-CSS/">
+            <span class="level-start">
+                <span class="level-item">HTML-CSS</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Study/programming/">
+            <span class="level-start">
+                <span class="level-item">programming</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/codility/">
+            <span class="level-start">
+                <span class="level-item">codility</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/fast-campus/">
+            <span class="level-start">
+                <span class="level-item">fast campus</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">17</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/fast-campus/HTML-CSS/">
+            <span class="level-start">
+                <span class="level-item">HTML-CSS</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">10</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/fast-campus/Javascript/">
+            <span class="level-start">
+                <span class="level-item">Javascript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/fast-campus/web-basic/">
+            <span class="level-start">
+                <span class="level-item">web-basic</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            태그 클라우드
+        </h3>
+        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 13.33px;">Javascript</a> <a href="/tags/TIL/" style="font-size: 18.33px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 13.33px;">codility</a> <a href="/tags/coding/" style="font-size: 15px;">coding</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 16.67px;">study</a> <a href="/tags/web-basic/" style="font-size: 11.67px;">web-basic</a>
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">17</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Bootstrap/">
+                        <span class="tag">Bootstrap</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/ESMAScript/">
+                        <span class="tag">ESMAScript</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Error/">
+                        <span class="tag">Error</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/HTML-CSS/">
+                        <span class="tag">HTML-CSS</span>
+                        <span class="tag is-grey">11</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JQuery/">
+                        <span class="tag">JQuery</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Javascript/">
+                        <span class="tag">Javascript</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/TIL/">
+                        <span class="tag">TIL</span>
+                        <span class="tag is-grey">10</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/TypeError/">
+                        <span class="tag">TypeError</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/call-by-reference/">
+                        <span class="tag">call by reference</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/call-by-value/">
+                        <span class="tag">call by value</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/codility/">
+                        <span class="tag">codility</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/coding/">
+                        <span class="tag">coding</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/homework/">
+                        <span class="tag">homework</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/project/">
+                        <span class="tag">project</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/sort/">
+                        <span class="tag">sort</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/study/">
+                        <span class="tag">study</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/web-basic/">
+                        <span class="tag">web-basic</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    DEUL
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 DEUL&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ko");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <link rel="stylesheet" href="/css/search.css">
+<div class="searchbox google-cse-search">
+    <div class="searchbox-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input" placeholder="Type something...">
+            <span class="searchbox-close searchbox-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        
+        <div class="searchbox-result-wrapper">
+            <gcse:searchresults-only></gcse:searchresults-only>
+        </div>
+        
+    </div>
+    
+    <script>
+        (function() {
+            var cx = '017960288971730342071:j_jjvjgevfs';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+    </script>
+    
+</div>
+<script>
+    (function (document, $) {
+        function debounce(func, wait, immediate) {
+            var timeout;
+            return function() {
+                var context = this, args = arguments;
+                var later = function() {
+                    timeout = null;
+                    if (!immediate) func.apply(context, args);
+                };
+                var callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+                if (callNow) func.apply(context, args);
+            };
+        };
+
+        $(document).on('click', '.navbar-main .search', function () {
+            $('.searchbox').toggleClass('show');
+        }).on('click', '.searchbox .searchbox-mask', function () {
+            $('.searchbox').removeClass('show');
+        }).on('click', '.searchbox-close', function () {
+            $('.searchbox').removeClass('show');
+        }).on('keydown', '.searchbox-input', debounce(function () {
+            var value = $(this).val();
+            try {
+                var element = google.search.cse.element.getElement('searchresults-only0');
+                if (value.trim() === '') {
+                    element.clearAllResults();
+                } else {
+                    element.execute(value);
+                }
+            } catch (e) {}
+        }, 300));
+    })(document, jQuery);
+</script>
+    
+</body>
+</html>
