@@ -8,6 +8,13 @@
     </url>
     
     <url>
+        <loc>https://hicucu.github.io/Javascript/Primitive-type-vs-Object-type.html</loc>
+        <lastmod>2019-06-03T04:19:42.376Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://hicucu.github.io/Javascript/environment.html</loc>
         <lastmod>2019-06-03T01:37:52.657Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -24,13 +31,6 @@
     <url>
         <loc>https://hicucu.github.io/Javascript/Scope-Lexical-Scope.html</loc>
         <lastmod>2019-06-02T18:00:12.435Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://hicucu.github.io/Javascript/Primitive-type-vs-Object-type.html</loc>
-        <lastmod>2019-06-02T18:00:10.368Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
