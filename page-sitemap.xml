@@ -8,6 +8,13 @@
     </url>
     
     <url>
+        <loc>https://hicucu.github.io/Javascript/environment.html</loc>
+        <lastmod>2019-06-03T01:37:52.657Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://hicucu.github.io/Javascript/Constructor-Function.html</loc>
         <lastmod>2019-06-02T18:00:21.737Z</lastmod>
         <changefreq>weekly</changefreq>
