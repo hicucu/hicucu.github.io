@@ -32,7 +32,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Nanum+Gothic|Ubuntu:400,600|Source+Code+Pro">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/darcula.css">
 
 
     
@@ -147,6 +147,58 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-19T09:48:18.000Z">2019-04-19</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Study/">Study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/codility/">codility</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3분 read (About 464 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/04/19/codility-2-2-CyclicRotation/">codility Lesson2 CyclicRotation</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="CyclicRotation"><a href="#CyclicRotation" class="headerlink" title="CyclicRotation"></a>CyclicRotation</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">An array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one index, and the last element of the array is moved to the first place. For example, the rotation of array A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7] (elements are shifted right by one index and 6 is moved to the first place).</span><br><span class="line"></span><br><span class="line">The goal is to rotate array A K times; that is, each element of A will be shifted to the right K times.</span><br><span class="line"></span><br><span class="line">Write a function:</span><br><span class="line"></span><br><span class="line">    def solution(A, K)</span><br><span class="line"></span><br><span class="line">that, given an array A consisting of N integers and an integer K, returns the array A rotated K times.</span><br><span class="line"></span><br><span class="line">For example, given</span><br><span class="line">    A = [3, 8, 9, 7, 6]</span><br><span class="line">    K = 3</span><br><span class="line"></span><br><span class="line">the function should return [9, 7, 6, 3, 8]. Three rotations were made:</span><br><span class="line">    [3, 8, 9, 7, 6] -[6, 3, 8, 9, 7]</span><br><span class="line">    [6, 3, 8, 9, 7] -[7, 6, 3, 8, 9]</span><br><span class="line">    [7, 6, 3, 8, 9] -[9, 7, 6, 3, 8]</span><br><span class="line"></span><br><span class="line">For another example, given</span><br><span class="line">    A = [0, 0, 0]</span><br><span class="line">    K = 1</span><br><span class="line"></span><br><span class="line">the function should return [0, 0, 0]</span><br><span class="line"></span><br><span class="line">Given</span><br><span class="line">    A = [1, 2, 3, 4]</span><br><span class="line">    K = 4</span><br><span class="line"></span><br><span class="line">the function should return [1, 2, 3, 4]</span><br><span class="line"></span><br><span class="line">Assume that:</span><br><span class="line"></span><br><span class="line">        N and K are integers within the range [0..100];</span><br><span class="line">        each element of array A is an integer within the range [−1,000..1,000].</span><br><span class="line"></span><br><span class="line">In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.</span><br><span class="line">Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/04/19/codility-2-2-CyclicRotation/#more">자세히 보기</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
     <div class="card">
     
     <div class="card-content article ">
@@ -646,77 +698,6 @@ section.term
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-05T06:51:20.000Z">2019-04-05</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/fast-campus/HTML-CSS/">HTML-CSS</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1분 read (About 191 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/05/fc-190405/">2019-04-05 TIL</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="form"><a href="#form" class="headerlink" title="form"></a>form</h1><p>상호작용<br>필수 요소로 action을 가짐(주소)</p>
-<h2 id="fieldset-연관성-있는-서식의-묶음"><a href="#fieldset-연관성-있는-서식의-묶음" class="headerlink" title="fieldset : 연관성 있는 서식의 묶음"></a>fieldset : 연관성 있는 서식의 묶음</h2><blockquote>
-<p>legend : fieldset의 목적</p>
-</blockquote>
-<hr>
-<h2 id="label-입력서식에-대한-표시-모든-입력서식은-label을-가져야-함"><a href="#label-입력서식에-대한-표시-모든-입력서식은-label을-가져야-함" class="headerlink" title="label : 입력서식에 대한 표시, 모든 입력서식은 label을 가져야 함"></a>label : 입력서식에 대한 표시, 모든 입력서식은 label을 가져야 함</h2><blockquote>
-<p>암묵적 label : label 안에 input을 넣는 방법<br>명시적 label ; label에 for를 이용하여 input의 id를 입력</p>
-</blockquote>
-<hr>
-<h2 id="required"><a href="#required" class="headerlink" title="required"></a>required</h2><blockquote>
-<p>논리속성<br>submit의 action으로 데이터 전송 전 browser에서 필수값을 확인</p>
-</blockquote>
-<hr>
-<h2 id="placeholder"><a href="#placeholder" class="headerlink" title="placeholder"></a>placeholder</h2><blockquote>
-<p>안에 들어올 값 이나 값의 힌트를 미리 입력 / label과 동일하게 많이 사용하나 다름</p>
-</blockquote>
-<hr>
-<h2 id="inputtype"><a href="#inputtype" class="headerlink" title="inputtype"></a>inputtype</h2><blockquote>
-<p><a href="https://seulbinim.github.io/WSA/form.html#input-%EC%9A%94%EC%86%8C" rel="external nofollow noopener noreferrer" target="_blank">https://seulbinim.github.io/WSA/form.html#input-%EC%9A%94%EC%86%8C</a><br><a href="https://miketaylr.com/pres/html5/forms2.html" rel="external nofollow noopener noreferrer" target="_blank">https://miketaylr.com/pres/html5/forms2.html</a></p>
-</blockquote>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/05/fc-190405/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -754,6 +735,19 @@ section.term
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T05:04:33.000Z">2019-06-07</time></div>
+                    <a href="/2019/06/07/putty로-aws-ec2-접속하기/" class="has-link-black-ter is-size-6">PuTTY로 aws ec2로 만든 리눅스 환경 접속하기</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -807,19 +801,6 @@ section.term
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-05T06:25:31.000Z">2019-05-05</time></div>
-                    <a href="/2019/05/05/codility-3-1-TapeEquilibrium/" class="has-link-black-ter is-size-6">codility Lesson3 TapeEquilibrium</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Study/">Study</a> / <a class="has-link-grey -link" href="/categories/codility/">codility</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -864,7 +845,7 @@ section.term
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        26
+                        27
                     </p>
                 </div>
             </div>
@@ -1053,7 +1034,7 @@ section.term
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1374,7 +1355,7 @@ section.term
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        26
+                        27
                     </p>
                 </div>
             </div>
@@ -1563,7 +1544,7 @@ section.term
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
