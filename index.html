@@ -153,6 +153,58 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-07T09:15:29.000Z">2019-06-07</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/aws/">aws</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    몇 초 read (About 70 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/07/ec2에-npm-설치/">ec2에 npm 설치</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="yum-update"><a href="#yum-update" class="headerlink" title="yum update"></a>yum update</h1><p>일단 yum을 update<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum update</span><br></pre></td></tr></table></figure></p>
+<h1 id="nvm-설치"><a href="#nvm-설치" class="headerlink" title="nvm 설치"></a>nvm 설치</h1><blockquote>
+<p><a href="https://docs.aws.amazon.com/ko_kr/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html" rel="external nofollow noopener noreferrer" target="_blank">https://docs.aws.amazon.com/ko_kr/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html</a></p>
+</blockquote>
+<p>aws문서를 참고하여 설치</p>
+<p><img src="https://user-images.githubusercontent.com/48123604/59095062-8b5d9380-8952-11e9-8db0-f649855b500f.png" alt="image"></p>
+<p>#node 새 버전 설치<br>nvm install v10.15.3 설치</p>
+<p>끝~!</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-07T05:04:33.000Z">2019-06-07</time>
                 
                 <div class="level-item">
@@ -635,64 +687,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-22T14:42:14.000Z">2019-04-22</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Study/">Study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Study/programming/">programming</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2분 read (About 257 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/22/call-by-Value-call-by-Reference/">call_by_Value, call_by_Reference</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="Call-by-Value-와-Call-by-Reference"><a href="#Call-by-Value-와-Call-by-Reference" class="headerlink" title="Call by Value 와 Call by Reference"></a>Call by Value 와 Call by Reference</h1><h2 id="Call-by-Value"><a href="#Call-by-Value" class="headerlink" title="Call by Value"></a>Call by Value</h2><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">change_value</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">	x = val;</span><br><span class="line">	<span class="hljs-built_in">printf</span>(<span class="hljs-string">"x : %d in change_value \n"</span>, x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="hljs-keyword">int</span> x = <span class="hljs-number">10</span>;</span><br><span class="line">	change_value(x, <span class="hljs-number">20</span>);</span><br><span class="line">	<span class="hljs-built_in">printf</span>(<span class="hljs-string">"x : %d in main \n"</span>, x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>위 소스는 main에서 선언된 변수 x에 값 10을 주고 변수 x와 정수 val 매개변수로 하여 change_value를 호출한 후 change_value에서 x의 값을 val로 변경하는 소스이다.</p>
-<p><img src="https://user-images.githubusercontent.com/48123604/56506442-7622d600-6559-11e9-9741-97a8cd044c0c.png" alt="image"></p>
-<p>실행을 하면 change_value에서 x의 값은 20으로 변경되었지만 main에서는 여전히 10이다.</p>
-<p>이는 main에서 넘긴 x는 x의 값 10을 의미하기 때문에 이것을 바꾸어도 main의 x는 영향을 받지 않는다.</p>
-<p>그래서 Call by Value이다.</p>
-<hr>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/22/call-by-Value-call-by-Reference/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -730,6 +724,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T09:15:29.000Z">2019-06-07</time></div>
+                    <a href="/2019/06/07/ec2에-npm-설치/" class="has-link-black-ter is-size-6">ec2에 npm 설치</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/aws/">aws</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -783,19 +790,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-06T08:37:44.000Z">2019-05-06</time></div>
-                    <a href="/2019/05/06/codility-3-2-FrogJmp/" class="has-link-black-ter is-size-6">codility-3-2-FrogJmp</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Study/">Study</a> / <a class="has-link-grey -link" href="/categories/codility/">codility</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -840,7 +834,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        27
+                        28
                     </p>
                 </div>
             </div>
@@ -964,7 +958,7 @@
                 <span class="level-item">aws</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/codility/">
@@ -1018,7 +1012,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.33px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/aws/" style="font-size: 10px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 13.33px;">codility</a> <a href="/tags/coding/" style="font-size: 15px;">coding</a> <a href="/tags/ec2/" style="font-size: 10px;">ec2</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 10px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 16.67px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.67px;">web-basic</a>
+        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.33px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/aws/" style="font-size: 11.67px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 13.33px;">codility</a> <a href="/tags/coding/" style="font-size: 15px;">coding</a> <a href="/tags/ec2/" style="font-size: 11.67px;">ec2</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 11.67px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 16.67px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.67px;">web-basic</a>
     </div>
 </div>
 
@@ -1037,7 +1031,7 @@
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -1231,7 +1225,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/aws/">
                         <span class="tag">aws</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1266,7 +1260,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/ec2/">
                         <span class="tag">ec2</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1287,7 +1281,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/putty/">
                         <span class="tag">putty</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1379,7 +1373,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        27
+                        28
                     </p>
                 </div>
             </div>
@@ -1503,7 +1497,7 @@
                 <span class="level-item">aws</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/codility/">
@@ -1557,7 +1551,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.33px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/aws/" style="font-size: 10px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 13.33px;">codility</a> <a href="/tags/coding/" style="font-size: 15px;">coding</a> <a href="/tags/ec2/" style="font-size: 10px;">ec2</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 10px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 16.67px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.67px;">web-basic</a>
+        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.33px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/aws/" style="font-size: 11.67px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 13.33px;">codility</a> <a href="/tags/coding/" style="font-size: 15px;">coding</a> <a href="/tags/ec2/" style="font-size: 11.67px;">ec2</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 11.67px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 16.67px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.67px;">web-basic</a>
     </div>
 </div>
 
@@ -1576,7 +1570,7 @@
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -1770,7 +1764,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/aws/">
                         <span class="tag">aws</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1805,7 +1799,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/ec2/">
                         <span class="tag">ec2</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1826,7 +1820,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/putty/">
                         <span class="tag">putty</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 

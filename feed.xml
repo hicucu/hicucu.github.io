@@ -8,8 +8,27 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 07 Jun 2019 09:07:45 GMT</pubDate>
+    <pubDate>Fri, 07 Jun 2019 11:17:51 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>ec2에 npm 설치</title>
+      <link>https://hicucu.github.io/2019/06/07/ec2%EC%97%90-npm-%EC%84%A4%EC%B9%98/</link>
+      <guid>https://hicucu.github.io/2019/06/07/ec2%EC%97%90-npm-%EC%84%A4%EC%B9%98/</guid>
+      <pubDate>Fri, 07 Jun 2019 09:15:29 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;yum-update&quot;&gt;&lt;a href=&quot;#yum-update&quot; class=&quot;headerlink&quot; title=&quot;yum update&quot;&gt;&lt;/a&gt;yum update&lt;/h1&gt;&lt;p&gt;일단 yum을 update&lt;br&gt;&lt;figure class=&quot;highl
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="yum-update"><a href="#yum-update" class="headerlink" title="yum update"></a>yum update</h1><p>일단 yum을 update<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum update</span><br></pre></td></tr></table></figure></p><h1 id="nvm-설치"><a href="#nvm-설치" class="headerlink" title="nvm 설치"></a>nvm 설치</h1><blockquote><p><a href="https://docs.aws.amazon.com/ko_kr/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html" rel="external nofollow noopener noreferrer" target="_blank">https://docs.aws.amazon.com/ko_kr/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html</a></p></blockquote><p>aws문서를 참고하여 설치</p><p><img src="https://user-images.githubusercontent.com/48123604/59095062-8b5d9380-8952-11e9-8db0-f649855b500f.png" alt="image"></p><p>#node 새 버전 설치<br>nvm install v10.15.3 설치</p><p>끝~!</p>]]></content:encoded>
+      
+      <comments>https://hicucu.github.io/2019/06/07/ec2%EC%97%90-npm-%EC%84%A4%EC%B9%98/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>PuTTY로 aws ec2로 만든 리눅스 환경 접속하기</title>
