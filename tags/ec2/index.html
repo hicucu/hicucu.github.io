@@ -2,9 +2,9 @@
 <html lang="ko">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>태그: HTML-CSS - DEUL</title>
+<title>태그: ec2 - DEUL</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="canonical" href="https://hicucu.github.io/tags/html-css/">
+<link rel="canonical" href="https://hicucu.github.io/tags/ec2/">
 <meta name="naver-site-verification" content="0f9748f2860e30674d25e55346b2d59eec0fc6a2">
 
 
@@ -12,7 +12,7 @@
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="DEUL">
-<meta property="og:url" content="https://hicucu.github.io/tags/HTML-CSS/index.html">
+<meta property="og:url" content="https://hicucu.github.io/tags/ec2/index.html">
 <meta property="og:site_name" content="DEUL">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://hicucu.github.io/images/og_image.png">
@@ -151,7 +151,7 @@
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
             <li><a href="/tags">태그</a></li>
-            <li class="is-active"><a href="#" aria-current="page">HTML-CSS</a></li>
+            <li class="is-active"><a href="#" aria-current="page">ec2</a></li>
         </ul>
         </nav>
     </div>
@@ -163,17 +163,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-18T12:00:49.000Z">2019-04-18</time>
+                <time class="level-item has-text-grey" datetime="2019-06-07T05:04:33.000Z">2019-06-07</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Study/">Study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Study/HTML-CSS/">HTML-CSS</a>
+                <a class="has-link-grey -link" href="/categories/aws/">aws</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3분 read (About 410 words)
+                    4분 read (About 623 words)
                 </span>
                 
                 
@@ -182,25 +182,40 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/04/18/box-sizing/">box-sizing</a>
+                <a class="has-link-black-ter" href="/2019/06/07/putty로-aws-ec2-접속하기/">PuTTY로 aws ec2로 만든 리눅스 환경 접속하기</a>
             
         </h1>
         <div class="content">
-            <h1 id="box-sizing과-box-model"><a href="#box-sizing과-box-model" class="headerlink" title="box-sizing과 box model"></a>box-sizing과 box model</h1><h2 id="box의-크기를-어떤-기준으로-계산-할-것인가"><a href="#box의-크기를-어떤-기준으로-계산-할-것인가" class="headerlink" title="box의 크기를 어떤 기준으로 계산 할 것인가?"></a>box의 크기를 어떤 기준으로 계산 할 것인가?</h2><p> HTML은 Box로 이루어져 있으며 문서의 레이아웃을 계산 할 때 박스 모델에 따라 박스의 사이즈가 달라지게 됨</p>
-<hr>
-<h2 id="box의-크기는-어떤-요소들로-이루어-지는가"><a href="#box의-크기는-어떤-요소들로-이루어-지는가" class="headerlink" title="box의 크기는 어떤 요소들로 이루어 지는가?"></a>box의 크기는 어떤 요소들로 이루어 지는가?</h2><p> box의 크기에 영향을 주는 요소는 box의 width, height, border, padding, margin이 됨</p>
-<hr>
-<h2 id="각-요소의-값이-동일-할-때-box의-크기는-달라지는가"><a href="#각-요소의-값이-동일-할-때-box의-크기는-달라지는가" class="headerlink" title="각 요소의 값이 동일 할 때 box의 크기는 달라지는가?"></a>각 요소의 값이 동일 할 때 box의 크기는 달라지는가?</h2><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"div content"</span>&gt;</span>content-box<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"div border"</span>&gt;</span>border-box<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+            <h1 id="ec2-만들기"><a href="#ec2-만들기" class="headerlink" title="ec2 만들기"></a>ec2 만들기</h1><p>aws의 ec2와 putty를 이용하여 리눅스에 개발공간을 만들고 연결하기<br><a href="https://aws.amazon.com/ko/" rel="external nofollow noopener noreferrer" target="_blank">aws</a>가입 필요.</p>
+<h2 id="인스턴스-생성"><a href="#인스턴스-생성" class="headerlink" title="인스턴스 생성"></a>인스턴스 생성</h2><p>가난한 저는 프리티어의 ec2를 생성하여 사용합니다.</p>
+<p>리눅스 초짜 리알못은 일단 아마존 리눅스를 사용하겠습니다.</p>
+<h3 id="1-우측-상단-내-계정-AWS-Management-Console을-클릭"><a href="#1-우측-상단-내-계정-AWS-Management-Console을-클릭" class="headerlink" title="1. 우측 상단 내 계정 - AWS Management Console을 클릭"></a>1. 우측 상단 <code>내 계정</code> - <code>AWS Management Console</code>을 클릭</h3><p>  <img src="https://user-images.githubusercontent.com/48123604/59082367-b8e41600-892d-11e9-990a-5d842464ef0f.png" alt="image"></p>
+<h3 id="2-솔루션-구축-EC2를-사용하여-클릭"><a href="#2-솔루션-구축-EC2를-사용하여-클릭" class="headerlink" title="2. 솔루션 구축 - EC2를 사용하여 클릭"></a>2. <code>솔루션 구축</code> - <code>EC2를 사용하여</code> 클릭</h3><p>  <img src="https://user-images.githubusercontent.com/48123604/59082820-c69a9b00-892f-11e9-8454-b631df90f9d3.png" alt="image"></p>
+<h3 id="3-단계-1-Amazon-Machine-Image-AMI-선택-Amazon-Linux-AMI-2018-03-0-HVM-SSD-Volume-Type-클릭"><a href="#3-단계-1-Amazon-Machine-Image-AMI-선택-Amazon-Linux-AMI-2018-03-0-HVM-SSD-Volume-Type-클릭" class="headerlink" title="3. 단계 1: Amazon Machine Image(AMI) 선택 - Amazon Linux AMI 2018.03.0 (HVM), SSD Volume Type 클릭"></a>3. <code>단계 1: Amazon Machine Image(AMI) 선택</code> - <code>Amazon Linux AMI 2018.03.0 (HVM), SSD Volume Type</code> 클릭</h3><p>  <img src="https://user-images.githubusercontent.com/48123604/59083446-622d0b00-8932-11e9-97ef-7aab7427f9b9.png" alt="image"></p>
+<h3 id="4-단계-2-인스턴스-유형-선택-기본-선택-상태에서-검토-및-시작-클릭"><a href="#4-단계-2-인스턴스-유형-선택-기본-선택-상태에서-검토-및-시작-클릭" class="headerlink" title="4. 단계 2: 인스턴스 유형 선택 - 기본 선택 상태에서 검토 및 시작 클릭"></a>4. <code>단계 2: 인스턴스 유형 선택</code> - 기본 선택 상태에서 <code>검토 및 시작</code> 클릭</h3><p>  <img src="https://user-images.githubusercontent.com/48123604/59084271-7cb4b380-8935-11e9-97f9-7d859f74e24b.png" alt="image"></p>
+<h3 id="5-단계-7-인스턴스-시작-검토-시작하기-클릭"><a href="#5-단계-7-인스턴스-시작-검토-시작하기-클릭" class="headerlink" title="5. 단계 7: 인스턴스 시작 검토 - 시작하기 클릭"></a>5. <code>단계 7: 인스턴스 시작 검토</code> - <code>시작하기</code> 클릭</h3><h3 id="6-키-페어-생성"><a href="#6-키-페어-생성" class="headerlink" title="6. 키 페어 생성"></a>6. 키 페어 생성</h3><p>새 키 페어 생성을 선택하고<br>키 페어 이름에서 키의 이름을 주고 <code>키 페어 다운로드</code>를 클릭하여 키 페어 다운</p>
+<p><img src="https://user-images.githubusercontent.com/48123604/59084677-10d34a80-8937-11e9-9222-e5244bbb86bc.png" alt="image"></p>
+<h2 id="인스턴스-정보-확인"><a href="#인스턴스-정보-확인" class="headerlink" title="인스턴스 정보 확인"></a>인스턴스 정보 확인</h2><p><code>인스턴스 상태</code>가 running이면 우리의 컴퓨터가 정상적으로 동작하고 있는 중 입니다.<br>우리는 <code>퍼블릭 DNS</code>를 이용하여 putty에서 접속을 할 겁니다.<br><code>IPv4 퍼블릭 IP</code>는 추후 서버를 구동해서 외부에서 접속을 할 떄 사용할 겁니다.<br>아마도…<br><img src="https://user-images.githubusercontent.com/48123604/59086866-010b3480-893e-11e9-9b25-6b297347a744.png" alt="image"></p>
+<h1 id="PuTTY로-접속하기"><a href="#PuTTY로-접속하기" class="headerlink" title="PuTTY로 접속하기"></a>PuTTY로 접속하기</h1><p><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" rel="external nofollow noopener noreferrer" target="_blank">PuTTy</a> 설치하기.</p>
+<h2 id="PuTTYgen"><a href="#PuTTYgen" class="headerlink" title="PuTTYgen"></a>PuTTYgen</h2><p><code>키 페어 다운로드</code>를 통해서 받은 파일을 ppk로 변경해야 함.</p>
+<ol>
+<li><p>PuTTygen을 실행하여 Load를 클릭<br><img src="https://user-images.githubusercontent.com/48123604/59087731-81cb3000-8940-11e9-976f-00de294be5ec.png" alt="image"></p>
+</li>
+<li><p>우측 파일 타입을 <code>All Files</code>를 선택하고 <code>키 페어 다운로드</code>에서 받은 파일 선택</p>
+</li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/48123604/59087751-8ee81f00-8940-11e9-902e-829726bfde4b.png" alt="image"></p>
+<ol start="3">
+<li>확인 창이 뜨면 누르고 <code>Save private key</code>를 클릭하여 <code>.ppk</code>파일 저장</li>
+</ol>
+<h2 id="연결"><a href="#연결" class="headerlink" title="연결"></a>연결</h2><p>PuTTY를 실행<br>ec2의 User Name은 ec2-user입니다.<br><code>Host Name</code>에 <code>user name@퍼블릭 DNS</code>을 입력합니다. </p>
+<p><img src="https://user-images.githubusercontent.com/48123604/59092182-e6d85300-894b-11e9-90e1-882f1e1007f3.png" alt="image"></p>
+<p>좌측 <code>Category</code> - <code>Connection</code> - <code>Auth</code> - <code>Private key file for authertication</code>에 위에서 만든 <code>.ppk</code>파일을 불러오고<br>Open!</p>
+<p><img src="https://user-images.githubusercontent.com/48123604/59091629-b17f3580-894a-11e9-8fe5-1cbdffd0e2e9.png" alt="image"></p>
+<p>끝~!</p>
+
         </div>
         
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/18/box-sizing/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
         
         
     </div>
@@ -213,546 +228,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-16T01:18:26.000Z">2019-04-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/fast-campus/HTML-CSS/">HTML-CSS</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    몇 초 read (About 41 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/16/fc-190416/">2019-04-16 TIL</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="picture"><a href="#picture" class="headerlink" title="picture"></a>picture</h1><p><code>&lt;picture&gt;</code> 내에 <code>&lt;img&gt;</code>를 사용하는 것은 필수</p>
-<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class="rwd-wrapper"&gt;</span><br><span class="line">    &lt;<span class="hljs-selector-tag">picture</span>&gt;</span><br><span class="line">        &lt;source srcset="images/image-1x.png 1x, images/image-2x.png 2x"       </span><br><span class="line">    &lt;/picture&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/16/fc-190416/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-15T03:26:11.000Z">2019-04-15</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/fast-campus/HTML-CSS/">HTML-CSS</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1분 read (About 145 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/15/fc-190415/">2019-04-15 TIL</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="footer"><a href="#footer" class="headerlink" title="footer"></a>footer</h1><h2 id="img"><a href="#img" class="headerlink" title="img"></a>img</h2><p><img src="https://user-images.githubusercontent.com/48123604/56102827-7e33b200-5f6a-11e9-8b80-1e12403bf194.png" alt="image"></p>
-<hr>
-<h2 id="마크업"><a href="#마크업" class="headerlink" title="마크업"></a>마크업</h2><p>내 마크업<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">div.footer-bg</span><br><span class="line">    footer.footer</span><br><span class="line">        a</span><br><span class="line">            img</span><br><span class="line">        </span><br><span class="line">        ul.footer-menu</span><br><span class="line">            li</span><br><span class="line">        div.copyright</span><br><span class="line">            p</span><br><span class="line">                a</span><br><span class="line">            p</span><br><span class="line">        div.badge</span><br><span class="line">            img.badge-html</span><br><span class="line">            img.badge-css</span><br></pre></td></tr></table></figure></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/15/fc-190415/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-12T02:59:10.000Z">2019-04-12</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/fast-campus/HTML-CSS/">HTML-CSS</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2분 read (About 225 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/12/fc-190412/">2019-04-12 TIL</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="인기-사이트"><a href="#인기-사이트" class="headerlink" title="인기 사이트"></a>인기 사이트</h1><p><img src="https://user-images.githubusercontent.com/48123604/56009298-4fbf9800-5d1a-11e9-9030-248e5e3ff541.png" alt="image"></p>
-<h2 id="마크업"><a href="#마크업" class="headerlink" title="마크업"></a>마크업</h2><p>내 마크업<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">section.favorite</span><br><span class="line">    h2.favorite-heading</span><br><span class="line">    ol.favorite-list</span><br><span class="line">        li</span><br><span class="line">            a</span><br><span class="line">            strong            </span><br><span class="line">    a.favorite-more</span><br></pre></td></tr></table></figure></p>
-<p>강사님 마크업<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">section.favorite</span><br><span class="line">    h2.favorite=heading</span><br><span class="line">    ol</span><br><span class="line">        li.no1</span><br><span class="line">            a</span><br><span class="line">            em.up, em.down, em.stop</span><br><span class="line">    favorite-more</span><br></pre></td></tr></table></figure></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/12/fc-190412/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-11T02:36:44.000Z">2019-04-11</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/fast-campus/HTML-CSS/">HTML-CSS</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5분 read (About 704 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/11/fc-190411/">2019-04-11 TIL</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="새소식"><a href="#새소식" class="headerlink" title="새소식"></a>새소식</h1><p><img src="https://user-images.githubusercontent.com/48123604/55924758-1ddd0180-5c46-11e9-8fdf-0d59d410b8b0.png" alt="image"></p>
-<h2 id="마크업"><a href="#마크업" class="headerlink" title="마크업"></a>마크업</h2><p>내 마크업<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">section.news</span><br><span class="line">    h2.news-header</span><br><span class="line">    a.news-link</span><br><span class="line">        article.news-item        </span><br><span class="line">            h3.news-item-subject</span><br><span class="line">            time</span><br><span class="line">            p.news-item-brief                </span><br><span class="line">                span</span><br><span class="line">                img                </span><br><span class="line">    a.news-more</span><br></pre></td></tr></table></figure></p>
-<p>강사님 마크업</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">section.news</span><br><span class="line">    h2.news-heading</span><br><span class="line">    article.news-item</span><br><span class="line">        h3.news-item-subject</span><br><span class="line">        time.news-item-date</span><br><span class="line">        p.news-item-brief</span><br><span class="line">        figure.news-item-thumbnail</span><br><span class="line">            img</span><br><span class="line">            figcaption</span><br><span class="line">    a.news-more</span><br></pre></td></tr></table></figure>
-<hr>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/11/fc-190411/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-09T06:53:35.000Z">2019-04-09</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/fast-campus/HTML-CSS/">HTML-CSS</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    몇 초 read (About 67 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/09/fc-190409/">2019-04-09 TIL</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="time"><a href="#time" class="headerlink" title="time"></a>time</h1><p>datetime 필요<br>time[datetime=”2019-04-09T11:18:27”]</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/09/fc-190409/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-08T06:52:52.000Z">2019-04-08</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/fast-campus/HTML-CSS/">HTML-CSS</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1분 read (About 125 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/08/fc-190408/">2019-04-08 TIL</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="시멘틱-마크업"><a href="#시멘틱-마크업" class="headerlink" title="시멘틱 마크업"></a>시멘틱 마크업</h1><pre><code>article.term
-    h2.term-head
-    div.term-body
-        h3.term-title
-        img.term-img        
-        span.term-content
-
-
-section.term
-    h2.section-heading{웹 관련 용어}
-    dl.term_list
-        div
-            dt.term-list-subject
-                a
-            dl.term-list-thumbnail
-                img
-            dd.term-list-brief
-                text
-</code></pre>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/08/fc-190408/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-05T06:51:20.000Z">2019-04-05</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/fast-campus/HTML-CSS/">HTML-CSS</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1분 read (About 191 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/05/fc-190405/">2019-04-05 TIL</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="form"><a href="#form" class="headerlink" title="form"></a>form</h1><p>상호작용<br>필수 요소로 action을 가짐(주소)</p>
-<h2 id="fieldset-연관성-있는-서식의-묶음"><a href="#fieldset-연관성-있는-서식의-묶음" class="headerlink" title="fieldset : 연관성 있는 서식의 묶음"></a>fieldset : 연관성 있는 서식의 묶음</h2><blockquote>
-<p>legend : fieldset의 목적</p>
-</blockquote>
-<hr>
-<h2 id="label-입력서식에-대한-표시-모든-입력서식은-label을-가져야-함"><a href="#label-입력서식에-대한-표시-모든-입력서식은-label을-가져야-함" class="headerlink" title="label : 입력서식에 대한 표시, 모든 입력서식은 label을 가져야 함"></a>label : 입력서식에 대한 표시, 모든 입력서식은 label을 가져야 함</h2><blockquote>
-<p>암묵적 label : label 안에 input을 넣는 방법<br>명시적 label ; label에 for를 이용하여 input의 id를 입력</p>
-</blockquote>
-<hr>
-<h2 id="required"><a href="#required" class="headerlink" title="required"></a>required</h2><blockquote>
-<p>논리속성<br>submit의 action으로 데이터 전송 전 browser에서 필수값을 확인</p>
-</blockquote>
-<hr>
-<h2 id="placeholder"><a href="#placeholder" class="headerlink" title="placeholder"></a>placeholder</h2><blockquote>
-<p>안에 들어올 값 이나 값의 힌트를 미리 입력 / label과 동일하게 많이 사용하나 다름</p>
-</blockquote>
-<hr>
-<h2 id="inputtype"><a href="#inputtype" class="headerlink" title="inputtype"></a>inputtype</h2><blockquote>
-<p><a href="https://seulbinim.github.io/WSA/form.html#input-%EC%9A%94%EC%86%8C" rel="external nofollow noopener noreferrer" target="_blank">https://seulbinim.github.io/WSA/form.html#input-%EC%9A%94%EC%86%8C</a><br><a href="https://miketaylr.com/pres/html5/forms2.html" rel="external nofollow noopener noreferrer" target="_blank">https://miketaylr.com/pres/html5/forms2.html</a></p>
-</blockquote>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/05/fc-190405/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-04T06:48:50.000Z">2019-04-04</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/fast-campus/HTML-CSS/">HTML-CSS</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4분 read (About 546 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/04/fc-190404/">2019-04-04 TIL</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="그라데이션"><a href="#그라데이션" class="headerlink" title="그라데이션"></a>그라데이션</h1><p>background-image: linear-gradient(red, green) : 위에서 아래, 레드에서 그린</p>
-<p>background-image: linear-gradient(to right, red, green)</p>
-<blockquote>
-<p><a href="https://webgradients.com/" rel="external nofollow noopener noreferrer" target="_blank">https://webgradients.com/</a><br><br><br><a href="https://leaverou.github.io/css3patterns/" rel="external nofollow noopener noreferrer" target="_blank">https://leaverou.github.io/css3patterns/</a> <br><br><a href="http://www.colorzilla.com/gradient-editor/" rel="external nofollow noopener noreferrer" target="_blank">http://www.colorzilla.com/gradient-editor/</a></p>
-</blockquote>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/04/fc-190404/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-02T21:00:00.000Z">2019-04-03</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/fast-campus/HTML-CSS/">HTML-CSS</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3분 read (About 432 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/03/fc-190402/">2019-04-02 TIL</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="css-중요도"><a href="#css-중요도" class="headerlink" title="css 중요도"></a>css 중요도</h1><p>상속<br>&lt;br겹침<br>&lt;br우선순위</p>
-<h1 id="HTML-중요도-box-model"><a href="#HTML-중요도-box-model" class="headerlink" title="HTML 중요도 = box model"></a>HTML 중요도 = box model</h1><p>position<br>float<br>display<br>block</p>
-<blockquote>
-<p>inline<br><br><br>brinline-block<br><br><br>flex<br><br><br>gird<br></p></blockquote>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/03/fc-190402/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-    
-<div class="card card-transparent">
-    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-        <div class="pagination-previous is-invisible is-hidden-mobile">
-            <a class="is-flex-grow has-text-black-ter" href="/tags/HTML-CSS/archives/0/">이전</a>
-        </div>
-        <div class="pagination-next">
-            <a class="is-flex-grow has-text-black-ter" href="/tags/HTML-CSS/archives/2/">다음</a>
-        </div>
-        <ul class="pagination-list is-hidden-mobile">
-            
-            <li><a class="pagination-link is-current" href="/tags/HTML-CSS/">1</a></li>
-            
-            <li><a class="pagination-link has-text-black-ter" href="/tags/HTML-CSS/archives/2/">2</a></li>
-            
-        </ul>
-    </nav>
-</div>
 </div>
                 
 
