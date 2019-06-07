@@ -10,19 +10,19 @@
 
 <meta name="robots" content="nofollow">
 
-    <meta name="description" content="ec2 만들기aws의 ec2와 putty를 이용하여 리눅스에 개발공간을 만들고 연결하기aws가입 필요. 인스턴스 생성가난한 저는 프리티어의 ec2를 생성하여 사용합니다. 리눅스 초짜 리알못은 일단 아마존 리눅스를 사용하겠습니다. 1. 우측 상단 내 계정 - AWS Management Console을 클릭   2. 솔루션 구축 - EC2를 사용하여 클릭">
+    <meta name="description" content="ec2 만들기aws의 ec2와 putty를 이용하여 리눅스에 개발공간을 만들고 연결하기aws가입 필요. 인스턴스 생성가난한 저는 프리티어의 ec2를 생성하여 사용합니다. 리눅스 초짜 리알못은 일단 아마존 리눅스를 사용하겠습니다. 1. 우측 상단 내 계정 - AWS Management Console을 클릭">
 <meta name="keywords" content="aws,ec2,putty">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PuTTY로 aws ec2로 만든 리눅스 환경 접속하기">
 <meta property="og:url" content="https://hicucu.github.io/2019/06/07/putty로-aws-ec2-접속하기/index.html">
 <meta property="og:site_name" content="DEUL">
-<meta property="og:description" content="ec2 만들기aws의 ec2와 putty를 이용하여 리눅스에 개발공간을 만들고 연결하기aws가입 필요. 인스턴스 생성가난한 저는 프리티어의 ec2를 생성하여 사용합니다. 리눅스 초짜 리알못은 일단 아마존 리눅스를 사용하겠습니다. 1. 우측 상단 내 계정 - AWS Management Console을 클릭   2. 솔루션 구축 - EC2를 사용하여 클릭">
+<meta property="og:description" content="ec2 만들기aws의 ec2와 putty를 이용하여 리눅스에 개발공간을 만들고 연결하기aws가입 필요. 인스턴스 생성가난한 저는 프리티어의 ec2를 생성하여 사용합니다. 리눅스 초짜 리알못은 일단 아마존 리눅스를 사용하겠습니다. 1. 우측 상단 내 계정 - AWS Management Console을 클릭">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://hicucu.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-07T09:03:41.380Z">
+<meta property="og:updated_time" content="2019-06-07T09:07:45.830Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PuTTY로 aws ec2로 만든 리눅스 환경 접속하기">
-<meta name="twitter:description" content="ec2 만들기aws의 ec2와 putty를 이용하여 리눅스에 개발공간을 만들고 연결하기aws가입 필요. 인스턴스 생성가난한 저는 프리티어의 ec2를 생성하여 사용합니다. 리눅스 초짜 리알못은 일단 아마존 리눅스를 사용하겠습니다. 1. 우측 상단 내 계정 - AWS Management Console을 클릭   2. 솔루션 구축 - EC2를 사용하여 클릭">
+<meta name="twitter:description" content="ec2 만들기aws의 ec2와 putty를 이용하여 리눅스에 개발공간을 만들고 연결하기aws가입 필요. 인스턴스 생성가난한 저는 프리티어의 ec2를 생성하여 사용합니다. 리눅스 초짜 리알못은 일단 아마존 리눅스를 사용하겠습니다. 1. 우측 상단 내 계정 - AWS Management Console을 클릭">
 <meta name="twitter:image" content="https://hicucu.github.io/images/og_image.png">
 
 
@@ -167,7 +167,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4분 read (About 623 words)
+                    4분 read (About 624 words)
                 </span>
                 
                 
@@ -184,6 +184,7 @@
 <h2 id="인스턴스-생성"><a href="#인스턴스-생성" class="headerlink" title="인스턴스 생성"></a>인스턴스 생성</h2><p>가난한 저는 프리티어의 ec2를 생성하여 사용합니다.</p>
 <p>리눅스 초짜 리알못은 일단 아마존 리눅스를 사용하겠습니다.</p>
 <h3 id="1-우측-상단-내-계정-AWS-Management-Console을-클릭"><a href="#1-우측-상단-내-계정-AWS-Management-Console을-클릭" class="headerlink" title="1. 우측 상단 내 계정 - AWS Management Console을 클릭"></a>1. 우측 상단 <code>내 계정</code> - <code>AWS Management Console</code>을 클릭</h3><p>  <img src="https://user-images.githubusercontent.com/48123604/59082367-b8e41600-892d-11e9-990a-5d842464ef0f.png" alt="image"></p>
+<a id="more"></a>
 <h3 id="2-솔루션-구축-EC2를-사용하여-클릭"><a href="#2-솔루션-구축-EC2를-사용하여-클릭" class="headerlink" title="2. 솔루션 구축 - EC2를 사용하여 클릭"></a>2. <code>솔루션 구축</code> - <code>EC2를 사용하여</code> 클릭</h3><p>  <img src="https://user-images.githubusercontent.com/48123604/59082820-c69a9b00-892f-11e9-8454-b631df90f9d3.png" alt="image"></p>
 <h3 id="3-단계-1-Amazon-Machine-Image-AMI-선택-Amazon-Linux-AMI-2018-03-0-HVM-SSD-Volume-Type-클릭"><a href="#3-단계-1-Amazon-Machine-Image-AMI-선택-Amazon-Linux-AMI-2018-03-0-HVM-SSD-Volume-Type-클릭" class="headerlink" title="3. 단계 1: Amazon Machine Image(AMI) 선택 - Amazon Linux AMI 2018.03.0 (HVM), SSD Volume Type 클릭"></a>3. <code>단계 1: Amazon Machine Image(AMI) 선택</code> - <code>Amazon Linux AMI 2018.03.0 (HVM), SSD Volume Type</code> 클릭</h3><p>  <img src="https://user-images.githubusercontent.com/48123604/59083446-622d0b00-8932-11e9-97ef-7aab7427f9b9.png" alt="image"></p>
 <h3 id="4-단계-2-인스턴스-유형-선택-기본-선택-상태에서-검토-및-시작-클릭"><a href="#4-단계-2-인스턴스-유형-선택-기본-선택-상태에서-검토-및-시작-클릭" class="headerlink" title="4. 단계 2: 인스턴스 유형 선택 - 기본 선택 상태에서 검토 및 시작 클릭"></a>4. <code>단계 2: 인스턴스 유형 선택</code> - 기본 선택 상태에서 <code>검토 및 시작</code> 클릭</h3><p>  <img src="https://user-images.githubusercontent.com/48123604/59084271-7cb4b380-8935-11e9-97f9-7d859f74e24b.png" alt="image"></p>
@@ -1523,7 +1524,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
 
-<a id="back-to-top" title="Kembali ke atas" href="javascript:;">
+<a id="back-to-top" title="Back to Top" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
