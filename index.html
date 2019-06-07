@@ -153,6 +153,82 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-07T16:20:41.000Z">2019-06-08</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/aws/">aws</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3분 read (About 491 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/08/express-helloworld-port/">express설치하고 helloworld 출력하기 feat 포트 열기</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="AWS-STUDY"><a href="#AWS-STUDY" class="headerlink" title="AWS STUDY"></a>AWS STUDY</h1><ol>
+<li><p><a href="../putty로-aws-ec2-접속하기/">PuTTY로 aws ec2로 만든 리눅스 환경 접속하기</a></p>
+</li>
+<li><p><a href="../ec2에-npm-설치/">ec2에-npm-설치</a></p>
+</li>
+<li><p><a href="../express-helloworld-port">express설치하고 helloworld 출력하기 feat 포트 열기</a></p>
+</li>
+</ol>
+<hr>
+<h1 id="express설치"><a href="#express설치" class="headerlink" title="express설치"></a>express설치</h1><p><a href="https://expressjs.com/ko/starter/installing.html" rel="external nofollow noopener noreferrer" target="_blank">메뉴얼</a>을 보고 express를 설치합시다.</p>
+<h2 id="1-폴더를-만들고-들어갑시다"><a href="#1-폴더를-만들고-들어갑시다" class="headerlink" title="1. 폴더를 만들고 들어갑시다."></a>1. 폴더를 만들고 들어갑시다.</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir myApp &amp;&amp; <span class="hljs-built_in">cd</span> myApp</span><br></pre></td></tr></table></figure>
+<h2 id="2-npm-init"><a href="#2-npm-init" class="headerlink" title="2. npm init"></a>2. npm init</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm init -y</span><br></pre></td></tr></table></figure>
+<p>-y를 붙여주면 지가 좀 알아서 해줍니다.</p>
+<p><img src="https://user-images.githubusercontent.com/48123604/59118831-29ba1b00-898c-11e9-9e85-f36f63844998.png" alt="image"></p>
+<h2 id="3-script를-수정"><a href="#3-script를-수정" class="headerlink" title="3. script를 수정"></a>3. script를 수정</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi package.json</span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/48123604/59119053-bf55aa80-898c-11e9-8cfb-cbb1aca8595f.png" alt="image"></p>
+<p>package.json을 열어서 <code>script</code>에 <code>test</code>를 지우고 <code>start</code>를 만들어 줍니다.</p>
+<h2 id="4-myApp-js"><a href="#4-myApp-js" class="headerlink" title="4. myApp.js"></a>4. myApp.js</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>);</span><br><span class="line"><span class="hljs-keyword">var</span> app = express();</span><br><span class="line"></span><br><span class="line">app.get(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="hljs-string">'Hello World!'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(<span class="hljs-number">3000</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Example app listening on port 3000!'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>myApp.js 파일을 만든 후 위 소스를 넣어줍니다.</p>
+<h2 id="5-실행"><a href="#5-실행" class="headerlink" title="5. 실행"></a>5. 실행</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/48123604/59119307-718d7200-898d-11e9-82a1-890af56e124e.png" alt="image"></p>
+<p>서버가 돌아갑니다.</p>
+<p>인스턴스를 만들 때 확인했던 <code>IPv4 퍼블릭 IP</code> 주소를 이용하여 접속해봅니다.<br>브라우저에서 <code>IPv4 퍼블릭 IP:3000</code>을 입력합니다.</p>
+<h2 id="6-안되네"><a href="#6-안되네" class="headerlink" title="6. 안되네?"></a>6. 안되네?</h2><p>페이지를 표시할 수 없습니다.</p>
+<p>난 안될 줄 알았어. 그냥 켠김에 해본거야. 진짜</p>
+<h2 id="7-port를-열자"><a href="#7-port를-열자" class="headerlink" title="7. port를 열자"></a>7. port를 열자</h2><p>인스턴스의 정보를 확인했던 화면으로 갑니다.<br><img src="https://user-images.githubusercontent.com/48123604/59119832-c8e01200-898e-11e9-92bc-32eb67fc359e.png" alt="image"></p>
+<p>아래 <code>보안 그룹</code>에서 <code>인바운드 규칙 보기</code>를 클릭하면 하나 밖에 없습니다.</p>
+<p>그 좌측을 클릭합니다.(이름은 다를 수 있음. 확인 안해 봄)</p>
+<p><code>인바운드</code> - <code>편집</code> 클릭</p>
+<p><img src="https://user-images.githubusercontent.com/48123604/59119959-24120480-898f-11e9-8487-ac57695bed27.png" alt="image"></p>
+<p><code>규칙 추가</code>를 클릭하고 <code>사용자 지정 TCP</code>를 선택하야 <code>myApp</code>에서 사용하는 포트 <code>3000</code>을 추가하고 저장합니다.</p>
+<h2 id="8-끝"><a href="#8-끝" class="headerlink" title="8. 끝"></a>8. 끝</h2><p>브라우저에서 새로고침해보면 Hello World!가 뽝</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-07T09:15:29.000Z">2019-06-07</time>
                 
                 <div class="level-item">
@@ -253,9 +329,10 @@
 <li><p><a href="../putty로-aws-ec2-접속하기/">PuTTY로 aws ec2로 만든 리눅스 환경 접속하기</a></p>
 </li>
 <li><p><a href="../ec2에-npm-설치/">ec2에-npm-설치</a></p>
-<h1 id="ec2-만들기"><a href="#ec2-만들기" class="headerlink" title="ec2 만들기"></a>ec2 만들기</h1><p>aws의 ec2와 putty를 이용하여 리눅스에 개발공간을 만들고 연결하기<br><a href="https://aws.amazon.com/ko/" rel="external nofollow noopener noreferrer" target="_blank">aws</a>가입 필요.</p>
 </li>
 </ol>
+<hr>
+<h1 id="ec2-만들기"><a href="#ec2-만들기" class="headerlink" title="ec2 만들기"></a>ec2 만들기</h1><p>aws의 ec2와 putty를 이용하여 리눅스에 개발공간을 만들고 연결하기<br><a href="https://aws.amazon.com/ko/" rel="external nofollow noopener noreferrer" target="_blank">aws</a>가입 필요.</p>
 <h2 id="인스턴스-생성"><a href="#인스턴스-생성" class="headerlink" title="인스턴스 생성"></a>인스턴스 생성</h2><p>가난한 저는 프리티어의 ec2를 생성하여 사용합니다.</p>
 <p>리눅스 초짜 리알못은 일단 아마존 리눅스를 사용하겠습니다.</p>
 <h3 id="1-우측-상단-내-계정-AWS-Management-Console을-클릭"><a href="#1-우측-상단-내-계정-AWS-Management-Console을-클릭" class="headerlink" title="1. 우측 상단 내 계정 - AWS Management Console을 클릭"></a>1. 우측 상단 <code>내 계정</code> - <code>AWS Management Console</code>을 클릭</h3><p>  <img src="https://user-images.githubusercontent.com/48123604/59082367-b8e41600-892d-11e9-990a-5d842464ef0f.png" alt="image"></p>
@@ -650,70 +727,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-29T12:12:50.000Z">2019-04-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/fast-campus/Javascript/">Javascript</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4분 read (About 633 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/29/Javascript-ES/">Javascript vs ECMAScript</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="Javascript-ECMAScript"><a href="#Javascript-ECMAScript" class="headerlink" title="Javascript = ECMAScript ?"></a>Javascript = ECMAScript ?</h1><p>최초의 Javascript는 넷스케이프의 웹 브라우저에서 정적 HTML페이지를 동적으로 표현하기 위하여 탄생하였다.</p>
-<p>그리고 마이크로소프트에서 이 Javascript의 파생 버전인 JScript를 만들었다.</p>
-<p>당시 웹브라우저 시장은 넷스케이프가 압도적이었으나 MS사가 Windows에 자신들의 웹브라우저를 끼워팔면서 점유율은 역전되었다.</p>
-<p>이 때 많은 웹브라우저 제조사들은 자사의 브라우저에서만 동작하는 기능을 경쟁적으로 만들면서 Javascript의 파편화가 극심해졌다.</p>
-<p>이런 각 벤더 사마다 다른 Javascript를 표준화하기 위하여 넷스케이프가 ECMA 인터내셔널에 표준화를 요청하였고 그렇게 탄생한 것이 ECMAScript이다.</p>
-<p>그러나 당시 막강한 점유율로 시장에서 압도적 우위에 있던 MS사의 미온한 참여로 당시 ECMAScript 버전은 많은 문제가 있었다.</p>
-<p>그 후 Google의 Chrome이 IE의 점유율을 끌어내리면서 ESMAScript5(ES5)가 제정되면서 표준화 문제가 어느정도 해결되기 시작하였다.</p>
-<p>이렇게 여러 밴드사가 공통으로 지원하는 Javascript의 Core를 ES = ESMAScript라고 한다.</p>
-<p>그 외에 각 벤더의 브라우저가 별도로 지원하는 Web API는 어전히 존재하고 있다.<br>즉,</p>
-<blockquote>
-<p>자바스크립트 = ES + Web API</p>
-</blockquote>
-<p>와 같다.<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/29/Javascript-ES/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -751,6 +764,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T16:20:41.000Z">2019-06-08</time></div>
+                    <a href="/2019/06/08/express-helloworld-port/" class="has-link-black-ter is-size-6">express설치하고 helloworld 출력하기 feat 포트 열기</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/aws/">aws</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -804,19 +830,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-08T16:29:23.000Z">2019-05-09</time></div>
-                    <a href="/2019/05/09/javascript-3/" class="has-link-black-ter is-size-6">javascript-3</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a> / <a class="has-link-grey -link" href="/categories/fast-campus/Javascript/">Javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -861,7 +874,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        28
+                        29
                     </p>
                 </div>
             </div>
@@ -881,7 +894,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        34
+                        35
                     </p>
                 </div>
             </div>
@@ -985,7 +998,7 @@
                 <span class="level-item">aws</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/codility/">
@@ -1039,7 +1052,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.33px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/aws/" style="font-size: 11.67px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 13.33px;">codility</a> <a href="/tags/coding/" style="font-size: 15px;">coding</a> <a href="/tags/ec2/" style="font-size: 11.67px;">ec2</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 11.67px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 16.67px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.67px;">web-basic</a>
+        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15.71px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/aws/" style="font-size: 12.86px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/ec2/" style="font-size: 12.86px;">ec2</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 12.86px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a>
     </div>
 </div>
 
@@ -1058,7 +1071,7 @@
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -1252,7 +1265,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/aws/">
                         <span class="tag">aws</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -1287,7 +1300,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/ec2/">
                         <span class="tag">ec2</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/express/">
+                        <span class="tag">express</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1308,7 +1328,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/putty/">
                         <span class="tag">putty</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -1400,7 +1420,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        28
+                        29
                     </p>
                 </div>
             </div>
@@ -1420,7 +1440,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        34
+                        35
                     </p>
                 </div>
             </div>
@@ -1524,7 +1544,7 @@
                 <span class="level-item">aws</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/codility/">
@@ -1578,7 +1598,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.33px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/aws/" style="font-size: 11.67px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 13.33px;">codility</a> <a href="/tags/coding/" style="font-size: 15px;">coding</a> <a href="/tags/ec2/" style="font-size: 11.67px;">ec2</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 11.67px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 16.67px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.67px;">web-basic</a>
+        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15.71px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/aws/" style="font-size: 12.86px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/ec2/" style="font-size: 12.86px;">ec2</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 12.86px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a>
     </div>
 </div>
 
@@ -1597,7 +1617,7 @@
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -1791,7 +1811,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/aws/">
                         <span class="tag">aws</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -1826,7 +1846,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/ec2/">
                         <span class="tag">ec2</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/express/">
+                        <span class="tag">express</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1847,7 +1874,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/putty/">
                         <span class="tag">putty</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -2015,7 +2042,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
 
-<a id="back-to-top" title="Kembali ke atas" href="javascript:;">
+<a id="back-to-top" title="Back to Top" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>

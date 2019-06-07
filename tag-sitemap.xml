@@ -3,22 +3,29 @@
 
 
     <url>
+        <loc>https://hicucu.github.io/tags/express/</loc>
+        <lastmod>2019-06-07T16:48:21.898Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://hicucu.github.io/tags/putty/</loc>
-        <lastmod>2019-06-07T15:34:51.757Z</lastmod>
+        <lastmod>2019-06-07T16:48:21.898Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/ec2/</loc>
-        <lastmod>2019-06-07T15:34:51.757Z</lastmod>
+        <lastmod>2019-06-07T16:48:21.898Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/aws/</loc>
-        <lastmod>2019-06-07T15:34:51.757Z</lastmod>
+        <lastmod>2019-06-07T16:48:21.898Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
