@@ -164,6 +164,77 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-09T08:19:08.000Z">2019-06-09</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/aws/">aws</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2분 read (About 250 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/09/aws-mongodb-install/">ec2 아마존 리눅스에 MonogoDB install</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="AWS-STUDY"><a href="#AWS-STUDY" class="headerlink" title="AWS STUDY"></a>AWS STUDY</h1><ol>
+<li><p><a href="https://hicucu.github.io/2019/06/07/aws-putty-ec2/">PuTTY로 aws ec2로 만든 리눅스 환경 접속하기</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/07/aws-ec2npm/">ec2에-npm-설치</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/08/aws-express-helloworld-port/">express설치하고 helloworld 출력하기 feat 포트 열기</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/09/aws-mongodb-install/">ec2 아마존 리눅스에 MonogoDB install</a></p>
+</li>
+</ol>
+<hr>
+<h1 id="MonogoDB-install"><a href="#MonogoDB-install" class="headerlink" title="MonogoDB install"></a>MonogoDB install</h1><p><a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/" rel="external nofollow noopener noreferrer" target="_blank">Install MongoDB Community Edition on Amazon Linux</a>을 참고하여 설치합시다.</p>
+<h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><h3 id="1-Configure-the-package-management-system-yum"><a href="#1-Configure-the-package-management-system-yum" class="headerlink" title="1. Configure the package management system (yum)."></a>1. Configure the package management system (yum).</h3><p>  vi로 <code>/etc/yum.repos.d/mongodb-org-4.0.repo</code>을 열어서 </p>
+  <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[mongodb-org-4.0]</span><br><span class="line">name=MongoDB Repository</span><br><span class="line">baseurl=https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/4.0/x86_64/</span><br><span class="line">gpgcheck=1</span><br><span class="line">enabled=1</span><br><span class="line">gpgkey=https://www.mongodb.org/static/pgp/server-4.0.asc</span><br></pre></td></tr></table></figure>
+<p>  을 넣어줍니다.</p>
+<p>  저장이 안된다면 <code>vi</code>를 열 때 <code>sudo</code>를 이용하면 됩니다.<br>  저는…</p>
+<h3 id="2-Install-the-MongoDB-packages"><a href="#2-Install-the-MongoDB-packages" class="headerlink" title="2. Install the MongoDB packages"></a>2. Install the MongoDB packages</h3>  <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ udo yum install -y mongodb-org</span><br></pre></td></tr></table></figure>
+<h3 id="3-실행확인"><a href="#3-실행확인" class="headerlink" title="3. 실행확인"></a>3. 실행확인</h3><ol start="2">
+<li><p>Install the MongoDB packages에서 <code>Complete!</code>가 나왔다면 성공입니다.</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service mongod start</span><br></pre></td></tr></table></figure>
+<p><code>ok</code>를 확인 할 수 있습니다.</p>
+</li>
+</ol>
+  <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo mongod</span><br></pre></td></tr></table></figure>
+<p>  mongodb의 shell을 실행할 수 있습니다.</p>
+  <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service mongod stop</span><br></pre></td></tr></table></figure>
+<p>  bay~</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-07T16:20:41.000Z">2019-06-08</time>
                 
                 <div class="level-item">
@@ -366,6 +437,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-09T08:19:08.000Z">2019-06-09</time></div>
+                    <a href="/2019/06/09/aws-mongodb-install/" class="has-link-black-ter is-size-6">ec2 아마존 리눅스에 MonogoDB install</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/aws/">aws</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T16:20:41.000Z">2019-06-08</time></div>
                     <a href="/2019/06/08/aws-express-helloworld-port/" class="has-link-black-ter is-size-6">express설치하고 helloworld 출력하기 feat 포트 열기</a>
                     <p class="is-size-7 is-uppercase">
@@ -407,19 +491,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-02T17:38:13.000Z">2019-06-03</time></div>
                     <a href="/2019/06/03/javascript-keyword/" class="has-link-black-ter is-size-6">Javascript</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a> / <a class="has-link-grey -link" href="/categories/fast-campus/Javascript/">Javascript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-20T04:39:22.000Z">2019-05-20</time></div>
-                    <a href="/2019/05/20/javascript-sort/" class="has-link-black-ter is-size-6">javascript-sort</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a> / <a class="has-link-grey -link" href="/categories/fast-campus/Javascript/">Javascript</a>
                     </p>
@@ -471,7 +542,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        29
+                        30
                     </p>
                 </div>
             </div>
@@ -595,7 +666,7 @@
                 <span class="level-item">aws</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/codility/">
@@ -668,7 +739,7 @@
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -862,7 +933,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/aws/">
                         <span class="tag">aws</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -897,7 +968,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/ec2/">
                         <span class="tag">ec2</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -925,7 +996,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/putty/">
                         <span class="tag">putty</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -1017,7 +1088,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        29
+                        30
                     </p>
                 </div>
             </div>
@@ -1141,7 +1212,7 @@
                 <span class="level-item">aws</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/codility/">
@@ -1214,7 +1285,7 @@
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1408,7 +1479,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/aws/">
                         <span class="tag">aws</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -1443,7 +1514,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/ec2/">
                         <span class="tag">ec2</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -1471,7 +1542,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/putty/">
                         <span class="tag">putty</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
