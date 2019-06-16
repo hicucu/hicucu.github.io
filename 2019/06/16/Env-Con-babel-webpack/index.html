@@ -2,7 +2,7 @@
 <html lang="ko">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Env-Con-babel-webpack - DEUL</title>
+<title>eslint, Babel, Webpack을 이용한 개발환경 구축 - DEUL</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="canonical" href="https://hicucu.github.io/2019/06/16/env-con-babel-webpack/">
 <meta name="naver-site-verification" content="0f9748f2860e30674d25e55346b2d59eec0fc6a2">
@@ -11,16 +11,17 @@
 <meta name="robots" content="nofollow">
 
     <meta name="description" content="개발 환경 구축vscode에서 eslint, bable, webpack을 설치하고 개발환경을 구출 폴더 생성 및 프로젝트 init12$ mkdir &amp;lt;project-name&amp;gt; &amp;amp;&amp;amp; cd &amp;lt;project-name&amp;gt;$ npm init -y -y를 입력하면 package name, version등의 질문없이 package.jso">
+<meta name="keywords" content="eslint,Babel,Webpack,VSCode,환경">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Env-Con-babel-webpack">
+<meta property="og:title" content="eslint, Babel, Webpack을 이용한 개발환경 구축">
 <meta property="og:url" content="https://hicucu.github.io/2019/06/16/Env-Con-babel-webpack/index.html">
 <meta property="og:site_name" content="DEUL">
 <meta property="og:description" content="개발 환경 구축vscode에서 eslint, bable, webpack을 설치하고 개발환경을 구출 폴더 생성 및 프로젝트 init12$ mkdir &amp;lt;project-name&amp;gt; &amp;amp;&amp;amp; cd &amp;lt;project-name&amp;gt;$ npm init -y -y를 입력하면 package name, version등의 질문없이 package.jso">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://hicucu.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-16T07:24:53.077Z">
+<meta property="og:updated_time" content="2019-06-16T07:27:35.042Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Env-Con-babel-webpack">
+<meta name="twitter:title" content="eslint, Babel, Webpack을 이용한 개발환경 구축">
 <meta name="twitter:description" content="개발 환경 구축vscode에서 eslint, bable, webpack을 설치하고 개발환경을 구출 폴더 생성 및 프로젝트 init12$ mkdir &amp;lt;project-name&amp;gt; &amp;amp;&amp;amp; cd &amp;lt;project-name&amp;gt;$ npm init -y -y를 입력하면 package name, version등의 질문없이 package.jso">
 <meta name="twitter:image" content="https://hicucu.github.io/images/og_image.png">
 
@@ -28,7 +29,7 @@
 
 
 
-<link rel="alternative" href="feed.xml" title="Env-Con-babel-webpack" type="application/atom+xml">
+<link rel="alternative" href="feed.xml" title="eslint, Babel, Webpack을 이용한 개발환경 구축" type="application/atom+xml">
 
 
 
@@ -158,6 +159,10 @@
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-16T05:44:57.000Z">2019-06-16</time>
                 
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/환경/">환경</a>
+                </div>
+                
                 
                 <span class="level-item has-text-grey">
                     
@@ -171,7 +176,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Env-Con-babel-webpack
+                eslint, Babel, Webpack을 이용한 개발환경 구축
             
         </h1>
         <div class="content">
@@ -220,6 +225,15 @@ Project/
 
         </div>
         
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Babel/">Babel</a>, <a class="has-link-grey -link" href="/tags/VSCode/">VSCode</a>, <a class="has-link-grey -link" href="/tags/Webpack/">Webpack</a>, <a class="has-link-grey -link" href="/tags/eslint/">eslint</a>, <a class="has-link-grey -link" href="/tags/환경/">환경</a>
+                </div>
+            </div>
+        </div>
+        
         
         
     </div>
@@ -266,9 +280,9 @@ Project/
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-16T05:44:57.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/Env-Con-babel-webpack/" class="has-link-black-ter is-size-6">Env-Con-babel-webpack</a>
+                    <a href="/2019/06/16/Env-Con-babel-webpack/" class="has-link-black-ter is-size-6">eslint, Babel, Webpack을 이용한 개발환경 구축</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/환경/">환경</a>
                     </p>
                 </div>
             </div>
@@ -380,7 +394,7 @@ Project/
                         카테고리
                     </p>
                     <p class="title has-text-weight-normal">
-                        10
+                        11
                     </p>
                 </div>
             </div>
@@ -390,7 +404,7 @@ Project/
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        36
+                        41
                     </p>
                 </div>
             </div>
@@ -536,7 +550,15 @@ Project/
             <span class="level-end">
                 <span class="level-item tag">2</span>
             </span>
-        </a></li></ul></li>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/환경/">
+            <span class="level-start">
+                <span class="level-item">환경</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
             </ul>
         </div>
     </div>
@@ -548,7 +570,7 @@ Project/
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15.71px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/aws/" style="font-size: 12.86px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/ec2/" style="font-size: 12.86px;">ec2</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 12.86px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a>
+        <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15.71px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/aws/" style="font-size: 12.86px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/ec2/" style="font-size: 12.86px;">ec2</a> <a href="/tags/eslint/" style="font-size: 10px;">eslint</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 12.86px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a> <a href="/tags/환경/" style="font-size: 10px;">환경</a>
     </div>
 </div>
 
@@ -617,6 +639,13 @@ Project/
                 태그
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Babel/">
+                        <span class="tag">Babel</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Bootstrap/">
@@ -759,6 +788,20 @@ Project/
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/VSCode/">
+                        <span class="tag">VSCode</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Webpack/">
+                        <span class="tag">Webpack</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/aws/">
                         <span class="tag">aws</span>
                         <span class="tag is-grey">4</span>
@@ -797,6 +840,13 @@ Project/
                     <a class="tags has-addons" href="/tags/ec2/">
                         <span class="tag">ec2</span>
                         <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/eslint/">
+                        <span class="tag">eslint</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -867,6 +917,13 @@ Project/
                     <a class="tags has-addons" href="/tags/web-basic/">
                         <span class="tag">web-basic</span>
                         <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/환경/">
+                        <span class="tag">환경</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -933,7 +990,7 @@ Project/
                         카테고리
                     </p>
                     <p class="title has-text-weight-normal">
-                        10
+                        11
                     </p>
                 </div>
             </div>
@@ -943,7 +1000,7 @@ Project/
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        36
+                        41
                     </p>
                 </div>
             </div>
@@ -1089,7 +1146,15 @@ Project/
             <span class="level-end">
                 <span class="level-item tag">2</span>
             </span>
-        </a></li></ul></li>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/환경/">
+            <span class="level-start">
+                <span class="level-item">환경</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
             </ul>
         </div>
     </div>
@@ -1101,7 +1166,7 @@ Project/
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15.71px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/aws/" style="font-size: 12.86px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/ec2/" style="font-size: 12.86px;">ec2</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 12.86px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a>
+        <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15.71px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/aws/" style="font-size: 12.86px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/ec2/" style="font-size: 12.86px;">ec2</a> <a href="/tags/eslint/" style="font-size: 10px;">eslint</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 12.86px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a> <a href="/tags/환경/" style="font-size: 10px;">환경</a>
     </div>
 </div>
 
@@ -1170,6 +1235,13 @@ Project/
                 태그
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Babel/">
+                        <span class="tag">Babel</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Bootstrap/">
@@ -1312,6 +1384,20 @@ Project/
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/VSCode/">
+                        <span class="tag">VSCode</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Webpack/">
+                        <span class="tag">Webpack</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/aws/">
                         <span class="tag">aws</span>
                         <span class="tag is-grey">4</span>
@@ -1350,6 +1436,13 @@ Project/
                     <a class="tags has-addons" href="/tags/ec2/">
                         <span class="tag">ec2</span>
                         <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/eslint/">
+                        <span class="tag">eslint</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1420,6 +1513,13 @@ Project/
                     <a class="tags has-addons" href="/tags/web-basic/">
                         <span class="tag">web-basic</span>
                         <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/환경/">
+                        <span class="tag">환경</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 

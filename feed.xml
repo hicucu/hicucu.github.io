@@ -8,11 +8,11 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 16 Jun 2019 07:24:53 GMT</pubDate>
+    <pubDate>Sun, 16 Jun 2019 07:27:35 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>Env-Con-babel-webpack</title>
+      <title>eslint, Babel, Webpack을 이용한 개발환경 구축</title>
       <link>https://hicucu.github.io/2019/06/16/Env-Con-babel-webpack/</link>
       <guid>https://hicucu.github.io/2019/06/16/Env-Con-babel-webpack/</guid>
       <pubDate>Sun, 16 Jun 2019 05:44:57 GMT</pubDate>
