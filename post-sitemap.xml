@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://hicucu.github.io/2019/06/16/Env-Con-babel-webpack/</loc>
+        <lastmod>2019-06-16T07:24:53.077Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://hicucu.github.io/2019/06/09/aws-mongodb-install/</loc>
         <lastmod>2019-06-11T02:20:46.722Z</lastmod>
         <changefreq>weekly</changefreq>
