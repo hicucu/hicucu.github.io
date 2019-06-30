@@ -31,7 +31,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Nanum+Gothic|Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans|Anonymous+Pro|Nanum+Gothic|Ubuntu:400,600|Source+Code+Pro">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/darcula.css">
 
 
@@ -147,6 +147,103 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-06T08:37:44.000Z">2019-05-06</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Study/">Study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/codility/">codility</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2분 read (About 317 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/05/06/codility-3-2-FrogJmp/">codility-3-2-FrogJmp</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="FrogJmp"><a href="#FrogJmp" class="headerlink" title="FrogJmp"></a>FrogJmp</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">A small frog wants to get to the other side of the road. The frog is currently located at position X and wants to get to a position greater than or equal to Y. The small frog always jumps a fixed distance, D.</span><br><span class="line"></span><br><span class="line">Count the minimal number of jumps that the small frog must perform to reach its target.</span><br><span class="line"></span><br><span class="line">Write a function:</span><br><span class="line"></span><br><span class="line">    function solution(X, Y, D);</span><br><span class="line"></span><br><span class="line">that, given three integers X, Y and D, returns the minimal number of jumps from position X to a position equal to or greater than Y.</span><br><span class="line"></span><br><span class="line">For example, given:</span><br><span class="line">  X = 10</span><br><span class="line">  Y = 85</span><br><span class="line">  D = 30</span><br><span class="line"></span><br><span class="line">the function should return 3, because the frog will be positioned as follows:</span><br><span class="line"></span><br><span class="line">        after the first jump, at position 10 + 30 = 40</span><br><span class="line">        after the second jump, at position 10 + 30 + 30 = 70</span><br><span class="line">        after the third jump, at position 10 + 30 + 30 + 30 = 100</span><br><span class="line"></span><br><span class="line">Write an efficient algorithm for the following assumptions:</span><br><span class="line"></span><br><span class="line">        X, Y and D are integers within the range [1..1,000,000,000];</span><br><span class="line">        X ≤ Y.</span><br><span class="line"></span><br><span class="line">Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.</span><br></pre></td></tr></table></figure>
+<h2 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h2><p>X : 시작 위치<br>Y : 도착 위치<br>D : 증가량</p>
+<p>X+nD &gt; Y의 n을 구하기<br>도착위치에서 시작위치를 뺀 후 증가량 D로 나누기<br>다른 언어의 경우 기본적으로 정수형 연산이기 때문에 나머지가 있으면 몫+1 이지만<br>javascript는 기본적으로 모든 숫자의 연산이 정수가 아닌 실수형이기 때문에 올림으로 계산하면 됨</p>
+<h2 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">X, Y, D</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// write your code in JavaScript (Node.js 8.9.4)</span></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.ceil((Y - X) / D);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h2><p><img src="https://user-images.githubusercontent.com/48123604/57214792-05ce8700-7026-11e9-911d-e4a9b4df4473.png" alt="image"></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-05T06:25:31.000Z">2019-05-05</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Study/">Study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/codility/">codility</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3분 read (About 395 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/05/05/codility-3-1-TapeEquilibrium/">codility Lesson3 TapeEquilibrium</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="TapeEquilibrium"><a href="#TapeEquilibrium" class="headerlink" title="TapeEquilibrium"></a>TapeEquilibrium</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">A non-empty array A consisting of N integers is given. Array A represents numbers on a tape.</span><br><span class="line"></span><br><span class="line">Any integer P, such that 0 &lt; P &lt; N, splits this tape into two non-empty parts: A[0], A[1], ..., A[P − 1] and A[P], A[P + 1], ..., A[N − 1].</span><br><span class="line"></span><br><span class="line">The difference between the two parts is the value of: |(A[0] + A[1] + ... + A[P − 1]) − (A[P] + A[P + 1] + ... + A[N − 1])|</span><br><span class="line"></span><br><span class="line">In other words, it is the absolute difference between the sum of the first part and the sum of the second part.</span><br><span class="line"></span><br><span class="line">For example, consider array A such that:</span><br><span class="line">  A[0] = 3</span><br><span class="line">  A[1] = 1</span><br><span class="line">  A[2] = 2</span><br><span class="line">  A[3] = 4</span><br><span class="line">  A[4] = 3</span><br><span class="line"></span><br><span class="line">We can split this tape in four places:</span><br><span class="line"></span><br><span class="line">        P = 1, difference = |3 − 10| = 7</span><br><span class="line">        P = 2, difference = |4 − 9| = 5</span><br><span class="line">        P = 3, difference = |6 − 7| = 1</span><br><span class="line">        P = 4, difference = |10 − 3| = 7</span><br><span class="line"></span><br><span class="line">Write a function:</span><br><span class="line"></span><br><span class="line">    function solution(A);</span><br><span class="line"></span><br><span class="line">that, given a non-empty array A of N integers, returns the minimal difference that can be achieved.</span><br><span class="line"></span><br><span class="line">For example, given:</span><br><span class="line">  A[0] = 3</span><br><span class="line">  A[1] = 1</span><br><span class="line">  A[2] = 2</span><br><span class="line">  A[3] = 4</span><br><span class="line">  A[4] = 3</span><br><span class="line"></span><br><span class="line">the function should return 1, as explained above.</span><br><span class="line"></span><br><span class="line">Write an efficient algorithm for the following assumptions:</span><br><span class="line"></span><br><span class="line">        N is an integer within the range [2..100,000];</span><br><span class="line">        each element of array A is an integer within the range [−1,000..1,000].</span><br><span class="line"></span><br><span class="line">Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.</span><br></pre></td></tr></table></figure>
+<h2 id="방법"><a href="#방법" class="headerlink" title="방법"></a>방법</h2><p>배열의 요소를 둘로 나누어 좌측 합과 우측합의 차를 절대값으로 계산하여 가장 작은 값을 찾는다.<br>좌측은 첫 요소부터 마지막요소를 제외한 나머지 요소의 합까지이며<br>우측은 첫 요소를 제외한 나머지의 합부터 마지막 요소까지<br>  A[0] = 3<br>  A[1] = 1<br>  A[2] = 2<br>  A[3] = 4<br>  A[4] = 3<br>일 때,<br>3+1+2+4+5 = 13 이며,<br>|3 - (1+2+4+3)| 부터 |(3+1+2+4)-3|까지 이므로<br>마지막 요소는 좌측의 합이 아니기 때문에 반복문은 A.length-1</p>
+<h2 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">A</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> getSum = <span class="hljs-function">(<span class="hljs-params">accumulator, currentValue</span>) =&gt;</span> accumulator + currentValue;</span><br><span class="line">  <span class="hljs-keyword">let</span> right = A.reduce(getSum);</span><br><span class="line">  <span class="hljs-keyword">let</span> left = <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-keyword">let</span> min = <span class="hljs-number">10001</span>;</span><br><span class="line">  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; A.length - <span class="hljs-number">1</span>; i++) &#123;</span><br><span class="line">    left += A[i];</span><br><span class="line">    right -= A[i];</span><br><span class="line"></span><br><span class="line">    min = <span class="hljs-built_in">Math</span>.min(<span class="hljs-built_in">Math</span>.abs(left - right), min);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> min;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h2><p><img src="https://user-images.githubusercontent.com/48123604/57189585-61781200-6f4b-11e9-96c5-1805183ed67f.png" alt="image"></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
     <div class="card">
     
     <div class="card-content article ">
@@ -588,113 +685,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-16T01:18:26.000Z">2019-04-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/fast-campus/HTML-CSS/">HTML-CSS</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    몇 초 read (About 41 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/16/fc-190416/">2019-04-16 TIL</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="picture"><a href="#picture" class="headerlink" title="picture"></a>picture</h1><p><code>&lt;picture&gt;</code> 내에 <code>&lt;img&gt;</code>를 사용하는 것은 필수</p>
-<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class="rwd-wrapper"&gt;</span><br><span class="line">    &lt;<span class="hljs-selector-tag">picture</span>&gt;</span><br><span class="line">        &lt;source srcset="images/image-1x.png 1x, images/image-2x.png 2x"       </span><br><span class="line">    &lt;/picture&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/16/fc-190416/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-15T03:26:11.000Z">2019-04-15</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/fast-campus/">fast campus</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/fast-campus/HTML-CSS/">HTML-CSS</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1분 read (About 145 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/15/fc-190415/">2019-04-15 TIL</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="footer"><a href="#footer" class="headerlink" title="footer"></a>footer</h1><h2 id="img"><a href="#img" class="headerlink" title="img"></a>img</h2><p><img src="https://user-images.githubusercontent.com/48123604/56102827-7e33b200-5f6a-11e9-8b80-1e12403bf194.png" alt="image"></p>
-<hr>
-<h2 id="마크업"><a href="#마크업" class="headerlink" title="마크업"></a>마크업</h2><p>내 마크업<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">div.footer-bg</span><br><span class="line">    footer.footer</span><br><span class="line">        a</span><br><span class="line">            img</span><br><span class="line">        </span><br><span class="line">        ul.footer-menu</span><br><span class="line">            li</span><br><span class="line">        div.copyright</span><br><span class="line">            p</span><br><span class="line">                a</span><br><span class="line">            p</span><br><span class="line">        div.badge</span><br><span class="line">            img.badge-html</span><br><span class="line">            img.badge-css</span><br></pre></td></tr></table></figure></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/15/fc-190415/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -739,6 +729,32 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-30T08:35:23.000Z">2019-06-30</time></div>
+                    <a href="/2019/06/30/aws-angular-todolist-2/" class="has-link-black-ter is-size-6">aws-angular-todolist-2</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-30T07:53:32.000Z">2019-06-30</time></div>
+                    <a href="/2019/06/30/aws-angular-todolist-1/" class="has-link-black-ter is-size-6">aws-angular-todolist-1</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-16T05:44:57.000Z">2019-06-16</time></div>
                     <a href="/2019/06/16/Env-Con-babel-webpack/" class="has-link-black-ter is-size-6">eslint, Babel, Webpack을 이용한 개발환경 구축</a>
                     <p class="is-size-7 is-uppercase">
@@ -767,32 +783,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T16:20:41.000Z">2019-06-08</time></div>
                     <a href="/2019/06/08/aws-express-helloworld-port/" class="has-link-black-ter is-size-6">express설치하고 helloworld 출력하기 feat 포트 열기</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/aws/">aws</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T09:15:29.000Z">2019-06-07</time></div>
-                    <a href="/2019/06/07/aws-ec2npm/" class="has-link-black-ter is-size-6">ec2에 npm 설치</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/aws/">aws</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T05:04:33.000Z">2019-06-07</time></div>
-                    <a href="/2019/06/07/aws-putty-ec2/" class="has-link-black-ter is-size-6">PuTTY로 aws ec2로 만든 리눅스 환경 접속하기</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/aws/">aws</a>
                     </p>
@@ -844,7 +834,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        31
+                        33
                     </p>
                 </div>
             </div>
@@ -1049,7 +1039,7 @@
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -1440,7 +1430,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        31
+                        33
                     </p>
                 </div>
             </div>
@@ -1645,7 +1635,7 @@
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
