@@ -164,6 +164,158 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-30T08:35:23.000Z">2019-06-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/aws/">aws</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3분 read (About 382 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/30/aws-angular-todolist-2/">aws-angular-todolist-2</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="AWS-STUDY"><a href="#AWS-STUDY" class="headerlink" title="AWS STUDY"></a>AWS STUDY</h1><ol>
+<li><p><a href="https://hicucu.github.io/2019/06/07/aws-putty-ec2/">PuTTY로 aws ec2로 만든 리눅스 환경 접속하기</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/07/aws-ec2npm/">ec2에-npm-설치</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/08/aws-express-helloworld-port/">express설치하고 helloworld 출력하기 feat 포트 열기</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/30/aws-angular-todolist-1/">AWS, Angular를 이용한 todo-list 만들기(1)</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/30/aws-angular-todolist-2/">AWS, Angular를 이용한 todo-list 만들기(2)</a></p>
+</li>
+</ol>
+<hr>
+<h1 id="AWS-Angular를-이용한-todo-list-만들기-2"><a href="#AWS-Angular를-이용한-todo-list-만들기-2" class="headerlink" title="AWS, Angular를 이용한 todo-list 만들기(2)"></a>AWS, Angular를 이용한 todo-list 만들기(2)</h1><h2 id="메서드-추가-생성"><a href="#메서드-추가-생성" class="headerlink" title="메서드 추가 생성"></a>메서드 추가 생성</h2><p>API Gateway에서 <code>/</code>선택 후 <code>작업</code>-<code>메서드 생성</code></p>
+<p><code>GET</code>선택 후 <code>myTodos</code> 함수 선택</p>
+<p><code>PATCH</code>와 <code>POST</code> 만들고 <code>myTodos</code> 선택</p>
+<p><img src="https://user-images.githubusercontent.com/48123604/60394461-b60cc780-9b5f-11e9-9415-76814f52eb1a.png" alt="image"></p>
+<h3 id="매칭-템플릿-생성"><a href="#매칭-템플릿-생성" class="headerlink" title="매칭 템플릿 생성"></a>매칭 템플릿 생성</h3><p><code>application/json</code>, <code>메소드 요청 패스스루</code>로 <code>GET</code>, <code>PATCH</code>, <code>POST</code>에 각각 추가</p>
+<h2 id="요청에-따라-다른-응답-만들기"><a href="#요청에-따라-다른-응답-만들기" class="headerlink" title="요청에 따라 다른 응답 만들기"></a>요청에 따라 다른 응답 만들기</h2><h3 id="요청-구분"><a href="#요청-구분" class="headerlink" title="요청 구분"></a>요청 구분</h3><p>path”: {<br>    “id”: “2”<br>  } 처럼 path에 id가 있으면 해당 id에 대한 요청</p>
+<p>path가 비어 있으면 todos에 대한 요청</p>
+<h3 id="Lambda-코드-수정"><a href="#Lambda-코드-수정" class="headerlink" title="Lambda 코드 수정"></a>Lambda 코드 수정</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> routeMap = &#123;</span><br><span class="line">  <span class="hljs-string">"/"</span>: &#123;</span><br><span class="line">    GET: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="hljs-keyword">const</span> result = <span class="hljs-string">"전체 todos"</span>;</span><br><span class="line">      <span class="hljs-keyword">return</span> result;</span><br><span class="line">    &#125;,</span><br><span class="line">    PATCH: <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="hljs-keyword">const</span> modifyALL = event[<span class="hljs-string">"body-json"</span>];</span><br><span class="line">      <span class="hljs-keyword">const</span> result = &#123; modifyALL &#125;;</span><br><span class="line">      <span class="hljs-keyword">return</span> result;</span><br><span class="line">    &#125;,</span><br><span class="line">    POST: <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="hljs-keyword">const</span> add = event[<span class="hljs-string">"body-json"</span>];</span><br><span class="line">      <span class="hljs-keyword">const</span> result = &#123; add &#125;;</span><br><span class="line">      <span class="hljs-keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="hljs-string">"/&#123;id&#125;"</span>: &#123;</span><br><span class="line">    PATCH: <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="hljs-keyword">const</span> modify = event[<span class="hljs-string">"body-json"</span>];</span><br><span class="line">      <span class="hljs-keyword">const</span> target = event.params.path.id;</span><br><span class="line">      <span class="hljs-keyword">const</span> result = &#123; target, modify &#125;;</span><br><span class="line">      <span class="hljs-keyword">return</span> result;</span><br><span class="line">    &#125;,</span><br><span class="line">    DELETE: <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="hljs-keyword">const</span> target = event.params.path.id;</span><br><span class="line">      <span class="hljs-keyword">const</span> result = &#123; target &#125;;</span><br><span class="line">      <span class="hljs-keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">router</span>(<span class="hljs-params">event</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> method =</span><br><span class="line">    routeMap[event.context[<span class="hljs-string">"resource-path"</span>]][event.context[<span class="hljs-string">"http-method"</span>]];</span><br><span class="line">  <span class="hljs-keyword">if</span> (method) <span class="hljs-keyword">return</span> method(event);</span><br><span class="line">  <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> &#123; <span class="hljs-attr">body</span>: &#123; <span class="hljs-attr">Error</span>: <span class="hljs-string">"Invalid Path"</span> &#125; &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">exports.handler = <span class="hljs-keyword">async</span> event =&gt; &#123;</span><br><span class="line">  <span class="hljs-comment">// TODO implement</span></span><br><span class="line">  <span class="hljs-comment">// const response = &#123;</span></span><br><span class="line">  <span class="hljs-comment">//     httpMethod : event.context["http-method"],</span></span><br><span class="line">  <span class="hljs-comment">//     resourcePath : event.context["resource-path"],</span></span><br><span class="line">  <span class="hljs-comment">//     path : event.params.path,</span></span><br><span class="line">  <span class="hljs-comment">//     body : event["body-json"]</span></span><br><span class="line">  <span class="hljs-comment">// &#125;;</span></span><br><span class="line">  <span class="hljs-keyword">const</span> response = router(event);</span><br><span class="line">  <span class="hljs-keyword">return</span> response;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>각 메서드에 따른 실제 DB구현은 다음에</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-30T07:53:32.000Z">2019-06-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/aws/">aws</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 read (About 553 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/30/aws-angular-todolist-1/">aws-angular-todolist-1</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="AWS-STUDY"><a href="#AWS-STUDY" class="headerlink" title="AWS STUDY"></a>AWS STUDY</h1><ol>
+<li><p><a href="https://hicucu.github.io/2019/06/07/aws-putty-ec2/">PuTTY로 aws ec2로 만든 리눅스 환경 접속하기</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/07/aws-ec2npm/">ec2에-npm-설치</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/08/aws-express-helloworld-port/">express설치하고 helloworld 출력하기 feat 포트 열기</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/30/aws-angular-todolist-1/">AWS, Angular를 이용한 todo-list 만들기(1)</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/30/aws-angular-todolist-2/">AWS, Angular를 이용한 todo-list 만들기(2)</a></p>
+</li>
+</ol>
+<hr>
+<h1 id="AWS-Angular를-이용한-todo-list-만들기-1"><a href="#AWS-Angular를-이용한-todo-list-만들기-1" class="headerlink" title="AWS, Angular를 이용한 todo-list 만들기(1)"></a>AWS, Angular를 이용한 todo-list 만들기(1)</h1><h2 id="AWS"><a href="#AWS" class="headerlink" title="AWS"></a>AWS</h2><p>API Gateway, Lambda, DynamoDB를 이용한 Server less 구축</p>
+<h2 id="API-Gateway-만들기"><a href="#API-Gateway-만들기" class="headerlink" title="API Gateway 만들기"></a>API Gateway 만들기</h2><h3 id="구성"><a href="#구성" class="headerlink" title="구성"></a>구성</h3><p>AWS의 API Gateway와 AWS의 Lambda를 이용하여 Client의 요청을 받음</p>
+<p><code>GET</code> ~/todos =&gt; todo list 전체 전달</p>
+<p><code>PATCH</code> ~/todos =&gt; todo list 전체의 completed 일괄 변경</p>
+<p><code>POST</code> ~/todos =&gt; todo list의 새로운 todo 등록</p>
+<p><code>PATCH</code> ~/todos/{id} =&gt; 해당 id의 todo 변경</p>
+<p><code>DELETE</code> ~/todos/{id} =&gt; 해당 id의 todo 삭제</p>
+<h3 id="API-생성"><a href="#API-생성" class="headerlink" title="API 생성"></a>API 생성</h3><p><img src="https://user-images.githubusercontent.com/48123604/60394027-b6ee2b00-9b58-11e9-9366-015ded2c2959.png" alt="image"></p>
+<p>todos API 생성</p>
+<h3 id="API-설정"><a href="#API-설정" class="headerlink" title="API 설정"></a>API 설정</h3><p><img src="https://user-images.githubusercontent.com/48123604/60394048-05032e80-9b59-11e9-9e4a-3c46c9e94d47.png" alt="image"></p>
+<p><code>작업</code> - <code>리소스 생성</code> 클릭</p>
+<p>리소스 이름을 id로 리소스 경로를 <code>{id}</code> 설정</p>
+<p><code>{}</code>를 이용하면 경로 파라미터가 됨</p>
+<h2 id="Lambda-만들기"><a href="#Lambda-만들기" class="headerlink" title="Lambda 만들기"></a>Lambda 만들기</h2><p><img src="https://user-images.githubusercontent.com/48123604/60394070-61664e00-9b59-11e9-8cac-c30400c05134.png" alt="image"></p>
+<p>myTodos 함수 생성</p>
+<h3 id="경로와-요청-확인을-위한-TEST-코드-작성"><a href="#경로와-요청-확인을-위한-TEST-코드-작성" class="headerlink" title="경로와 요청 확인을 위한 TEST 코드 작성"></a>경로와 요청 확인을 위한 TEST 코드 작성</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">exports.handler = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;</span><br><span class="line">    <span class="hljs-comment">// TODO implement</span></span><br><span class="line">    <span class="hljs-keyword">const</span> response = &#123; </span><br><span class="line">        httpMethod : event.context[<span class="hljs-string">"http-method"</span>],</span><br><span class="line">        resourcePath : event.context[<span class="hljs-string">"resource-path"</span>],</span><br><span class="line">        path : event.params.path,</span><br><span class="line">        body : event[<span class="hljs-string">"body-json"</span>]</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="hljs-keyword">return</span> response;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="API-Gateway와-Lambda-연결"><a href="#API-Gateway와-Lambda-연결" class="headerlink" title="API Gateway와 Lambda 연결"></a>API Gateway와 Lambda 연결</h2><p>API Gateway에서 <code>{id}</code>선택 후 <code>작업</code> - <code>메서드 생성</code> - <code>any</code>선택</p>
+<p>{id}-ANY-설정에서 위에서 만든 Lambda함수 선택</p>
+<p><img src="https://user-images.githubusercontent.com/48123604/60394184-53b1c800-9b5b-11e9-93f1-15597d5687d2.png" alt="image"></p>
+<h3 id="통합요청-설정"><a href="#통합요청-설정" class="headerlink" title="통합요청 설정"></a>통합요청 설정</h3><p><code>통합요청</code> 선택</p>
+<p>하단의 <code>매핑 템플릿</code> 선택</p>
+<p><code>매핑 템플릿 추가</code> 클릭 후 application/json추가</p>
+<p>하단 템플릿 생성에서 <code>메서드 요청 패스스루</code> 선택 후 저장</p>
+<h3 id="테스트"><a href="#테스트" class="headerlink" title="테스트"></a>테스트</h3><h2 id><a href="#" class="headerlink" title></a><img src="https://user-images.githubusercontent.com/48123604/60394216-c4f17b00-9b5b-11e9-98f7-e71c10fa7a87.png" alt="image"></h2><p><code>메서드</code>에서 <code>DELETE</code>선택, <code>경로</code>의 <code>{id}</code>에 <code>2</code>입력</p>
+<p><img src="https://user-images.githubusercontent.com/48123604/60394295-e4d56e80-9b5c-11e9-9c99-53d27c0362db.png" alt="image"></p>
+<hr>
+<p><code>메서드</code>에서 <code>PATCH</code>선택, <code>경로</code>의 <code>{id}</code>에 <code>2</code>입력, <code>요청 본문</code>에<br><figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="hljs-attr">"content"</span>:<span class="hljs-string">"AWS"</span>,</span><br><span class="line">    <span class="hljs-attr">"completed"</span>:<span class="hljs-literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>입력</p>
+<p><img src="https://user-images.githubusercontent.com/48123604/60394323-501f4080-9b5d-11e9-8e70-0427c61c451d.png" alt="image"></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-09T08:19:08.000Z">2019-06-09</time>
                 
                 <div class="level-item">
@@ -174,7 +326,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3분 read (About 512 words)
+                    4분 read (About 531 words)
                 </span>
                 
                 
@@ -194,7 +346,9 @@
 </li>
 <li><p><a href="https://hicucu.github.io/2019/06/08/aws-express-helloworld-port/">express설치하고 helloworld 출력하기 feat 포트 열기</a></p>
 </li>
-<li><p><a href="https://hicucu.github.io/2019/06/09/aws-mongodb-install/">ec2 아마존 리눅스에 MonogoDB install</a></p>
+<li><p><a href="https://hicucu.github.io/2019/06/30/aws-angular-todolist-1/">AWS, Angular를 이용한 todo-list 만들기(1)</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/30/aws-angular-todolist-2/">AWS, Angular를 이용한 todo-list 만들기(2)</a></p>
 </li>
 </ol>
 <hr>
@@ -241,7 +395,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3분 read (About 498 words)
+                    4분 read (About 534 words)
                 </span>
                 
                 
@@ -260,6 +414,10 @@
 <li><p><a href="https://hicucu.github.io/2019/06/07/aws-ec2npm/">ec2에-npm-설치</a></p>
 </li>
 <li><p><a href="https://hicucu.github.io/2019/06/08/aws-express-helloworld-port/">express설치하고 helloworld 출력하기 feat 포트 열기</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/30/aws-angular-todolist-1/">AWS, Angular를 이용한 todo-list 만들기(1)</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/30/aws-angular-todolist-2/">AWS, Angular를 이용한 todo-list 만들기(2)</a></p>
 </li>
 </ol>
 <hr>
@@ -303,7 +461,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2분 read (About 265 words)
+                    2분 read (About 301 words)
                 </span>
                 
                 
@@ -322,6 +480,10 @@
 <li><p><a href="https://hicucu.github.io/2019/06/07/aws-ec2npm/">ec2에-npm-설치</a></p>
 </li>
 <li><p><a href="https://hicucu.github.io/2019/06/08/aws-express-helloworld-port/">express설치하고 helloworld 출력하기 feat 포트 열기</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/30/aws-angular-todolist-1/">AWS, Angular를 이용한 todo-list 만들기(1)</a></p>
+</li>
+<li><p><a href="https://hicucu.github.io/2019/06/30/aws-angular-todolist-2/">AWS, Angular를 이용한 todo-list 만들기(2)</a></p>
 </li>
 </ol>
 <hr>
@@ -436,7 +598,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-30T08:35:23.000Z">2019-06-30</time></div>
                     <a href="/2019/06/30/aws-angular-todolist-2/" class="has-link-black-ter is-size-6">aws-angular-todolist-2</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/aws/">aws</a>
                     </p>
                 </div>
             </div>
@@ -449,7 +611,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-30T07:53:32.000Z">2019-06-30</time></div>
                     <a href="/2019/06/30/aws-angular-todolist-1/" class="has-link-black-ter is-size-6">aws-angular-todolist-1</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/aws/">aws</a>
                     </p>
                 </div>
             </div>
@@ -558,7 +720,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        41
+                        43
                     </p>
                 </div>
             </div>
@@ -662,7 +824,7 @@
                 <span class="level-item">aws</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">4</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/codility/">
@@ -724,7 +886,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15.71px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/aws/" style="font-size: 12.86px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/ec2/" style="font-size: 12.86px;">ec2</a> <a href="/tags/eslint/" style="font-size: 10px;">eslint</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 12.86px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a> <a href="/tags/환경/" style="font-size: 10px;">환경</a>
+        <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15.71px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/angular/" style="font-size: 11.43px;">angular</a> <a href="/tags/aws/" style="font-size: 15.71px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/ec2/" style="font-size: 15.71px;">ec2</a> <a href="/tags/eslint/" style="font-size: 10px;">eslint</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/lambda/" style="font-size: 11.43px;">lambda</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 12.86px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a> <a href="/tags/환경/" style="font-size: 10px;">환경</a>
     </div>
 </div>
 
@@ -956,9 +1118,16 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/angular/">
+                        <span class="tag">angular</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/aws/">
                         <span class="tag">aws</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -993,7 +1162,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/ec2/">
                         <span class="tag">ec2</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -1015,6 +1184,13 @@
                     <a class="tags has-addons" href="/tags/homework/">
                         <span class="tag">homework</span>
                         <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/lambda/">
+                        <span class="tag">lambda</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1154,7 +1330,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        41
+                        43
                     </p>
                 </div>
             </div>
@@ -1258,7 +1434,7 @@
                 <span class="level-item">aws</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">4</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/codility/">
@@ -1320,7 +1496,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15.71px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/aws/" style="font-size: 12.86px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/ec2/" style="font-size: 12.86px;">ec2</a> <a href="/tags/eslint/" style="font-size: 10px;">eslint</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 12.86px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a> <a href="/tags/환경/" style="font-size: 10px;">환경</a>
+        <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 15.71px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/angular/" style="font-size: 11.43px;">angular</a> <a href="/tags/aws/" style="font-size: 15.71px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/ec2/" style="font-size: 15.71px;">ec2</a> <a href="/tags/eslint/" style="font-size: 10px;">eslint</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/lambda/" style="font-size: 11.43px;">lambda</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 12.86px;">putty</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a> <a href="/tags/환경/" style="font-size: 10px;">환경</a>
     </div>
 </div>
 
@@ -1552,9 +1728,16 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/angular/">
+                        <span class="tag">angular</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/aws/">
                         <span class="tag">aws</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -1589,7 +1772,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/ec2/">
                         <span class="tag">ec2</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -1611,6 +1794,13 @@
                     <a class="tags has-addons" href="/tags/homework/">
                         <span class="tag">homework</span>
                         <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/lambda/">
+                        <span class="tag">lambda</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 

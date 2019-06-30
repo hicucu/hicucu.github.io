@@ -8,16 +8,40 @@
     </url>
 
     <url>
-        <loc>https://hicucu.github.io/2019/06/30/aws-angular-todolist-2/</loc>
-        <lastmod>2019-06-30T10:01:37.657Z</lastmod>
+        <loc>https://hicucu.github.io/2019/06/30/aws-angular-todolist-1/</loc>
+        <lastmod>2019-06-30T10:09:32.199Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://hicucu.github.io/2019/06/30/aws-angular-todolist-1/</loc>
-        <lastmod>2019-06-30T08:46:31.126Z</lastmod>
+        <loc>https://hicucu.github.io/2019/06/07/aws-ec2npm/</loc>
+        <lastmod>2019-06-30T10:09:27.402Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/06/08/aws-express-helloworld-port/</loc>
+        <lastmod>2019-06-30T10:09:22.823Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/06/09/aws-mongodb-install/</loc>
+        <lastmod>2019-06-30T10:09:19.718Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/06/30/aws-angular-todolist-2/</loc>
+        <lastmod>2019-06-30T10:08:41.622Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -26,30 +50,6 @@
     <url>
         <loc>https://hicucu.github.io/2019/06/16/Env-Con-babel-webpack/</loc>
         <lastmod>2019-06-16T07:28:50.572Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/2019/06/09/aws-mongodb-install/</loc>
-        <lastmod>2019-06-11T02:20:46.722Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/2019/06/08/aws-express-helloworld-port/</loc>
-        <lastmod>2019-06-07T17:08:57.990Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/2019/06/07/aws-ec2npm/</loc>
-        <lastmod>2019-06-07T17:08:55.012Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
