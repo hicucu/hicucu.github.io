@@ -8,8 +8,27 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 30 Jun 2019 10:12:57 GMT</pubDate>
+    <pubDate>Wed, 10 Jul 2019 16:12:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>내가 기억하려고 적어두는 javascript, html, css</title>
+      <link>https://hicucu.github.io/2019/07/11/javascript-tip/</link>
+      <guid>https://hicucu.github.io/2019/07/11/javascript-tip/</guid>
+      <pubDate>Wed, 10 Jul 2019 16:02:05 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h1&gt;&lt;h2 id=&quot;중앙정렬&quot;&gt;&lt;a href=&quot;#중앙정렬&quot; class=&quot;headerlink&quot; title=&quot;중앙정렬&quot;&gt;&lt;/a&gt;중앙정
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h2 id="중앙정렬"><a href="#중앙정렬" class="headerlink" title="중앙정렬"></a>중앙정렬</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"wrapped"</span>&gt;</span><br><span class="line">  &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"main"</span>&gt;</span><br><span class="line">  &lt;<span class="hljs-regexp">/div&gt;</span></span><br><span class="line"><span class="hljs-regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure><p>main을 가운데 정렬하기<br><figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-class">.wrapped</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">width</span>:<span class="hljs-number">1024px</span>;</span><br><span class="line">  <span class="hljs-attribute">left</span>:-<span class="hljs-number">50%</span>;</span><br><span class="line">  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content:encoded>
+      
+      <comments>https://hicucu.github.io/2019/07/11/javascript-tip/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>aws-angular-todolist-2</title>

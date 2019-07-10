@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>내가 기억하려고 적어두는 javascript, html, css</title>
+      <link href="/2019/07/11/javascript-tip/"/>
+      <url>/2019/07/11/javascript-tip/</url>
+      
+        <content type="html"><![CDATA[<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h2 id="중앙정렬"><a href="#중앙정렬" class="headerlink" title="중앙정렬"></a>중앙정렬</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"wrapped"</span>&gt;</span><br><span class="line">  &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"main"</span>&gt;</span><br><span class="line">  &lt;<span class="hljs-regexp">/div&gt;</span></span><br><span class="line"><span class="hljs-regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure><p>main을 가운데 정렬하기<br><figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-class">.wrapped</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">width</span>:<span class="hljs-number">1024px</span>;</span><br><span class="line">  <span class="hljs-attribute">left</span>:-<span class="hljs-number">50%</span>;</span><br><span class="line">  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Javascript </category>
+          
+          <category> html </category>
+          
+          <category> css </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Javascript </tag>
+            
+            <tag> html </tag>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>aws-angular-todolist-2</title>
       <link href="/2019/06/30/aws-angular-todolist-2/"/>
       <url>/2019/06/30/aws-angular-todolist-2/</url>
