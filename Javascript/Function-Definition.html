@@ -10,18 +10,18 @@
 
 <meta name="robots" content="nofollow">
 
-    <meta name="description" content="Function프로그래밍 언어의 ㅎㅁ수는 일련의 과정을 문(statement)들로 구현하고 코드 블록으로 감싸서 하나의 실행 단위로 정의한 것이이다. 이 때 입력을 전달받는 변수를 매개변수(parameter), 입력을 인수(argument), 출력을 반환값(return)이라고 한다. 함수는 여러 개가 존재 할 수 있어 특정 함수를 구별하기 위하여 함수명이라">
+    <meta name="description" content="Function프로그래밍 언어의 함수는 일련의 과정을 문(statement)들로 구현하고 코드 블록으로 감싸서 하나의 실행 단위로 정의한 것이이다. 이 때 입력을 전달받는 변수를 매개변수(parameter), 입력을 인수(argument), 출력을 반환값(return)이라고 한다. 함수는 여러 개가 존재 할 수 있어 특정 함수를 구별하기 위하여 함수명이라는">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Function Definition">
 <meta property="og:url" content="https://hicucu.github.io/Javascript/Function-Definition.html">
 <meta property="og:site_name" content="DEUL">
-<meta property="og:description" content="Function프로그래밍 언어의 ㅎㅁ수는 일련의 과정을 문(statement)들로 구현하고 코드 블록으로 감싸서 하나의 실행 단위로 정의한 것이이다. 이 때 입력을 전달받는 변수를 매개변수(parameter), 입력을 인수(argument), 출력을 반환값(return)이라고 한다. 함수는 여러 개가 존재 할 수 있어 특정 함수를 구별하기 위하여 함수명이라">
+<meta property="og:description" content="Function프로그래밍 언어의 함수는 일련의 과정을 문(statement)들로 구현하고 코드 블록으로 감싸서 하나의 실행 단위로 정의한 것이이다. 이 때 입력을 전달받는 변수를 매개변수(parameter), 입력을 인수(argument), 출력을 반환값(return)이라고 한다. 함수는 여러 개가 존재 할 수 있어 특정 함수를 구별하기 위하여 함수명이라는">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://hicucu.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-02T18:00:02.742Z">
+<meta property="og:updated_time" content="2019-08-15T09:51:05.786Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Function Definition">
-<meta name="twitter:description" content="Function프로그래밍 언어의 ㅎㅁ수는 일련의 과정을 문(statement)들로 구현하고 코드 블록으로 감싸서 하나의 실행 단위로 정의한 것이이다. 이 때 입력을 전달받는 변수를 매개변수(parameter), 입력을 인수(argument), 출력을 반환값(return)이라고 한다. 함수는 여러 개가 존재 할 수 있어 특정 함수를 구별하기 위하여 함수명이라">
+<meta name="twitter:description" content="Function프로그래밍 언어의 함수는 일련의 과정을 문(statement)들로 구현하고 코드 블록으로 감싸서 하나의 실행 단위로 정의한 것이이다. 이 때 입력을 전달받는 변수를 매개변수(parameter), 입력을 인수(argument), 출력을 반환값(return)이라고 한다. 함수는 여러 개가 존재 할 수 있어 특정 함수를 구별하기 위하여 함수명이라는">
 <meta name="twitter:image" content="https://hicucu.github.io/images/og_image.png">
 
 
@@ -160,9 +160,10 @@
             
         </h1>
         <div class="content">
-            <h1 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h1><p>프로그래밍 언어의 ㅎㅁ수는 일련의 과정을 문(statement)들로 구현하고 코드 블록으로 감싸서 하나의 실행 단위로 정의한 것이이다.</p>
+            <h1 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h1><p>프로그래밍 언어의 함수는 일련의 과정을 문(statement)들로 구현하고 코드 블록으로 감싸서 하나의 실행 단위로 정의한 것이이다.</p>
 <p>이 때 입력을 전달받는 변수를 매개변수(parameter), 입력을 인수(argument), 출력을 반환값(return)이라고 한다.</p>
 <p>함수는 여러 개가 존재 할 수 있어 특정 함수를 구별하기 위하여 함수명이라는 식별자를 사용한다.</p>
+<hr>
 <h1 id="함수-정의"><a href="#함수-정의" class="headerlink" title="함수 정의"></a>함수 정의</h1><p>Javascript에서 함수를 정의하는 방법은 4가지가 있다.</p>
 <ul>
 <li>함수 선언문(Function Declaration/Function Statement)</li>
@@ -171,7 +172,8 @@
 <li>화살표 함수(Arrow Function): ES6</li>
 </ul>
 <p>모든 방식은 함수를 정의한다는 결과적인 면에서 동일하나 각각 차이가 존재한다.</p>
-<h2 id="함수-선언문과-함수-표현식"><a href="#함수-선언문과-함수-표현식" class="headerlink" title="함수 선언문과 함수 표현식"></a>함수 선언문과 함수 표현식</h2><p>함수 선언문은 문(Statement)이다.<br>함수 선언문은 표현식이 나닌 문으로 실행되어 객체를 생성한다.</p>
+<hr>
+<h2 id="함수-선언문과-함수-표현식"><a href="#함수-선언문과-함수-표현식" class="headerlink" title="함수 선언문과 함수 표현식"></a>함수 선언문과 함수 표현식</h2><p>함수 선언문은 문(Statement)이다.<br>함수 선언문은 표현식이 아닌 문으로 실행되어 객체를 생성한다.</p>
 <p>이 때 함수 객체를 할당할 변수가 필요하다.<br>함수 객체를 변수에 할당하지 않으면 생성된 함수 객체를 사용할 수 없고 아무도 참조하지 않기 때문에 메모리에서 해제된다.</p>
 <p>하지만 함수선언문은 함수명을 생략할 수 없고 자바스크립트 엔진은 암묵적으로 함수선언문의 함수명과 동일한 변수를 만들어 생성된 함수를 할당한다.</p>
 <p>즉, 함수는 함수명으로 호출하는 것이 아니라 자바스크립트 엔진이 암묵적으로 함수명과 동일하게 생성한 변수를 호출하는 것이다.</p>
@@ -179,16 +181,19 @@
 <p>함수 표현식은 식으로 함수를 값으로 평가한다.<br>그렇기 때문에 변수에 함수를 할당한다.</p>
 <p>함수 표현식은 함수 선언문과 같이 암묵적으로 함수명을 가지고 변수를 만드는 것이 아니라 사용자가 변수에 함수를 할당하는 형태이기 때문에 함수명을 생략하여 익명함수 형탵를 갖게 할 수 있다.</p>
 <p>결론적으로 자바스크립트엔진에 의하여 함수 선언문은 암묵적으로 선언된 변수에 할당이 되어 함수 표현식과 같이 동작하는 것 처럼 보인다.<br>하지만 이 암묵적 동작으로 인하여 두 개의 방식은 차이가 발생한다.</p>
+<hr>
 <h3 id="함수-호이스팅"><a href="#함수-호이스팅" class="headerlink" title="함수 호이스팅"></a>함수 호이스팅</h3><p>함수 표현식은 변수에 함수를 할당하는 형태이다.<br>그렇기 때문에 자바스크립트에 의하여 변수 호이스팅이 발생한다.</p>
 <p>자바스크립트 엔진은 실행시점에서 변수 호이스팅을 한다.<br>그렇기 때문에 함수 표현식을 할당한 변수도 호이스팅이 발생한다.</p>
 <p>표현식은 할당문이 실행되는 시점에서 값으로 평가되어진다.<br>그렇기 때문에 함수 표현식이 평가되는 시점 이전에 함수 표현식이 할당된 변수를 참조하면 undefined가 발생하며 함수를 호출하면 에러가 발생한다.(var로 선언한 경우)</p>
 <p>그러나 함수 선언문은 암묵적으로 생성된 변수에 할당이 되면서 변수만 호이스팅이 되는 것이 아니라 호이스팅 시점에서 함수 자체가 평가되어 변수에 할당이 된다.</p>
 <p>즉, 함수 선언문 이전에 함수를 사용하여도 정상적으로 동작한다.</p>
 <p>이는 함수 호출 전에 함수를 선언해야 한다는 규칙을 무시하여도 동작하는 문제를 발생시켜 코드의 구조를 엉성하게 만들 수 있다.</p>
+<hr>
 <h2 id="Function-생성자-함수"><a href="#Function-생성자-함수" class="headerlink" title="Function 생성자 함수"></a>Function 생성자 함수</h2><p>빌트인 함수인 Function 생성자 함수는 매개변수 목록과 함수 몸체를 문자열로 전달받는다.<br>new 연산자와 함께 호출하며 생성된 함수 객체를 반환한다.</p>
 <p>하지만 함수 생성자 함수를 이용하여 생성한 함수는 렉시컬 스코프를 만들지 않고 전역 함수인 거처럼 스코프를 생성한다.</p>
 <p>그렇기 때문에 클로저도 생성하지 않는다.</p>
-<p>결론적으로 unction 생성자 함수로 함수를 생성하는 방식은 일반적이지 않으며 바람직하지 않다.</p>
+<p>결론적으로 function 생성자 함수로 함수를 생성하는 방식은 일반적이지 않으며 바람직하지 않다.</p>
+<hr>
 <h2 id="화살표-함수"><a href="#화살표-함수" class="headerlink" title="화살표 함수"></a>화살표 함수</h2><p>기존 함수 선언문이나 함수 표현식으로 만든 함수와는 다르게 this 바인딩 방식이 다르며, prototype 프로퍼티가 없고, arguments 객체를 생성하지 않는다.</p>
 <p>화살표함수는 항상 익명함수로 정의하기 때문에 보통 고차함수에 사용된다.</p>
 

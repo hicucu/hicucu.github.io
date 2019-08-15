@@ -3,6 +3,20 @@
 
 
     <url>
+        <loc>https://hicucu.github.io/tags/TIL/</loc>
+        <lastmod>2019-08-15T10:14:01.347Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/tags/HTML-CSS/</loc>
+        <lastmod>2019-08-15T10:14:01.347Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://hicucu.github.io/tags/css/</loc>
         <lastmod>2019-08-15T06:21:38.265Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -299,20 +313,6 @@
     <url>
         <loc>https://hicucu.github.io/tags/homework/</loc>
         <lastmod>2019-04-23T15:58:53.816Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/tags/TIL/</loc>
-        <lastmod>2019-04-23T15:57:12.195Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/tags/HTML-CSS/</loc>
-        <lastmod>2019-04-23T15:57:12.195Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
