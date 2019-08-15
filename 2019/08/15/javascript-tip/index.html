@@ -10,19 +10,19 @@
 
 <meta name="robots" content="nofollow">
 
-    <meta name="description" content="html / CSS선택자id : 고유값, 중복 불가, #id명로 선택class : 중복 가능, .class명으로 선택[특정속성] : 특정 속성을 갖는 모든 요소[특정속성=’’] : 특정 속성의 값이 ‘’인 요소 선택자 우선순위!important를 포함한 규칙 &amp;gt; 인라인 스타일 속성 &amp;gt; id선택자 &amp;gt; 클래스, 속성, 가상 선택자 &amp;gt; 요소">
+    <meta name="description" content="html / CSSnode vs elementnode : 태그 노드와 텍스트 노드 전체element : 텍스트 노드 제외 children : 텍스트 노드 제외childNodes: 텍스트 노드 포함 선택자id : 고유값, 중복 불가, #id명로 선택class : 중복 가능, .class명으로 선택[특정속성] : 특정 속성을 갖는 모든 요소[특정속성=’’] :">
 <meta name="keywords" content="Javascript,html,css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="내가 기억하려고 적어두는 javascript, html, css">
 <meta property="og:url" content="https://hicucu.github.io/2019/08/15/javascript-tip/index.html">
 <meta property="og:site_name" content="DEUL">
-<meta property="og:description" content="html / CSS선택자id : 고유값, 중복 불가, #id명로 선택class : 중복 가능, .class명으로 선택[특정속성] : 특정 속성을 갖는 모든 요소[특정속성=’’] : 특정 속성의 값이 ‘’인 요소 선택자 우선순위!important를 포함한 규칙 &amp;gt; 인라인 스타일 속성 &amp;gt; id선택자 &amp;gt; 클래스, 속성, 가상 선택자 &amp;gt; 요소">
+<meta property="og:description" content="html / CSSnode vs elementnode : 태그 노드와 텍스트 노드 전체element : 텍스트 노드 제외 children : 텍스트 노드 제외childNodes: 텍스트 노드 포함 선택자id : 고유값, 중복 불가, #id명로 선택class : 중복 가능, .class명으로 선택[특정속성] : 특정 속성을 갖는 모든 요소[특정속성=’’] :">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://hicucu.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-15T05:24:48.308Z">
+<meta property="og:updated_time" content="2019-08-15T06:13:44.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="내가 기억하려고 적어두는 javascript, html, css">
-<meta name="twitter:description" content="html / CSS선택자id : 고유값, 중복 불가, #id명로 선택class : 중복 가능, .class명으로 선택[특정속성] : 특정 속성을 갖는 모든 요소[특정속성=’’] : 특정 속성의 값이 ‘’인 요소 선택자 우선순위!important를 포함한 규칙 &amp;gt; 인라인 스타일 속성 &amp;gt; id선택자 &amp;gt; 클래스, 속성, 가상 선택자 &amp;gt; 요소">
+<meta name="twitter:description" content="html / CSSnode vs elementnode : 태그 노드와 텍스트 노드 전체element : 텍스트 노드 제외 children : 텍스트 노드 제외childNodes: 텍스트 노드 포함 선택자id : 고유값, 중복 불가, #id명로 선택class : 중복 가능, .class명으로 선택[특정속성] : 특정 속성을 갖는 모든 요소[특정속성=’’] :">
 <meta name="twitter:image" content="https://hicucu.github.io/images/og_image.png">
 
 
@@ -167,7 +167,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    8분 read (About 1179 words)
+                    11분 read (About 1590 words)
                 </span>
                 
                 
@@ -180,7 +180,9 @@
             
         </h1>
         <div class="content">
-            <h1 id="html-CSS"><a href="#html-CSS" class="headerlink" title="html / CSS"></a>html / CSS</h1><h2 id="선택자"><a href="#선택자" class="headerlink" title="선택자"></a>선택자</h2><p>id : 고유값, 중복 불가, #id명로 선택<br>class : 중복 가능, .class명으로 선택<br>[특정속성] : 특정 속성을 갖는 모든 요소<br>[특정속성=’’] : 특정 속성의 값이 ‘’인 요소</p>
+            <h1 id="html-CSS"><a href="#html-CSS" class="headerlink" title="html / CSS"></a>html / CSS</h1><h2 id="node-vs-element"><a href="#node-vs-element" class="headerlink" title="node vs element"></a>node vs element</h2><p>node : 태그 노드와 텍스트 노드 전체<br>element : 텍스트 노드 제외</p>
+<p>children : 텍스트 노드 제외<br>childNodes: 텍스트 노드 포함</p>
+<h2 id="선택자"><a href="#선택자" class="headerlink" title="선택자"></a>선택자</h2><p>id : 고유값, 중복 불가, #id명로 선택<br>class : 중복 가능, .class명으로 선택<br>[특정속성] : 특정 속성을 갖는 모든 요소<br>[특정속성=’’] : 특정 속성의 값이 ‘’인 요소</p>
 <h2 id="선택자-우선순위"><a href="#선택자-우선순위" class="headerlink" title="선택자 우선순위"></a>선택자 우선순위</h2><p>!important를 포함한 규칙 &gt; 인라인 스타일 속성 &gt; id선택자 &gt; 클래스, 속성, 가상 선택자 &gt; 요소 선택자 &gt; 전체 선택자</p>
 <p>높은 우선순위의 선택자를 더 많이 사용한 규칙이 우선<br>| #id .wrap .content div span &gt; #id .content div span</p>
 <p>head 안 style &gt; style안 @import &gt; link로 연결한 css &gt; link로 연결한 css 안에 @import &gt; 사용자 css &gt; 브라우저 기본</p>
@@ -201,7 +203,13 @@
 <p>콜백 방식의 비동기 처리를 하면 에러처리가 곤란</p>
 <h2 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h2><p>Promise 생성자 함수를 통해 인스턴스화<br>비동기 작업을 수행할 콜백 함수를 인자로 전달받는데 이 콜백 함수는 resolve와 reject 함수를 인자로 전달받음</p>
 <p>Promise 생성자 함수가 인자로 전달받은 콜백 함수 내부에서 비동기 처리 작업을 수행<br>처리가 성공하면 resolve함수를 호출<br>실패하면 reject함수를 호출</p>
-<h2 id="fetch-async-await"><a href="#fetch-async-await" class="headerlink" title="fetch, async/await"></a>fetch, async/await</h2><h1 id="SPA"><a href="#SPA" class="headerlink" title="SPA"></a>SPA</h1><h2 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h2><h2 id="ssr-vs-csr"><a href="#ssr-vs-csr" class="headerlink" title="ssr vs csr"></a>ssr vs csr</h2>
+<p>Promise로 구현된 비동기 함수는 반환값으로 Promise객체를 반환</p>
+<p>Promise객체를 반환한 비동기 함수는 프로미스 후속 처리 메소드인 then이나 catch 메소드를 사용 가능<br>-&gt; then 메소드가 Promise를 반환하면 여러개의 프로미스를 연결하여 사용가능 -&gt; 콜백 헬을 후속처리 메소드의 체이닝을 통해 해결</p>
+<h2 id="fetch-async-await"><a href="#fetch-async-await" class="headerlink" title="fetch, async/await"></a>fetch, async/await</h2><h1 id="SPA"><a href="#SPA" class="headerlink" title="SPA"></a>SPA</h1><h2 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h2><h2 id="ssr-vs-csr"><a href="#ssr-vs-csr" class="headerlink" title="ssr vs csr"></a>ssr vs csr</h2><p>렌더링 : 어떤 웹 페이지 접속시, 그 페이지를 화면에 그려주는 것</p>
+<p>ssr : 요청마다 새로고침이 일어나며 서버에 새로운 페이지에 대한 요청을 하는 방식 -&gt; 서버측에서 HTML&amp;view를 생성하여 응답하는 방식<br>csr : 서버에서는 빈 체이지를 제공하고 view에 대해서는 client에서 자바스크립트를 통해 렌더링하는 방식 -&gt; 클라이언트에서 view를 생성</p>
+<p>ssr은 view를 서버에서 렌더링하여 가져오기 때문에 첫 로딩이 짧지만 csr은 서버에서 view를 렌더하지 않고 html과 js등의 파일을 다운받은 후 브라우져에서 렌더링하여 보여주기 때문에 초기 로딩시간이 상대적으로 길어짐</p>
+<p>ssr은 view를 생성하기 위해 자바스크립트가 필요하고 그 전까진 HTML의 내용이 이어있어 제대로 데이터 수집이 어려움 -&gt; seo 어려움</p>
+
         </div>
         
         <div class="level is-size-7 is-uppercase">
