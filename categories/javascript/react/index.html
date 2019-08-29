@@ -2,9 +2,9 @@
 <html lang="ko">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>태그: call by value - DEUL</title>
+<title>카테고리: react - DEUL</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="canonical" href="https://hicucu.github.io/tags/call-by-value/">
+<link rel="canonical" href="https://hicucu.github.io/categories/javascript/react/">
 <meta name="naver-site-verification" content="0f9748f2860e30674d25e55346b2d59eec0fc6a2">
 
 
@@ -12,7 +12,7 @@
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="DEUL">
-<meta property="og:url" content="https://hicucu.github.io/tags/call-by-value/index.html">
+<meta property="og:url" content="https://hicucu.github.io/categories/javascript/react/index.html">
 <meta property="og:site_name" content="DEUL">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://hicucu.github.io/images/og_image.png">
@@ -150,8 +150,11 @@
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
-            <li><a href="/tags">태그</a></li>
-            <li class="is-active"><a href="#" aria-current="page">call by value</a></li>
+            <li><a href="/categories">카테고리</a></li>
+            
+            <li><a href="/categories/javascript/">javascript</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">react</a></li>
         </ul>
         </nav>
     </div>
@@ -163,17 +166,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-22T14:42:14.000Z">2019-04-22</time>
+                <time class="level-item has-text-grey" datetime="2019-08-27T08:03:35.000Z">2019-08-27</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Study/">Study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Study/programming/">programming</a>
+                <a class="has-link-grey -link" href="/categories/javascript/">javascript</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/javascript/react/">react</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2분 read (About 257 words)
+                    몇 초 read (About 20 words)
                 </span>
                 
                 
@@ -182,27 +185,27 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/04/22/call-by-Value-call-by-Reference/">call_by_Value, call_by_Reference</a>
+                <a class="has-link-black-ter" href="/2019/08/27/keyword/">keyword</a>
             
         </h1>
         <div class="content">
-            <h1 id="Call-by-Value-와-Call-by-Reference"><a href="#Call-by-Value-와-Call-by-Reference" class="headerlink" title="Call by Value 와 Call by Reference"></a>Call by Value 와 Call by Reference</h1><h2 id="Call-by-Value"><a href="#Call-by-Value" class="headerlink" title="Call by Value"></a>Call by Value</h2><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">change_value</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">	x = val;</span><br><span class="line">	<span class="hljs-built_in">printf</span>(<span class="hljs-string">"x : %d in change_value \n"</span>, x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="hljs-keyword">int</span> x = <span class="hljs-number">10</span>;</span><br><span class="line">	change_value(x, <span class="hljs-number">20</span>);</span><br><span class="line">	<span class="hljs-built_in">printf</span>(<span class="hljs-string">"x : %d in main \n"</span>, x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>위 소스는 main에서 선언된 변수 x에 값 10을 주고 변수 x와 정수 val 매개변수로 하여 change_value를 호출한 후 change_value에서 x의 값을 val로 변경하는 소스이다.</p>
-<p><img src="https://user-images.githubusercontent.com/48123604/56506442-7622d600-6559-11e9-9741-97a8cd044c0c.png" alt="image"></p>
-<p>실행을 하면 change_value에서 x의 값은 20으로 변경되었지만 main에서는 여전히 10이다.</p>
-<p>이는 main에서 넘긴 x는 x의 값 10을 의미하기 때문에 이것을 바꾸어도 main의 x는 영향을 받지 않는다.</p>
-<p>그래서 Call by Value이다.</p>
-<hr>
+            <ul>
+<li><p>prop-types</p>
+<blockquote>
+<p><a href="https://www.npmjs.com/package/prop-types" rel="external nofollow noopener noreferrer" target="_blank">https://www.npmjs.com/package/prop-types</a></p>
+</blockquote>
+</li>
+<li><p>gh-pages</p>
+<blockquote>
+<p><a href="https://www.npmjs.com/package/gh-pages" rel="external nofollow noopener noreferrer" target="_blank">https://www.npmjs.com/package/gh-pages</a></p>
+</blockquote>
+</li>
+<li><p>styled-components</p>
+</li>
+</ul>
+
         </div>
         
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/22/call-by-Value-call-by-Reference/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
         
         
     </div>

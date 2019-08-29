@@ -8,8 +8,30 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 16 Aug 2019 02:50:29 GMT</pubDate>
+    <pubDate>Thu, 29 Aug 2019 09:40:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>keyword</title>
+      <link>https://hicucu.github.io/2019/08/27/keyword/</link>
+      <guid>https://hicucu.github.io/2019/08/27/keyword/</guid>
+      <pubDate>Tue, 27 Aug 2019 08:03:35 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;prop-types&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.npmjs.com/package/prop-types&quot; rel=&quot;external nofollow noopener noreferrer&quot; ta
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<ul><li><p>prop-types</p><blockquote><p><a href="https://www.npmjs.com/package/prop-types" rel="external nofollow noopener noreferrer" target="_blank">https://www.npmjs.com/package/prop-types</a></p></blockquote></li><li><p>gh-pages</p><blockquote><p><a href="https://www.npmjs.com/package/gh-pages" rel="external nofollow noopener noreferrer" target="_blank">https://www.npmjs.com/package/gh-pages</a></p></blockquote></li><li><p>styled-components</p></li></ul>]]></content:encoded>
+      
+      <comments>https://hicucu.github.io/2019/08/27/keyword/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>내가 기억하려고 적어두는 javascript, html, css</title>
