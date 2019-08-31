@@ -2,9 +2,9 @@
 <html lang="ko">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>태그: Error - DEUL</title>
+<title>카테고리: github - DEUL</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="canonical" href="https://hicucu.github.io/tags/error/">
+<link rel="canonical" href="https://hicucu.github.io/categories/github/">
 <meta name="naver-site-verification" content="0f9748f2860e30674d25e55346b2d59eec0fc6a2">
 
 
@@ -12,7 +12,7 @@
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="DEUL">
-<meta property="og:url" content="https://hicucu.github.io/tags/Error/index.html">
+<meta property="og:url" content="https://hicucu.github.io/categories/github/index.html">
 <meta property="og:site_name" content="DEUL">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://hicucu.github.io/images/og_image.png">
@@ -150,8 +150,9 @@
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
-            <li><a href="/tags">태그</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Error</a></li>
+            <li><a href="/categories">카테고리</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">github</a></li>
         </ul>
         </nav>
     </div>
@@ -163,17 +164,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-19T06:28:28.000Z">2019-03-19</time>
+                <time class="level-item has-text-grey" datetime="2019-08-31T11:15:37.000Z">2019-08-31</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Study/">Study</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Study/Front-end/">Front-end</a>
+                <a class="has-link-grey -link" href="/categories/github/">github</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1분 read (About 183 words)
+                    1분 read (About 224 words)
                 </span>
                 
                 
@@ -182,21 +183,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/03/19/TypeError-is-not-a-function/">TypeError-is-not-a-function</a>
+                <a class="has-link-black-ter" href="/2019/08/31/gh-pages/">gh-pages를 이용한 github.io에 게시하기</a>
             
         </h1>
         <div class="content">
-            <h1 id="증상"><a href="#증상" class="headerlink" title="증상"></a>증상</h1><p>JQuery의 stop, animate 를 사용 할 때 TypeError발생<br>TypeError: $(…).stop is not a function</p>
-<blockquote>
-<p><img src="https://user-images.githubusercontent.com/48123604/56209717-25116e80-608f-11e9-8e8b-345f04159c91.jpg" alt="TypeError"></p>
-</blockquote>
+            <h1 id="ng-pages"><a href="#ng-pages" class="headerlink" title="ng-pages"></a>ng-pages</h1><h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i gh-pages</span><br></pre></td></tr></table></figure>
+<h2 id="package-json-설정"><a href="#package-json-설정" class="headerlink" title="package.json 설정"></a>package.json 설정</h2><p>“homepage”추가</p>
+<p>http://<code>&lt;github ID&gt;</code>.github.io/<code>&lt;Repository Name&gt;</code></p>
+<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"name": "coin_explorer",</span><br><span class="line">"version": "0.1.0",</span><br><span class="line">...</span><br><span class="line">"homepage": "https://hicucu.github.io/ReactjsStudy-CoinExplorer/"</span><br></pre></td></tr></table></figure>
+<p>script에 deploy, predeploy 추가</p>
+<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">   "start": "react-scripts start",</span><br><span class="line">   "build": "react-scripts build",</span><br><span class="line">   ...</span><br><span class="line">   "deploy" : "gh-pages -d build",</span><br><span class="line">   "predeploy" : "npm run build"</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/03/19/TypeError-is-not-a-function/#more">자세히 보기</a>
+                <a class="button is-size-7 is-light" href="/2019/08/31/gh-pages/#more">자세히 보기</a>
                 </div>
             </div>
         </div>

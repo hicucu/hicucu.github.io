@@ -8,6 +8,34 @@
     </url>
 
     <url>
+        <loc>https://hicucu.github.io/categories/github/</loc>
+        <lastmod>2019-08-31T11:31:44.557Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/categories/Javascript/html/css/</loc>
+        <lastmod>2019-08-31T11:31:34.148Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/categories/Javascript/html/</loc>
+        <lastmod>2019-08-31T11:31:34.148Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/categories/Javascript/</loc>
+        <lastmod>2019-08-31T11:31:34.148Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://hicucu.github.io/categories/javascript/react/</loc>
         <lastmod>2019-08-31T05:35:57.135Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,27 +45,6 @@
     <url>
         <loc>https://hicucu.github.io/categories/javascript/</loc>
         <lastmod>2019-08-31T05:35:57.135Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/categories/Javascript/html/css/</loc>
-        <lastmod>2019-08-16T02:50:29.484Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/categories/Javascript/html/</loc>
-        <lastmod>2019-08-16T02:50:29.484Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/categories/Javascript/</loc>
-        <lastmod>2019-08-16T02:50:29.484Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
