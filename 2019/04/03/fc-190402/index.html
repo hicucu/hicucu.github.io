@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
 <title>2019-04-02 TIL - DEUL</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -14,16 +14,14 @@
 <meta name="keywords" content="HTML-CSS,TIL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2019-04-02 TIL">
-<meta property="og:url" content="https://hicucu.github.io/2019/04/03/fc-190402/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;hicucu.github.io&#x2F;2019&#x2F;04&#x2F;03&#x2F;fc-190402&#x2F;index.html">
 <meta property="og:site_name" content="DEUL">
 <meta property="og:description" content="css 중요도상속&amp;lt;br겹침&amp;lt;br우선순위 HTML 중요도 = box modelpositionfloatdisplayblock  inlinebrinline-blockflexgird">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="https://hicucu.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-04-23T15:44:16.977Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;hicucu.github.io&#x2F;images&#x2F;og_image.png">
+<meta property="og:updated_time" content="2019-04-23T15:44:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2019-04-02 TIL">
-<meta name="twitter:description" content="css 중요도상속&amp;lt;br겹침&amp;lt;br우선순위 HTML 중요도 = box modelpositionfloatdisplayblock  inlinebrinline-blockflexgird">
-<meta name="twitter:image" content="https://hicucu.github.io/images/og_image.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;hicucu.github.io&#x2F;images&#x2F;og_image.png">
 
 
 
@@ -139,7 +137,7 @@
                 
                 
                 
-                <a class="navbar-item search" title="Search" href="javascript:;">
+                <a class="navbar-item search" title="Search" href="javascript:;" target="_blank" rel="noopener">
                     <i class="fas fa-search"></i>
                 </a>
                 
@@ -196,11 +194,8 @@
 </ul>
 <h1 id="선택자"><a href="#선택자" class="headerlink" title="선택자"></a>선택자</h1><ul>
 <li>[class^=”box”] = box로 시작하는 모든 class</li>
-<li><p>^ : 시작 / $ 끝</p>
-  <figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-attr">[class^="box"]</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">background</span>: pink;</span><br><span class="line">    <span class="hljs-attribute">color</span>: green <span class="hljs-meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>!important 강제로 우선순위 무시</p>
-</li>
+<li>^ : 시작 / $ 끝  <figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-attr">[class^="box"]</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">background</span>: pink;</span><br><span class="line">    <span class="hljs-attribute">color</span>: green <span class="hljs-meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>!important 강제로 우선순위 무시</li>
 </ul>
 <h1 id="position"><a href="#position" class="headerlink" title="position"></a>position</h1><ul>
 <li>block으로 바뀜</li>
@@ -223,7 +218,7 @@
 <li><code>&lt;li&gt;</code>의 부모인 member의 font-size를 0으로 하여 상속하고 li의 글자크기를 키우면 해결</li>
 </ul>
 <h1 id="구조선택자"><a href="#구조선택자" class="headerlink" title="구조선택자"></a>구조선택자</h1><ul>
-<li><a href="http://nthmaster.com/" rel="external nofollow noopener noreferrer" target="_blank">http://nthmaster.com/</a></li>
+<li><a href="http://nthmaster.com/" target="_blank" rel="external nofollow noopener noreferrer">http://nthmaster.com/</a></li>
 </ul>
 <h1 id="tabindex-0"><a href="#tabindex-0" class="headerlink" title="tabindex=0"></a>tabindex=0</h1><ul>
 <li>tab으로 마크업순서 이동가능</li>
@@ -231,10 +226,9 @@
 <h1 id="숨김"><a href="#숨김" class="headerlink" title="숨김"></a>숨김</h1><ul>
 <li>display:none = 처음부터 없던 것 처럼 / 화면 뿐 아니라 다른 보조기구로도 인식 불가</li>
 <li>position: absolute = 절대값으로 화면 밖으로 옮김 / 모바일 환경에서 가상커서 문제 발생</li>
-<li><p>opacity: 0 = 투명도 인지가 안되는 문제 발생 할 수 있음</p>
-  <figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-class">.readable-hidden</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">position</span>: absolute;</span><br><span class="line">    <span class="hljs-attribute">width</span>: <span class="hljs-number">1px</span>;</span><br><span class="line">    <span class="hljs-attribute">height</span>: <span class="hljs-number">1px</span>;</span><br><span class="line">    <span class="hljs-attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="hljs-attribute">margin</span>: -<span class="hljs-number">1px</span>;</span><br><span class="line">    <span class="hljs-attribute">clip</span>: <span class="hljs-built_in">rect</span>(0 0 0 0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>opacity: 0 = 투명도 인지가 안되는 문제 발생 할 수 있음  <figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-class">.readable-hidden</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">position</span>: absolute;</span><br><span class="line">    <span class="hljs-attribute">width</span>: <span class="hljs-number">1px</span>;</span><br><span class="line">    <span class="hljs-attribute">height</span>: <span class="hljs-number">1px</span>;</span><br><span class="line">    <span class="hljs-attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="hljs-attribute">margin</span>: -<span class="hljs-number">1px</span>;</span><br><span class="line">    <span class="hljs-attribute">clip</span>: <span class="hljs-built_in">rect</span>(0 0 0 0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p><a href="https://seulbinim.github.io/WSA/float-position.html#clip-%EC%86%8D%EC%84%B1" rel="external nofollow noopener noreferrer" target="_blank">https://seulbinim.github.io/WSA/float-position.html#clip-%EC%86%8D%EC%84%B1</a><br>  <br><br>spac out 예정<br>  <br><br><a href="https://css-tricks.com/almanac/properties/c/clip/" rel="external nofollow noopener noreferrer" target="_blank">https://css-tricks.com/almanac/properties/c/clip/</a></p>
+<p><a href="https://seulbinim.github.io/WSA/float-position.html#clip-%EC%86%8D%EC%84%B1" target="_blank" rel="external nofollow noopener noreferrer">https://seulbinim.github.io/WSA/float-position.html#clip-%EC%86%8D%EC%84%B1</a><br>  <br><br>spac out 예정<br>  <br><br><a href="https://css-tricks.com/almanac/properties/c/clip/" target="_blank" rel="external nofollow noopener noreferrer">https://css-tricks.com/almanac/properties/c/clip/</a></p>
 </blockquote>
 </li>
 </ul>
@@ -245,7 +239,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/HTML-CSS/">HTML-CSS</a>, <a class="has-link-grey -link" href="/tags/TIL/">TIL</a>
+                    <a class="has-link-grey -link" href="/tags/HTML-CSS/" rel="tag">HTML-CSS</a>, <a class="has-link-grey -link" href="/tags/TIL/" rel="tag">TIL</a>
                 </div>
             </div>
         </div>
@@ -302,6 +296,32 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-07T01:23:22.000Z">2019-11-07</time></div>
+                    <a href="/2019/11/07/2019-11-07/" class="has-link-black-ter is-size-6">.htaccess http를 https로 redirect</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%ED%99%98%EA%B2%BD/">환경</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-25T10:20:20.000Z">2019-10-25</time></div>
+                    <a href="/2019/10/25/2019-10-25/" class="has-link-black-ter is-size-6">나도 zsh를 써보고 싶었다.</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%ED%99%98%EA%B2%BD/">환경</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T11:15:37.000Z">2019-08-31</time></div>
                     <a href="/2019/08/31/gh-pages/" class="has-link-black-ter is-size-6">gh-pages를 이용한 github.io에 게시하기</a>
                     <p class="is-size-7 is-uppercase">
@@ -332,32 +352,6 @@
                     <a href="/2019/08/15/javascript-tip/" class="has-link-black-ter is-size-6">내가 기억하려고 적어두는 javascript, html, css</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Javascript/">Javascript</a> / <a class="has-link-grey -link" href="/categories/Javascript/html/">html</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-30T08:35:23.000Z">2019-06-30</time></div>
-                    <a href="/2019/06/30/aws-angular-todolist-2/" class="has-link-black-ter is-size-6">aws-angular-todolist-2</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/aws/">aws</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-30T07:53:32.000Z">2019-06-30</time></div>
-                    <a href="/2019/06/30/aws-angular-todolist-1/" class="has-link-black-ter is-size-6">aws-angular-todolist-1</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/aws/">aws</a>
                     </p>
                 </div>
             </div>
@@ -407,7 +401,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        36
+                        38
                     </p>
                 </div>
             </div>
@@ -427,7 +421,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        48
+                        55
                     </p>
                 </div>
             </div>
@@ -614,12 +608,12 @@
                 <span class="level-item tag">1</span>
             </span>
         </a></li></ul></li><li>
-        <a class="level is-marginless" href="/categories/환경/">
+        <a class="level is-marginless" href="/categories/%ED%99%98%EA%B2%BD/">
             <span class="level-start">
                 <span class="level-item">환경</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li>
             </ul>
@@ -633,7 +627,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 17.14px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/angular/" style="font-size: 11.43px;">angular</a> <a href="/tags/aws/" style="font-size: 15.71px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/ec2/" style="font-size: 15.71px;">ec2</a> <a href="/tags/eslint/" style="font-size: 10px;">eslint</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/lambda/" style="font-size: 11.43px;">lambda</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 12.86px;">putty</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a> <a href="/tags/환경/" style="font-size: 10px;">환경</a>
+        <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 17.14px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/angular/" style="font-size: 11.43px;">angular</a> <a href="/tags/aws/" style="font-size: 15.71px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/ec2/" style="font-size: 15.71px;">ec2</a> <a href="/tags/eslint/" style="font-size: 10px;">eslint</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/lambda/" style="font-size: 11.43px;">lambda</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/oh-my-posh/" style="font-size: 10px;">oh-my-posh</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 12.86px;">putty</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/redirect/" style="font-size: 10px;">redirect</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a> <a href="/tags/%ED%99%98%EA%B2%BD/" style="font-size: 11.43px;">환경</a>
     </div>
 </div>
 
@@ -645,6 +639,28 @@
             아카이브
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/08/">
@@ -967,6 +983,20 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/http/">
+                        <span class="tag">http</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/https/">
+                        <span class="tag">https</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/javascript/">
                         <span class="tag">javascript</span>
                         <span class="tag is-grey">1</span>
@@ -988,6 +1018,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/oh-my-posh/">
+                        <span class="tag">oh-my-posh</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/project/">
                         <span class="tag">project</span>
                         <span class="tag is-grey">1</span>
@@ -1004,6 +1041,20 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/react/">
                         <span class="tag">react</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/redirect/">
+                        <span class="tag">redirect</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/shell/">
+                        <span class="tag">shell</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1044,9 +1095,23 @@
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/환경/">
-                        <span class="tag">환경</span>
+                    <a class="tags has-addons" href="/tags/windows/">
+                        <span class="tag">windows</span>
                         <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/zsh/">
+                        <span class="tag">zsh</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%ED%99%98%EA%B2%BD/">
+                        <span class="tag">환경</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1103,7 +1168,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        36
+                        38
                     </p>
                 </div>
             </div>
@@ -1123,7 +1188,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        48
+                        55
                     </p>
                 </div>
             </div>
@@ -1310,12 +1375,12 @@
                 <span class="level-item tag">1</span>
             </span>
         </a></li></ul></li><li>
-        <a class="level is-marginless" href="/categories/환경/">
+        <a class="level is-marginless" href="/categories/%ED%99%98%EA%B2%BD/">
             <span class="level-start">
                 <span class="level-item">환경</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li>
             </ul>
@@ -1329,7 +1394,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 17.14px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/angular/" style="font-size: 11.43px;">angular</a> <a href="/tags/aws/" style="font-size: 15.71px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/ec2/" style="font-size: 15.71px;">ec2</a> <a href="/tags/eslint/" style="font-size: 10px;">eslint</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/lambda/" style="font-size: 11.43px;">lambda</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 12.86px;">putty</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a> <a href="/tags/환경/" style="font-size: 10px;">환경</a>
+        <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/Constructor/" style="font-size: 10px;">Constructor</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Data-type/" style="font-size: 10px;">Data type</a> <a href="/tags/Definition/" style="font-size: 10px;">Definition</a> <a href="/tags/ESMAScript/" style="font-size: 10px;">ESMAScript</a> <a href="/tags/Error/" style="font-size: 10px;">Error</a> <a href="/tags/Expression/" style="font-size: 10px;">Expression</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Global/" style="font-size: 10px;">Global</a> <a href="/tags/HTML-CSS/" style="font-size: 20px;">HTML-CSS</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/Javascript/" style="font-size: 17.14px;">Javascript</a> <a href="/tags/Lexocal-Scope/" style="font-size: 10px;">Lexocal Scope</a> <a href="/tags/Literal/" style="font-size: 10px;">Literal</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Primitive/" style="font-size: 10px;">Primitive</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/TIL/" style="font-size: 18.57px;">TIL</a> <a href="/tags/TypeError/" style="font-size: 10px;">TypeError</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/angular/" style="font-size: 11.43px;">angular</a> <a href="/tags/aws/" style="font-size: 15.71px;">aws</a> <a href="/tags/call-by-reference/" style="font-size: 10px;">call by reference</a> <a href="/tags/call-by-value/" style="font-size: 10px;">call by value</a> <a href="/tags/codility/" style="font-size: 14.29px;">codility</a> <a href="/tags/coding/" style="font-size: 15.71px;">coding</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/ec2/" style="font-size: 15.71px;">ec2</a> <a href="/tags/eslint/" style="font-size: 10px;">eslint</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/homework/" style="font-size: 10px;">homework</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/lambda/" style="font-size: 11.43px;">lambda</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/oh-my-posh/" style="font-size: 10px;">oh-my-posh</a> <a href="/tags/project/" style="font-size: 10px;">project</a> <a href="/tags/putty/" style="font-size: 12.86px;">putty</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/redirect/" style="font-size: 10px;">redirect</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/study/" style="font-size: 17.14px;">study</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/web-basic/" style="font-size: 11.43px;">web-basic</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a> <a href="/tags/%ED%99%98%EA%B2%BD/" style="font-size: 11.43px;">환경</a>
     </div>
 </div>
 
@@ -1341,6 +1406,28 @@
             아카이브
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/08/">
@@ -1663,6 +1750,20 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/http/">
+                        <span class="tag">http</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/https/">
+                        <span class="tag">https</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/javascript/">
                         <span class="tag">javascript</span>
                         <span class="tag is-grey">1</span>
@@ -1684,6 +1785,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/oh-my-posh/">
+                        <span class="tag">oh-my-posh</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/project/">
                         <span class="tag">project</span>
                         <span class="tag is-grey">1</span>
@@ -1700,6 +1808,20 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/react/">
                         <span class="tag">react</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/redirect/">
+                        <span class="tag">redirect</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/shell/">
+                        <span class="tag">shell</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1740,9 +1862,23 @@
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/환경/">
-                        <span class="tag">환경</span>
+                    <a class="tags has-addons" href="/tags/windows/">
+                        <span class="tag">windows</span>
                         <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/zsh/">
+                        <span class="tag">zsh</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%ED%99%98%EA%B2%BD/">
+                        <span class="tag">환경</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1831,7 +1967,7 @@
 
 <div id="outdated">
     <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="external nofollow noopener noreferrer">Update
             my browser now </a></p>
     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
@@ -1875,7 +2011,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="Back to Top" href="javascript:;" target="_blank" rel="noopener">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>

@@ -3,337 +3,386 @@
 
 
     <url>
+        <loc>https://hicucu.github.io/tags/https/</loc>
+        <lastmod>2019-11-07T01:35:22.864Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/tags/http/</loc>
+        <lastmod>2019-11-07T01:35:22.864Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/tags/redirect/</loc>
+        <lastmod>2019-11-07T01:35:22.864Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/tags/%25ED%2599%2598%25EA%25B2%25BD/</loc>
+        <lastmod>2019-11-07T01:35:22.864Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/tags/oh-my-posh/</loc>
+        <lastmod>2019-11-04T11:33:16.137Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/tags/zsh/</loc>
+        <lastmod>2019-11-04T11:33:16.137Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/tags/windows/</loc>
+        <lastmod>2019-11-04T11:33:16.137Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/tags/shell/</loc>
+        <lastmod>2019-11-04T11:33:16.137Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://hicucu.github.io/tags/github/</loc>
-        <lastmod>2019-08-31T11:31:44.557Z</lastmod>
+        <lastmod>2019-09-04T13:33:59.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/css/</loc>
-        <lastmod>2019-08-31T11:31:34.148Z</lastmod>
+        <lastmod>2019-08-31T11:31:34.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/html/</loc>
-        <lastmod>2019-08-31T11:31:34.148Z</lastmod>
+        <lastmod>2019-08-31T11:31:34.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Javascript/</loc>
-        <lastmod>2019-08-31T11:31:34.148Z</lastmod>
+        <lastmod>2019-08-31T11:31:34.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/react/</loc>
-        <lastmod>2019-08-31T05:35:57.135Z</lastmod>
+        <lastmod>2019-08-31T05:35:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/javascript/</loc>
-        <lastmod>2019-08-31T05:35:57.135Z</lastmod>
+        <lastmod>2019-08-31T05:35:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/TIL/</loc>
-        <lastmod>2019-08-15T10:14:01.347Z</lastmod>
+        <lastmod>2019-08-15T10:14:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/HTML-CSS/</loc>
-        <lastmod>2019-08-15T10:14:01.347Z</lastmod>
+        <lastmod>2019-08-15T10:14:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/angular/</loc>
-        <lastmod>2019-06-30T10:12:58.718Z</lastmod>
+        <lastmod>2019-06-30T10:12:58.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/lambda/</loc>
-        <lastmod>2019-06-30T10:12:58.718Z</lastmod>
+        <lastmod>2019-06-30T10:12:58.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/ec2/</loc>
-        <lastmod>2019-06-30T10:12:58.718Z</lastmod>
+        <lastmod>2019-06-30T10:12:58.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/aws/</loc>
-        <lastmod>2019-06-30T10:12:58.718Z</lastmod>
+        <lastmod>2019-06-30T10:12:58.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/putty/</loc>
-        <lastmod>2019-06-30T10:09:27.402Z</lastmod>
+        <lastmod>2019-06-30T10:09:27.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/express/</loc>
-        <lastmod>2019-06-30T10:09:22.823Z</lastmod>
+        <lastmod>2019-06-30T10:09:22.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/mongodb/</loc>
-        <lastmod>2019-06-30T10:09:19.718Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://hicucu.github.io/tags/%ED%99%98%EA%B2%BD/</loc>
-        <lastmod>2019-06-16T07:28:50.572Z</lastmod>
+        <lastmod>2019-06-30T10:09:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/VSCode/</loc>
-        <lastmod>2019-06-16T07:28:50.572Z</lastmod>
+        <lastmod>2019-06-16T07:28:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Webpack/</loc>
-        <lastmod>2019-06-16T07:28:50.572Z</lastmod>
+        <lastmod>2019-06-16T07:28:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Babel/</loc>
-        <lastmod>2019-06-16T07:28:50.572Z</lastmod>
+        <lastmod>2019-06-16T07:28:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/eslint/</loc>
-        <lastmod>2019-06-16T07:28:50.572Z</lastmod>
+        <lastmod>2019-06-16T07:28:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/DOM/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/this/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Constructor/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/var/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Global/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Lexocal-Scope/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Scope/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Definition/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Function/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Object/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Primitive/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Expression/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Literal/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Data-type/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/project/</loc>
-        <lastmod>2019-06-02T17:50:41.842Z</lastmod>
+        <lastmod>2019-06-02T17:50:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/web-basic/</loc>
-        <lastmod>2019-06-02T17:50:41.842Z</lastmod>
+        <lastmod>2019-06-02T17:50:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/sort/</loc>
-        <lastmod>2019-05-30T07:39:50.619Z</lastmod>
+        <lastmod>2019-05-30T07:39:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/ESMAScript/</loc>
-        <lastmod>2019-05-09T01:18:09.631Z</lastmod>
+        <lastmod>2019-05-09T01:18:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/TypeError/</loc>
-        <lastmod>2019-05-08T17:25:32.631Z</lastmod>
+        <lastmod>2019-05-08T17:25:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Error/</loc>
-        <lastmod>2019-05-08T17:25:32.631Z</lastmod>
+        <lastmod>2019-05-08T17:25:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/Bootstrap/</loc>
-        <lastmod>2019-05-08T17:25:32.631Z</lastmod>
+        <lastmod>2019-05-08T17:25:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/JQuery/</loc>
-        <lastmod>2019-05-08T17:25:32.631Z</lastmod>
+        <lastmod>2019-05-08T17:25:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/call-by-reference/</loc>
-        <lastmod>2019-05-08T17:22:39.560Z</lastmod>
+        <lastmod>2019-05-08T17:22:39.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/call-by-value/</loc>
-        <lastmod>2019-05-08T17:22:39.560Z</lastmod>
+        <lastmod>2019-05-08T17:22:39.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/coding/</loc>
-        <lastmod>2019-05-08T17:22:39.560Z</lastmod>
+        <lastmod>2019-05-08T17:22:39.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/study/</loc>
-        <lastmod>2019-05-08T17:22:39.560Z</lastmod>
+        <lastmod>2019-05-08T17:22:39.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/codility/</loc>
-        <lastmod>2019-05-06T08:43:25.967Z</lastmod>
+        <lastmod>2019-05-06T08:43:25.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://hicucu.github.io/tags/homework/</loc>
-        <lastmod>2019-04-23T15:58:53.816Z</lastmod>
+        <lastmod>2019-04-23T15:58:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -8,8 +8,24 @@
     </url>
 
     <url>
+        <loc>https://hicucu.github.io/2019/11/07/2019-11-07/</loc>
+        <lastmod>2019-11-07T01:35:22.864Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hicucu.github.io/2019/10/25/2019-10-25/</loc>
+        <lastmod>2019-11-04T11:33:16.137Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://hicucu.github.io/2019/08/31/gh-pages/</loc>
-        <lastmod>2019-08-31T11:31:44.557Z</lastmod>
+        <lastmod>2019-09-04T13:33:59.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +33,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/08/15/javascript-tip/</loc>
-        <lastmod>2019-08-31T11:31:34.148Z</lastmod>
+        <lastmod>2019-08-31T11:31:34.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -25,7 +41,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/08/27/keyword/</loc>
-        <lastmod>2019-08-31T05:35:57.135Z</lastmod>
+        <lastmod>2019-08-31T05:35:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -33,7 +49,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/01/fc-190401/</loc>
-        <lastmod>2019-08-15T10:14:01.347Z</lastmod>
+        <lastmod>2019-08-15T10:14:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -41,7 +57,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/06/30/aws-angular-todolist-1/</loc>
-        <lastmod>2019-06-30T10:12:58.718Z</lastmod>
+        <lastmod>2019-06-30T10:12:58.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -49,7 +65,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/06/30/aws-angular-todolist-2/</loc>
-        <lastmod>2019-06-30T10:12:57.556Z</lastmod>
+        <lastmod>2019-06-30T10:12:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -57,7 +73,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/06/07/aws-ec2npm/</loc>
-        <lastmod>2019-06-30T10:09:27.402Z</lastmod>
+        <lastmod>2019-06-30T10:09:27.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -65,7 +81,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/06/08/aws-express-helloworld-port/</loc>
-        <lastmod>2019-06-30T10:09:22.823Z</lastmod>
+        <lastmod>2019-06-30T10:09:22.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -73,7 +89,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/06/09/aws-mongodb-install/</loc>
-        <lastmod>2019-06-30T10:09:19.718Z</lastmod>
+        <lastmod>2019-06-30T10:09:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -81,7 +97,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/06/16/Env-Con-babel-webpack/</loc>
-        <lastmod>2019-06-16T07:28:50.572Z</lastmod>
+        <lastmod>2019-06-16T07:28:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -89,7 +105,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/06/07/aws-putty-ec2/</loc>
-        <lastmod>2019-06-07T17:06:32.657Z</lastmod>
+        <lastmod>2019-06-07T17:06:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -97,7 +113,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/06/03/javascript-keyword/</loc>
-        <lastmod>2019-06-03T02:07:02.268Z</lastmod>
+        <lastmod>2019-06-03T02:07:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -105,7 +121,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/03/29/shopping-spree/</loc>
-        <lastmod>2019-06-02T17:50:41.842Z</lastmod>
+        <lastmod>2019-06-02T17:50:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -113,7 +129,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/05/20/javascript-sort/</loc>
-        <lastmod>2019-05-30T07:39:50.619Z</lastmod>
+        <lastmod>2019-05-30T07:39:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -121,7 +137,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/29/Javascript-ES/</loc>
-        <lastmod>2019-05-09T01:18:09.631Z</lastmod>
+        <lastmod>2019-05-09T01:18:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -129,7 +145,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/03/19/TypeError-is-not-a-function/</loc>
-        <lastmod>2019-05-08T17:25:32.631Z</lastmod>
+        <lastmod>2019-05-08T17:25:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -137,7 +153,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/05/09/javascript-3/</loc>
-        <lastmod>2019-05-08T17:24:28.976Z</lastmod>
+        <lastmod>2019-05-08T17:24:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -145,7 +161,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/22/call-by-Value-call-by-Reference/</loc>
-        <lastmod>2019-05-08T17:22:39.560Z</lastmod>
+        <lastmod>2019-05-08T17:22:39.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -153,7 +169,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/05/06/codility-3-2-FrogJmp/</loc>
-        <lastmod>2019-05-06T08:43:25.967Z</lastmod>
+        <lastmod>2019-05-06T08:43:25.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -161,7 +177,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/05/05/codility-3-1-TapeEquilibrium/</loc>
-        <lastmod>2019-05-05T06:35:18.061Z</lastmod>
+        <lastmod>2019-05-05T06:35:18.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -169,7 +185,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/05/02/javascript-2/</loc>
-        <lastmod>2019-05-03T03:50:44.195Z</lastmod>
+        <lastmod>2019-05-03T03:50:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -177,7 +193,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/30/Javascript-1/</loc>
-        <lastmod>2019-05-01T01:28:36.323Z</lastmod>
+        <lastmod>2019-05-01T01:28:36.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -185,7 +201,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/03/19/to-do-list/</loc>
-        <lastmod>2019-04-23T15:58:53.816Z</lastmod>
+        <lastmod>2019-04-23T15:58:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -193,7 +209,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/16/fc-190416/</loc>
-        <lastmod>2019-04-23T15:57:12.195Z</lastmod>
+        <lastmod>2019-04-23T15:57:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -201,7 +217,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/15/fc-190415/</loc>
-        <lastmod>2019-04-23T15:57:02.795Z</lastmod>
+        <lastmod>2019-04-23T15:57:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -209,7 +225,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/12/fc-190412/</loc>
-        <lastmod>2019-04-23T15:55:07.672Z</lastmod>
+        <lastmod>2019-04-23T15:55:07.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -217,7 +233,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/11/fc-190411/</loc>
-        <lastmod>2019-04-23T15:54:40.124Z</lastmod>
+        <lastmod>2019-04-23T15:54:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -225,7 +241,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/09/fc-190409/</loc>
-        <lastmod>2019-04-23T15:50:51.332Z</lastmod>
+        <lastmod>2019-04-23T15:50:51.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -233,7 +249,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/05/fc-190405/</loc>
-        <lastmod>2019-04-23T15:49:27.706Z</lastmod>
+        <lastmod>2019-04-23T15:49:27.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -241,7 +257,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/08/fc-190408/</loc>
-        <lastmod>2019-04-23T15:47:21.834Z</lastmod>
+        <lastmod>2019-04-23T15:47:21.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -249,7 +265,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/04/fc-190404/</loc>
-        <lastmod>2019-04-23T15:45:34.461Z</lastmod>
+        <lastmod>2019-04-23T15:45:34.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -257,7 +273,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/03/fc-190402/</loc>
-        <lastmod>2019-04-23T15:44:16.977Z</lastmod>
+        <lastmod>2019-04-23T15:44:16.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -265,7 +281,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/19/codility-2-2-CyclicRotation/</loc>
-        <lastmod>2019-04-23T15:37:42.704Z</lastmod>
+        <lastmod>2019-04-23T15:37:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -273,7 +289,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/17/codility-1-1-BinaryGap/</loc>
-        <lastmod>2019-04-23T15:37:25.639Z</lastmod>
+        <lastmod>2019-04-23T15:37:25.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -281,7 +297,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/19/codility-2-1-OddOccurrencesInArray/</loc>
-        <lastmod>2019-04-23T15:37:09.252Z</lastmod>
+        <lastmod>2019-04-23T15:37:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -289,7 +305,7 @@
 
     <url>
         <loc>https://hicucu.github.io/2019/04/18/box-sizing/</loc>
-        <lastmod>2019-04-23T15:34:07.136Z</lastmod>
+        <lastmod>2019-04-23T15:34:07.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
