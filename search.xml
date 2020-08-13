@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>Password Validation Regular Expression</title>
+      <link href="/2020/08/14/password-validation/"/>
+      <url>/2020/08/14/password-validation/</url>
+      
+        <content type="html"><![CDATA[<h1 id="조건"><a href="#조건" class="headerlink" title="조건"></a>조건</h1><p>10~20 자리 이내 영문, 숫자, 특수문자(!, @, <em>) 중 2종류 이상 또는 8~20자리 이내 영문, 숫자, 특수문자(!, @, </em>) 중 3종류 이상을 조합</p><h1 id="조건-정리"><a href="#조건-정리" class="headerlink" title="조건 정리"></a>조건 정리</h1><ol><li>10~20 자리 이내 영문, 숫자, 특수문자(!, @, *) 중 2종류 이상 조합</li><li>8~20자리 이내 영문, 숫자, 특수문자(!, @, *) 중 3종류 이상 조합</li></ol><h1 id="상세-조건-및-정규식"><a href="#상세-조건-및-정규식" class="headerlink" title="상세 조건 및 정규식"></a>상세 조건 및 정규식</h1><ol><li><ol><li>password must contain 1 number (0-9)</li><li>password must contain 1 uppercase letters or 1 lowercase letters</li><li>password must contain 1 special characters, of the group !@*</li><li>password must contain 2 or more of the above</li><li>password is 10-20 characters with no space</li></ol></li><li><ol><li>password must contain 1 number (0-9)</li><li>password must contain 1 uppercase letters or 1 lowercase letters</li><li>password must contain 1 special characters, of the group !@*</li><li>password is 10-20 characters with no space</li></ol></li></ol><h2 id="정규식"><a href="#정규식" class="headerlink" title="정규식"></a>정규식</h2><ol><li>password must contain 1 number (0-9)<ul><li>(?=.*\d)</li></ul></li><li>password must contain 1 uppercase letters or 1 lowercase letters<ul><li>(?=.*[a-zA-Z])</li></ul></li><li>password must contain 1 special characters, of the group !@*<ul><li>(?=.<em>[!@</em>])</li></ul></li><li>password is 10-20 or 8-20 characters with no space<ul><li>([^\s]){10,20} or ([^\s]){8,20}</li></ul></li></ol><h1 id="정규식-1"><a href="#정규식-1" class="headerlink" title="정규식"></a>정규식</h1><ol><li>^(?=.<em>\d)(?=.</em>[!@<em>])([^\s]){10,20}$|^(?=.</em>\d)(?=.<em>[a-zA-Z])([^\s]){10,20}$|^(?=.</em>[a-zA-Z])(?=.<em>[!@</em>])([^\s]){10,20}$</li><li>^(?=.<em>\d)(?=.</em>[a-zA-Z])(?=.<em>[!@</em>])([^\s]){8,20}$</li></ol><p>^(?=.<em>\d)(?=.</em>[!@<em>])([^\s]){10,20}$|^(?=.</em>\d)(?=.<em>[a-zA-Z])([^\s]){10,20}$|^(?=.</em>[a-zA-Z])(?=.<em>[!@</em>])([^\s]){10,20}$|^(?=.<em>\d)(?=.</em>[a-zA-Z])(?=.<em>[!@</em>])([^\s]){8,20}$</p><h1 id="최종"><a href="#최종" class="headerlink" title="최종"></a>최종</h1><p><a href="https://regex101.com/r/hqMtyd/1" target="_blank" rel="external nofollow noopener noreferrer">https://regex101.com/r/hqMtyd/3</a></p><blockquote><p>(?=.\d)(?=.[!@])([\s]){10,20}$|(?=.\d)(?=.[a-zA-Z])([^\s]){10,20}|(?=.[a-zA-Z])(?=.[!@])([\s]){10,20}|(?=.\d)(?=.[a-zA-Z])(?=.[!@])([^\s]){8,20}</p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> password </tag>
+            
+            <tag> validation </tag>
+            
+            <tag> regex </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>.htaccess http를 https로 redirect</title>
       <link href="/2019/11/07/2019-11-07/"/>
       <url>/2019/11/07/2019-11-07/</url>
